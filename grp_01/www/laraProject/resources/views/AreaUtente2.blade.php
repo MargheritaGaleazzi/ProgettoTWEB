@@ -12,10 +12,10 @@
                                     </h5>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Le mie Info:</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Storico Biglietti</a>
                                 </li>
                             </ul>
                         </div>
@@ -39,7 +39,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Name</label>
+                                                <label>Nome</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <p>Kshiti Ghelani</p>
@@ -47,7 +47,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Email</label>
+                                                <label>Cognome</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <p>kshitighelani@gmail.com</p>
@@ -55,7 +55,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Phone</label>
+                                                <label>E-mail</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <p>123 456 7890</p>
@@ -63,7 +63,39 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Profession</label>
+                                                <label>Via</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Web Developer and Designer</p>
+                                            </div>
+                                            </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Città</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Web Developer and Designer</p>
+                                            </div>
+                                            </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>CAP</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Web Developer and Designer</p>
+                                            </div>
+                                            </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Sesso</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Web Developer and Designer</p>
+                                            </div>
+                                            </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Cellulare</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <p>Web Developer and Designer</p>
