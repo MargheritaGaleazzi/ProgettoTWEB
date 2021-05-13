@@ -7,9 +7,9 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="profile-head">
-                                    <h5>
+                                    <h1>
                                         Kshiti Ghelani
-                                    </h5>
+                                    </h1>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Le mie Info:</a>
