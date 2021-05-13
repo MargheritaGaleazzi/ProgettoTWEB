@@ -12,22 +12,23 @@
                                     </h1>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Le mie Info:</a>
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#dati" role="tab" aria-controls="home" aria-selected="true">Le mie Info:</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Storico Biglietti</a>
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#ticket" role="tab" aria-controls="profile" aria-selected="false">Storico Biglietti</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Modifica Profilo"/>
+                        <a><input type="submit" class="profile-edit-btn" name="btnAddMore" value="Modifica Profilo"/></a>
                     </div>
                 </div>
                 <div class="row">
                     
                     <div class="col-md-8">
                         <div class="tab-content profile-tab" id="myTabContent">
+                            <section id="dati">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                         <div class="row">
                                             <div class="col-md-6">
@@ -102,6 +103,8 @@
                                             </div>
                                         </div>
                             </div>
+                            </section>
+                            <section id="ticket">
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                         <div class="row">
                                             <div class="col-md-6">
@@ -150,6 +153,7 @@
                                     </div>
                                 </div>
                             </div>
+                            </section>
                         </div>
                     </div>
                 </div>          
