@@ -1,4 +1,4 @@
-@extends('layout.zonaPubblica')
+@extends('layout.zonaUtente2')
 
 @section('title', 'User')
 <!-- inizio della sezione home -->
@@ -12,10 +12,7 @@
                                     </h1>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="{{ route('login') }}" title="login" role="tab" aria-controls="home" aria-selected="true">Le mie Info:</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="{{ route('storico') }}" title="Storico" role="tab" aria-controls="profile" aria-selected="false">Storico Biglietti</a>
+                                    <p class="nav-link active" id="home-tab" data-toggle="tab" href="{{ route('login') }}" title="login" role="tab" aria-controls="home" aria-selected="true">Le mie Info:</p>
                                 </li>
                             </ul>
                         </div>
