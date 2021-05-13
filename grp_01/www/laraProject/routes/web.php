@@ -16,6 +16,8 @@ Route::view('/faq', 'faq')
         ->name('faq');
 Route::view('/info', 'info')
         ->name('info');
+Route::view('/catalogo', 'catalogo')
+        ->name('catalogo');
 Route::view('/login', 'AreaUtente2')
         ->name('login');
 Route::view('/storico', 'StoricoUtente2')
