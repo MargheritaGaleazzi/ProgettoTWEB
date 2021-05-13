@@ -2115,7 +2115,7 @@ input[type=text]:placeholder {
   -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
             filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3)); 
   display: block;
-  margin: 10% auto auto auto;
+  margin: auto auto auto auto;
   color: #fff;;
 }
 
