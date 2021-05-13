@@ -18,6 +18,6 @@ Route::view('/info', 'info')
         ->name('info');
 Route::view('/login', 'AreaUtente2')
         ->name('login');
-Route::view('/login/storico', 'StoricoUtente2')
+Route::view('/storico', 'StoricoUtente2')
         ->name('storico');
 
