@@ -3,6 +3,6 @@
     <li> Catalogo </li>
     <li> <a href="{{ route('info') }}" title="Info">Info</a> </li>
     <li> <a href="{{ route('faq') }}" title="FAQ">FAQ</a> </li>
-    <li> Login </li>
+    <li> Logout </li>
 </ul>
 
