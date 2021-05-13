@@ -2102,3 +2102,103 @@ input[type=text]:placeholder {
     font-weight: 600;
     color: #cc0014;
 }
+.ticket {
+  font-family: sans-serif;
+
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  background-color: #04030C;
+  width: 700px;
+  height: 300px;
+  border-radius: 15px;
+  -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3)); 
+  display: block;
+  margin: 10% auto auto auto;
+  color: #fff;;
+}
+
+.ticketdate {
+  margin: 15px;
+  -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3)); 
+}
+
+.ticketdate .ticketday{
+  font-size: 80px;
+  float: left;
+}
+
+.ticketdate .ticketmonth-and-time {
+  float: left;
+  margin: 15px 0 0 0;
+  font-weight: bold;
+}
+
+.ticketartist {
+  font-size: 30px;
+  margin: 10px 100px 0 40px;
+  float: left;
+  font-weight: bold;
+  -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3)); 
+}
+
+.ticketlocation {
+  float: left;
+  margin: 135px 0 0 78px;
+  font-size: 30px;
+  font-weight: bold;
+  -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3)); 
+}
+
+.ticketlocation::before {
+  background-size: 110px 110px;
+  width: 110px; 
+  height: 110px;
+  content:"";
+  display: inline-block;
+  float: left;
+  position: absolute;
+  left: -160px;
+  bottom: 5px;
+  -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3)); 
+}
+
+.ticketrip {
+  border-right: 8px dotted #ffffff;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 530px;
+}
+
+.ticketcta .ticketinfo {
+  position: absolute;
+  top: 135px;
+  right: 15px;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #690812;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3)); 
+}
+
+.ticketsmall {
+  font-weight: 200;
+}
+
+.ticket-1 {
+    background-image: url(https://images.unsplash.com/photo-1483101974978-cf266fdf1139?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3289&q=80);
+}
