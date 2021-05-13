@@ -3,13 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/faq.blade.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/biglietto.blade.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/StoricoUtente2.blade.php</file>
             <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/homePubblica.blade.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/AreaUtente2.blade.php</file>
             <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/layout/zonaPubblica.blade.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/layout/navLevel2.blade.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/layout/zonaUtente2.blade.php</file>
             <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/info.blade.php</file>
             <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/public/css/style.css</file>
-            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/layout/navBarPubblica.blade.php</file>
             <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/routes/web.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/database/seeds/DatabaseSeeder.php</file>
         </group>
     </open-files>
 </project-private>
