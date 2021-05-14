@@ -18,7 +18,7 @@ Route::view('/info', 'info')
         ->name('info');
 Route::view('/catalogo', 'catalogo')
         ->name('catalogo');
-Route::view('/login', 'AreaUtente2')
+Route::view('/login', 'loginUtenti')
         ->name('login');
 Route::view('/storico', 'StoricoUtente2')
         ->name('storico');
