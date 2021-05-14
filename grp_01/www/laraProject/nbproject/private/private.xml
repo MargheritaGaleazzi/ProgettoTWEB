@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>database/migrations/2021_05_13_061204_evento.php</url>
+            <bookmark id="1">
+                <name/>
+                <line>16</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< Updated upstream
         <group>
             <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/biglietto.blade.php</file>
             <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/homePubblica.blade.php</file>
@@ -9,5 +19,8 @@
             <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/layout/navBarPubblica.blade.php</file>
             <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/routes/web.php</file>
         </group>
+=======
+        <group/>
+>>>>>>> Stashed changes
     </open-files>
 </project-private>
