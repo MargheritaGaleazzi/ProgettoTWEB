@@ -3,7 +3,7 @@
 @section('title', 'Catalogo')
 
 @section('content')
-<div class="container mt-5 mb-5">
+
 
     <section class="search-sec">
     <div class="container">
@@ -46,11 +46,12 @@
             </div>
         </form>
     </div>
-</section></div>
+</section>
     
     
     @isset($eventi)
     @foreach ($eventi as $evento)
+    <div class="container">
     <div class="d-flex justify-content-center row">
         <div class="col-md-10">
             <div class="row p-2 bg-white border rounded">
@@ -72,6 +73,7 @@
             
          </div>
     </div>
+</div>
     @endforeach
     
     
