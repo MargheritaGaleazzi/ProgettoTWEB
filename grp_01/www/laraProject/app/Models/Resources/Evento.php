@@ -9,4 +9,14 @@ class Evento extends Model{
     protected $table = 'evento';
     protected $primaryKey = 'codice_evento';
     public $timestamps = false;
+    
+    //trova il prezzo in caso ci sia lo sconto lo applica
+    public function getPrezzo($conSconto = false) {
+        $prezzo = $this->prezzo_biglietto;
+        if (true == ($this->biglietto_scontato) && true == $conSconto) {
+            $sconto = ($prezzo * $this->sconto) / 100;
+            $prezzo = round($prezzo - $sconto, 2);
+        }
+        return $prezzo;
+    }
 }
