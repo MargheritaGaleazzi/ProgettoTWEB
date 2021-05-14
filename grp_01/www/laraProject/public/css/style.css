@@ -2063,7 +2063,7 @@ input[type="password"]:placeholder {
   background-repeat: no-repeat;
   background-position: top;
   background-size: 100%;
-  background-color: #04030C;
+  background-color: #991722;
   width: 700px;
   height: 300px;
   border-radius: 15px;
@@ -2155,7 +2155,7 @@ input[type="password"]:placeholder {
      fontsize:10px;
   top: 115px;
   right: 10px;
-      background-color: #690812;
+      background-color: #4a080e;
   padding: 10px 20px;
   border-radius: 25px;
     text-align: center;
