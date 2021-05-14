@@ -55,7 +55,11 @@
     <div class="d-flex justify-content-center row">
         <div class="col-md-10">
             <div class="row p-2 bg-white border rounded">
-                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="https://i.imgur.com/QpjAiHq.jpg"></div>
+                <div class="col-md-3 mt-1">
+                    <div class="image">
+                        @include('Helper/Locandina', ['attrs' => 'imagefrm', 'imgFile' => $evento->locandina])
+                    </div>
+                </div>
                 <div class="col-md-6 mt-1">
                     <p class="nomeprod">{{ $evento->titolo }}</p>
                     <div class="d-flex flex-row">
@@ -75,8 +79,7 @@
     </div>
 </div>
     @endforeach
-    
-    
+   
     @endisset()
 
 @endsection
