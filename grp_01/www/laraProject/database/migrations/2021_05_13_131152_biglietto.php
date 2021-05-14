@@ -22,7 +22,6 @@ class Biglietto extends Migration
             $table->enum('metodo_pagamento',['bonifico','carta di credito','paypal']);
             $table->timestamp('data_acquisto');
             $table->float('prezzo_acquisto');
-            $table->text('qrcode');
             $table->primary(['codice_biglietto','codice_utente','codice_evento']);
         });
     }
