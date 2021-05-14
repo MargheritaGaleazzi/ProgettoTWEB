@@ -46,7 +46,7 @@
             </div>
         </form>
     </div>
-</section>
+</section></div>
     
     
     @isset($eventi)
@@ -76,6 +76,6 @@
     
     
     @endisset()
-</div>
+
 @endsection
 
