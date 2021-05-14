@@ -7,29 +7,39 @@ use App\Models\Resources\Product;
 
 class Catalogo {
 
-    public function getTopCats() {
-        return Category::where('parId', 0)->get();
+    public function getTuttiEventi($paginazione = 6) {
+         $eventi=Evento::all()->get();
+         return $eventi->paginate($paginazione);
     }
-
-    public function getCatsByParId($topId) {
-        return Category::whereIn('parId', $topId)->get();
-    }
-
-    // Estrae i prodotti della categoria/e $catId (tutti o solo quelli in sconto), eventualmente ordinati
-    public function getProdsByCat($catId, $paged = 1, $order = null, $discounted = false) {
-
-        $prods = Product::whereIn('catId', $catId)
-                ->orWhereHas('prodCat', function ($query) use ($catId) {
-                        $query->whereIn('parId', $catId);
-        });
-        if ($discounted) {
-            $prods = $prods->where('discounted', true);
+    
+    public function getEventiFiltrati($descr=null,$reg=null,$date=null) {
+        //se non specifico descrizone e regione ricerca per data
+        if ((is_null($descr))&&((is_null($reg)))){
+            return Evento::where('luogo', $reg)->get()->paginate(2);
         }
-        if (!is_null($order)) {
-            $prods = $prods->orderBy('discountPerc', $order);
+        //se non specifico descrizone e data ricerca per regione
+        if ((is_null($descr))&&((is_null($date)))){
+           return Evento::where('luogo', $reg)->get()->paginate(2); 
         }
-        return $prods->paginate($paged);
+        //se non specifico regione e data ricerca per descrizione
+        if ((is_null($reg))&&((is_null($date)))){
+           return Evento::whereIn('informazioni', $descr)->get()->paginate(2); 
+        }
+        //se non specifico regione ricerca per descrizione e data
+        if ((is_null($reg))){
+           return Evento::where()->get()->paginate(2); 
+        }
+        //se non specifico descrizione ricerca per regione e data
+        if ((is_null($descr))){
+           return Evento::where()->get()->paginate(2); 
+        }
+        //se non specifico data ricerca per regione e descrizione
+        if ((is_null($date))){
+           return Evento::where()->get()->paginate(2); 
+        }
+        //se non specifico descrizione ricerca per regione e data
+        if ((!is_null($descr))&&(!is_null($reg))&&(!is_null($date))){
+           return Evento::where('luogo', $reg)->whereIn('informazioni', $descr)->get()->paginate(2); 
+        }
     }
-
 }
-
