@@ -16,7 +16,7 @@ Route::view('/faq', 'faq')
         ->name('faq');
 Route::view('/info', 'info')
         ->name('info');
-Route::view('/catalogo', 'catalogo')
+Route::view('/catalogo', 'ControllerPubblico@mostraCatalogo')
         ->name('catalogo');
 Route::view('/login', 'loginUtenti')
         ->name('login');
