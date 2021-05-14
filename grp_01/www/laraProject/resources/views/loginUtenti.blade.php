@@ -3,7 +3,6 @@
 @section('title', 'Login')
 
 @section('content')
-</div>
 <div class="container">
     <div class="row">
         <div class=" col-md-6 offset-md-3">
@@ -22,7 +21,7 @@
                   
                       <!-- Iscrizione -->
                       <div id="formFooter">
-                        <a class="underlineHover" href="registrazione.html">Iscriviti</a>
+                        <a class="underlineHover" href="{{route('registrazione')}}" title="Storico">Iscriviti</a>
                       </div>
                   
                     </div>

@@ -20,6 +20,8 @@ Route::view('/catalogo', 'catalogo')
         ->name('catalogo');
 Route::view('/login', 'loginUtenti')
         ->name('login');
+Route::view('/registrazione', 'registrazioneUtenti')
+        ->name('registrazione');
 Route::view('/storico', 'StoricoUtente2')
         ->name('storico');
 Route::get('/qrcode', function () {
