@@ -29,7 +29,6 @@
     </div>
     @endforeach
     
-    @include('pagination.paginator', ['paginator' => $eventi])
     
     @endisset()
 </div>
