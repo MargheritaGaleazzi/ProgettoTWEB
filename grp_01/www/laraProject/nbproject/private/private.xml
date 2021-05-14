@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/biglietto.blade.php</file>
-            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/StoricoUtente2.blade.php</file>
-            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/config/app.php</file>
-            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/layout/navLevel2.blade.php</file>
-            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/public/css/style.css</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/app/Models/Catalogo.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/app/Http/Controllers/ControllerPubblico.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/catalogo.blade.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/database/migrations/2021_05_13_061204_evento.php</file>
             <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/routes/web.php</file>
         </group>
     </open-files>
