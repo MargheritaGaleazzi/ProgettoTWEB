@@ -14,7 +14,7 @@ class Utente extends Migration
     public function up()
     {
         Schema::create('utente', function (Blueprint $table){
-            $table->string('codice_utente',30)->primary();
+            $table->bigIncrements('codice_utente')->unsigned()->index();
             $table->enum('categoria',['cliente','organizzatore','amministratore']);
             $table->string('email',40);
             $table->string('password',30);
@@ -25,6 +25,7 @@ class Utente extends Migration
             $table->integer('cap')->nullable();
             $table->string('sesso')->nullable();
             $table->string('cellulare',10)->nullable();
+            $table->string('nome_societa_organizzatrice',40)->nullable();
         });
     }
 
