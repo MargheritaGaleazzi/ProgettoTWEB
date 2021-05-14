@@ -14,9 +14,8 @@
 <<<<<<< Updated upstream
         <group>
             <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/biglietto.blade.php</file>
-            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/homePubblica.blade.php</file>
-            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/public/css/style.css</file>
-            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/layout/navBarPubblica.blade.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/config/app.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/layout/navLevel2.blade.php</file>
             <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/routes/web.php</file>
         </group>
 =======

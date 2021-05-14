@@ -22,4 +22,10 @@ Route::view('/login', 'AreaUtente2')
         ->name('login');
 Route::view('/storico', 'StoricoUtente2')
         ->name('storico');
+Route::get('/qrcode', function () {
+    return QrCode::size(250)
+        ->backgroundColor(255, 255, 204)
+        ->generate('Margherita Galeazzi');
+})
+->name('qrcode');
 
