@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         DB::table('utente')->insert([
             ['categoria' => 'amministratore', 'email' => 'giuseppe.santi3@mail.com', 'password' => 'giuseppino',
                 'nome' => 'Giuseppe', 'cognome' => 'Santi', 'via' => 'Piagi', 'citta' => 'Ancona',
-                'cap' => '60121', 'sesso' => 'M', 'cellulare' => '3556768542'],
+                'cap' => '60121', 'sesso' => 'M', 'cellulare' => '3556768542', 'nome_societa_organizzatrice' => Null],
             ['categoria' => 'organizzatore', 'email' => 'maria.cerrato@live.com', 'password' => 'mery88',
                 'nome' => 'Maria', 'cognome' => 'Cerrato', 'via' => 'Donnola', 'citta' => 'Perugia',
                 'cap' => '59439', 'sesso' => 'F', 'cellulare' => '3542047281', 'nome_societa_organizzatrice' => 'PartyLove'],
@@ -41,19 +41,19 @@ class DatabaseSeeder extends Seeder
                 'cap' => '69574', 'sesso' => 'M', 'cellulare' => '3283659409' , 'nome_societa_organizzatrice' => 'TheConcertoShoppe'],
             ['categoria' => 'cliente', 'email' => 'mario.bianchi@gmail.com', 'password' => 'mario123',
                 'nome' => 'Mario', 'cognome' => 'Bianchi', 'via' => 'Monfalcone', 'citta' => 'Torino',
-                'cap' => '10122', 'sesso' => 'M', 'cellulare' => '3355268759'],
+                'cap' => '10122', 'sesso' => 'M', 'cellulare' => '3355268759', 'nome_societa_organizzatrice' => Null],
             ['categoria' => 'cliente', 'email' => 'brendalina@alice.it', 'password' => 'brendiLina1234567',
                 'nome' => 'Lina', 'cognome' => 'Brenda', 'via' => 'Bellaria', 'citta' => 'Roma',
-                'cap' => '00127', 'sesso' => 'F', 'cellulare' => '3357220036'],
+                'cap' => '00127', 'sesso' => 'F', 'cellulare' => '3357220036', 'nome_societa_organizzatrice' => Null],
             ['categoria' => 'cliente', 'email' => 'gianni.roveri@gmail.com', 'password' => 'gGgG3030',
                 'nome' => 'Gianni', 'cognome' => 'Roveri', 'via' => 'Degli abeti', 'citta' => 'Ancona',
-                'cap' => '60131', 'sesso' => 'M', 'cellulare' => '3333620125'],
+                'cap' => '60131', 'sesso' => 'M', 'cellulare' => '3333620125', 'nome_societa_organizzatrice' => Null],
             ['categoria' => 'cliente', 'email' => 'bellkort@gmail.com', 'password' => 'bkioio25478',
                 'nome' => 'Beleriana', 'cognome' => 'Kort', 'via' => 'Piccoli', 'citta' => 'Macerata',
-                'cap' => '62100', 'sesso' => 'F', 'cellulare' => '3339996587'],
+                'cap' => '62100', 'sesso' => 'F', 'cellulare' => '3339996587', 'nome_societa_organizzatrice' => Null],
             ['categoria' => 'cliente', 'email' => 'maria.pia@alice.it', 'password' => 'MariaLaPia',
                 'nome' => 'Maria Pia', 'cognome' => 'Rossi', 'via' => 'Verdi', 'citta' => 'Palermo',
-                'cap' => '90128', 'sesso' => 'F', 'cellulare' => '3333332548'],
+                'cap' => '90128', 'sesso' => 'F', 'cellulare' => '3333332548', 'nome_societa_organizzatrice' => Null],
             
         ]);
         // $this->call(UsersTableSeeder::class);
