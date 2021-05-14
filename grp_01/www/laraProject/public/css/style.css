@@ -2156,8 +2156,8 @@ input[type=text]:placeholder {
 
 .ticketlocation::before {
   background-size: 110px 110px;
-  width: 110px; 
-  height: 110px;
+  width: 100px; 
+  height: 100px;
   content:"";
   display: inline-block;
   float: left;

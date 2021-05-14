@@ -19,7 +19,6 @@
   <div class="ticketlocation">
     <span>KINGSTON TOWN</span>
     </br>
-    <span class="ticketsmall"><span>NANCY'S PUB</span>
   </div>
 
   <div class="ticketrip">
@@ -27,7 +26,6 @@
   <div class="ticketcta">
     <button class="ticketinfo" href="#">DETTAGLI EVENTO</button>
   </div>
- 
 
 </div>
 @endsection
