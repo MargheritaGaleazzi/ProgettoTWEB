@@ -26,7 +26,7 @@
   <div class="ticketrip">
   </div>
   <div class="ticketcta">
-    <button class="ticketbutton" href="#">DETTAGLI EVENTO</button>
+    <a class="ticketbutton" href="{{route('qrcode')}}">Codice QR biglietto</a>
   </div>
  
 </div>

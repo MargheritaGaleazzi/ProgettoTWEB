@@ -2153,6 +2153,8 @@ input[type="password"]:placeholder {
      position: absolute;
      width:20%;
      fontsize:10px;
+     color:#FFF;
+     text-decoration: none;
   top: 115px;
   right: 10px;
       background-color: #4a080e;

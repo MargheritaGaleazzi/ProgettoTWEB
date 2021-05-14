@@ -28,7 +28,7 @@ Route::view('/storico', 'StoricoUtente2')
         ->name('storico');
 Route::get('/qrcode', function () {
     return QrCode::size(250)
-        ->backgroundColor(255, 255, 204)
+        ->backgroundColor(224, 122, 114)
         ->generate('Margherita Galeazzi');
 })
 ->name('qrcode');
