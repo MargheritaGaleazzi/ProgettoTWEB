@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Biglietto extends Model{
     
     protected $table = 'biglietto';
-    protected $primaryKey = ['codice_biglietto','codice_evento','codice_utente'];
+    protected $primaryKey = 'codice_biglietto';
     public $timestamps = false;
     
     // Realazione One-To-One con Utente
