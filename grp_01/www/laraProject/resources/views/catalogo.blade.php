@@ -77,10 +77,11 @@
             
          </div>
     </div>
-</div>
     @endforeach
-   
+
     @endisset()
+</div>
+
 
 @endsection
 
