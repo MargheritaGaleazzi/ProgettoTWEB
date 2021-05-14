@@ -3,7 +3,6 @@
 @section('title', 'Catalogo')
 
 @section('content')
-
 <div class="container mt-5 mb-5">
     @isset($eventi)
     @foreach ($eventi as $evento)
@@ -28,6 +27,11 @@
             
          </div>
     </div>
+    @endforeach
+    
+    @include('pagination.paginator', ['paginator' => $eventi])
+    
+    @endisset()
 </div>
 @endsection
 

@@ -8,8 +8,8 @@ use App\Models\Resources\Evento;
 class Catalogo {
 
     public function getTuttiEventi() {
-         $eventi=Evento::all()->get();
-         return $eventi->paginate(2);
+         
+         return Evento::all()->get('codice_evento');
     }
     
     /*public function getEventiFiltrati($descr=null,$reg=null,$date=null) {
