@@ -16,7 +16,8 @@
                       <form>
                         <input type="text" id="login" class="fadeIn second" name="login" placeholder="username">
                         <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
-                        <button type="submit" class="fadeIn fourth" value="Accedi">Accedi</button>
+                        <!--<button type="submit" class="fadeIn fourth" value="Accedi">Accedi</button>-->
+                        <a href="{{route('utente')}}" title="Storico">Iscriviti</a>
                       </form>
                   
                       <!-- Iscrizione -->

@@ -26,7 +26,7 @@
   <div class="ticketrip">
   </div>
   <div class="ticketcta">
-    <button class="ticketinfo" href="#">DETTAGLI EVENTO</button>
+    <button class="ticketbutton" href="#">DETTAGLI EVENTO</button>
   </div>
  
 </div>

@@ -2134,7 +2134,7 @@ input[type="password"]:placeholder {
 .ticketcta .ticketinfo {
   position: absolute;
   top: 135px;
-  right: 15px;
+  right: 0px;
   display: block;
   font-size: 12px;
   font-weight: bold;
@@ -2144,6 +2144,28 @@ input[type="password"]:placeholder {
   color: #fff;
   text-decoration: none;
   -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3)); 
+}
+.ticketbutton{
+     position: absolute;
+     width:20%;
+     fontsize:10px;
+  top: 115px;
+  right: 10px;
+      background-color: #690812;
+  padding: 10px 20px;
+  border-radius: 25px;
+    text-align: center;
+    font-style: normal;
+    border: 1px solid red;
+    border-width: 0px 0px 4px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    text-decoration: none;
+    margin-bottom: 10px;
+    -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg);
   -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
