@@ -22,7 +22,7 @@ class Utente extends Migration
             $table->string('cognome',30);
             $table->string('via',30)->nullable();
             $table->string('citta',40)->nullable();
-            $table->integer('cap')->nullable();
+            $table->String('cap')->nullable();
             $table->string('sesso')->nullable();
             $table->string('cellulare',10)->nullable();
             $table->string('nome_societa_organizzatrice',40)->nullable();
