@@ -7,12 +7,12 @@ use App\Models\Resources\Evento;
 
 class Catalogo {
 
-    public function getTuttiEventi($paginazione = 6) {
+    public function getTuttiEventi() {
          $eventi=Evento::all()->get();
-         return $eventi->paginate($paginazione);
+         return $eventi->paginate(2);
     }
     
-    public function getEventiFiltrati($descr=null,$reg=null,$date=null) {
+    /*public function getEventiFiltrati($descr=null,$reg=null,$date=null) {
         $dataDivisa=explode("-",$date);
         //se non specifico descrizone e regione ricerca per data
         if ((is_null($descr))&&((is_null($reg)))){
@@ -43,5 +43,5 @@ class Catalogo {
         if ((!is_null($descr))&&(!is_null($reg))&&(!is_null($date))){
            return Evento::where('luogo', $reg)->where(year('data_ora'), $dataDivisa[0])->where(month('data_ora'), $dataDivisa[1])->whereIn('informazioni', $descr)->get()->paginate(2); 
         }
-    }
+    }*/
 }

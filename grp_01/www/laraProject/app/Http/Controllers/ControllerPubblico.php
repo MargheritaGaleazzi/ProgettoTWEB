@@ -15,7 +15,7 @@ class ControllerPubblico extends Controller {
     public function mostraCatalogo() {
 
         //Categorie Top
-        $eventi = $this->_catalogModel->getTuttiEventi();
+        $eventi = $this->_catalogoModel->getTuttiEventi();
         
 
         return view('catalogo')
