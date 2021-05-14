@@ -13,11 +13,11 @@
                       <h2 class="active"> Accedi </h2>
     
                       <!-- Login Form -->
-                      <form>
-                        <input type="text" id="login" class="fadeIn second" name="login" placeholder="username">
-                        <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
-                        <!--<button type="submit" class="fadeIn fourth" value="Accedi">Accedi</button>-->
-                        <a href="{{route('utente')}}" title="Storico">Iscriviti</a>
+                      <form action="{{route('utente')}}">
+                        <input type="text" id="login" class="fadeIn second" name="login" placeholder="username" required>
+                        <input type="password" id="password" class="fadeIn third" name="login" placeholder="password" required>
+                        <button type="submit" class="fadeIn fourth" value="Accedi">Accedi</button>
+                        
                       </form>
                   
                       <!-- Iscrizione -->
