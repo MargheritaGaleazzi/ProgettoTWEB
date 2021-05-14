@@ -22,6 +22,8 @@ Route::view('/login', 'loginUtenti')
         ->name('login');
 Route::view('/registrazione', 'registrazioneUtenti')
         ->name('registrazione');
+Route::view('/utente', 'AreaUtente2')
+        ->name('utente');
 Route::view('/storico', 'StoricoUtente2')
         ->name('storico');
 Route::get('/qrcode', function () {

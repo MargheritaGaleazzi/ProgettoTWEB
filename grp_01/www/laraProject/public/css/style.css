@@ -2147,7 +2147,7 @@ input[type=text]:placeholder {
 
 .ticketlocation {
   float: left;
-  margin: 135px 0 0 78px;
+  margin: 70px 0 0 0px;
   font-size: 30px;
   font-weight: bold;
   -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));

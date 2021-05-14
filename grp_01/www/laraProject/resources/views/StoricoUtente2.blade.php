@@ -18,6 +18,7 @@
   </div>
 
   <div class="ticketlocation">
+      {!! QrCode::generate('MyNotePaper'); !!}
     <span>KINGSTON TOWN</span>
     </br>
   </div>

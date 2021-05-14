@@ -3,6 +3,7 @@
 @section('title', 'Biglietti')
 <!-- inizio della sottosezione Biglietti -->
 @section('subcontent')
+<div class="container mt-5 mb-5">{!! QrCode::generate('MyNotePaper'); !!}</div>
 <div class="ticket ticket-1">
   
   <div class="ticketdate">
@@ -15,8 +16,8 @@
     </br>
 <span class="live small">LIVE</span>
   </div>
-
-  <div class="ticketlocation">
+    
+  <div class="ticketlocation"> 
     <span>KINGSTON TOWN</span>
     </br>
   </div>
