@@ -14,7 +14,7 @@ class Biglietto extends Migration
     public function up()
     {
         Schema::create('biglietto', function (Blueprint $table){
-            $table->bigInteger('codice_biglietto');
+            $table->bigInteger('codice_biglietto')->index();
             $table->string('codice_utente',30)->index();
             $table->foreign('codice_utente')->references('codice_utente')->on('utente');
             $table->bigInteger('codice_evento')->unsigned()->index();
@@ -22,6 +22,8 @@ class Biglietto extends Migration
             $table->enum('metodo_pagamento',['bonifico','carta di credito'])->default('carta di credito');
             $table->timestamp('data_acquisto');
             $table->float('prezzo_acquisto');
+            $table->text('qrcode');
+            $table->primary(['codice_biglietto','codice_utente','codice_evento']);
         });
     }
 
