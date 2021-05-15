@@ -14,7 +14,7 @@ Route::view('/', 'homePubblica')
         ->name('homePubblica');
 Route::get('/faq', 'ControllerPubblico@mostrafaq')
         ->name('faq');
-Route::view('/info', 'info\info')
+Route::view('/info', 'info')
         ->name('info');
 Route::get('/catalogo', 'ControllerPubblico@mostraCatalogo')
         ->name('catalogo');
@@ -22,9 +22,9 @@ Route::view('/login', 'loginUtenti')
         ->name('login');
 Route::view('/registrazione', 'registrazioneUtenti')
         ->name('registrazione');
-Route::view('/utente', 'Livello2\AreaUtente2')
+Route::view('/utente', 'AreaUtente2')
         ->name('utente');
-Route::view('/storico', 'Livello2\StoricoUtente2')
+Route::view('/storico', 'StoricoUtente2')
         ->name('storico');
 //Route::view('/dettagliEvento', 'evento\dettagliEvento')
         //->name('dettagliEvento');

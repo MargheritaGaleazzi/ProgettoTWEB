@@ -24,7 +24,7 @@ class ControllerPubblico extends Controller {
         $eventi = $this->_catalogoModel->getTuttiEventi();
         
 
-        return view('evento\catalogo')
+        return view('catalogo')
                         ->with('eventi', $eventi);
     }
     
@@ -34,7 +34,7 @@ class ControllerPubblico extends Controller {
         $faq = $this->_faqModel->getfaq();
         
 
-        return view('info\faq')
+        return view('faq')
                         ->with('faq', $faq);
     }
     
@@ -52,7 +52,7 @@ class ControllerPubblico extends Controller {
         $stato_evento = $evento->stato_evento;
         $locandina = $evento->locandina;
         
-        return view('evento\dettagliEvento',['titolo'=>$titolo,
+        return view('dettagliEvento',['titolo'=>$titolo,
                                                 'prezzo'=>$prezzo,
                                                 'organizzatore'=>$organizzatore,
                                                 'data_ora'=>$data_ora,
