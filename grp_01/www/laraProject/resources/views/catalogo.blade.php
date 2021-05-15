@@ -48,10 +48,10 @@
     </div>
 </section>
     
-    
+    <div class="container">
     @isset($eventi)
     @foreach ($eventi as $evento)
-    <div class="container">
+    
     <div class="d-flex justify-content-center row">
         <div class="col-md-10">
             <div class="row p-2 bg-white border rounded">
