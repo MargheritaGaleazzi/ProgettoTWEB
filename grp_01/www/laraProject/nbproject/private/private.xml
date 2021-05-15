@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/app/Models/Catalogo.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/faq.blade.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/app/Http/Controllers/ControllerPubblico.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/catalogo.blade.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/app/Models/Resources/Evento.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/public/css/style.css</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/routes/web.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/app/Models/Resources/FAQ.php</file>
+        </group>
     </open-files>
 </project-private>
