@@ -29,26 +29,7 @@
               </div> <!-- faq-content -->
             </li>
       
-            <li>
-              <a class="trigger" href="#0">How do I sign up?</a>
-              <div class="faq-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi cupiditate et laudantium esse adipisci consequatur modi possimus accusantium vero atque excepturi nobis in doloremque repudiandae soluta non minus dolore voluptatem enim reiciendis officia voluptates, fuga ullam? Voluptas reiciendis cumque molestiae unde numquam similique quas doloremque non, perferendis doloribus necessitatibus itaque dolorem quam officia atque perspiciatis dolore laudantium dolor voluptatem eligendi? Aliquam nulla unde voluptatum molestiae, eos fugit ullam, consequuntur, saepe voluptas quaerat deleniti. Repellendus magni sint temporibus, accusantium rem commodi?</p>
-              </div> <!-- faq-content -->
-            </li>
-      
-            <li>
-              <a class="trigger" href="#0">Can I remove a post?</a>
-              <div class="faq-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-              </div> <!-- faq-content -->
-            </li>
-      
-            <li>
-              <a class="trigger" href="#0">How do reviews work?</a>
-              <div class="faq-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-              </div> <!-- faq-content -->
-            </li>
+            
           </ul> <!-- faq-group -->
         
 
