@@ -21,12 +21,13 @@
       
         
           <ul id="basics" class="faq-group">
+            <li class="faq-title"><h2>Le risposte alle domande che ci vengono poste più di frequente, clicca sulla domanda di interesse per
+                visualizzare la risposta.</h2></li>
               
     @isset($faq)
     @foreach ($faq as $domanda)
               
-            <li class="faq-title"><h2>Le risposte alle domande che ci vengono poste più di frequente, clicca sulla domanda di interesse per
-                visualizzare la risposta.</h2></li>
+
             <li>
               <a class="trigger" href="#0">{{ $domanda->domanda }}</a>
               <div class="faq-content">

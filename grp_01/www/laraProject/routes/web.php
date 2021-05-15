@@ -12,7 +12,7 @@
 */
 Route::view('/', 'homePubblica')
         ->name('homePubblica');
-Route::view('/faq', 'faq')
+Route::get('/faq', 'ControllerPubblico@mostrafaq')
         ->name('faq');
 Route::view('/info', 'info')
         ->name('info');
