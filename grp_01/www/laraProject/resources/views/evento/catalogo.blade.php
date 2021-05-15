@@ -71,7 +71,8 @@
                     <div class="d-flex flex-row align-items-center">
                         <h4 class="mr-1">{{ $evento->prezzo_biglietto }} €</h4><span class="strike-text"></span>
                     </div>
-                    <div class="d-flex flex-column mt-4"><a href="{{route('dettagliEvento')}}"><button class="btn btn-primary btn-sm" type="button">Dettagli</button></a>
+                    <!--<div class="d-flex flex-column mt-4"><a href="{{route('dettagliEvento',[$evento->codice_evento])}}"><button class="btn btn-primary btn-sm" type="button">Dettagli</button></a>-->
+                        <div class="d-flex flex-column mt-4"><a href="{{route('dettagliEvento')}}"><button class="btn btn-primary btn-sm" type="button">Dettagli</button></a>
                         <button class="btn btn-outline-primary btn-sm mt-2" type="button">Compra</button>
                     </div>
                 </div>

@@ -22,10 +22,10 @@
         </div>
         <div class="col-lg-7">
             <h3>
-                Titolo Concerto
+                $titolo
             </h3>
             <h5>
-                Prezzo biglietto
+                $prezzo_biglietto
             </h5>
             <p>
                 Prezzo pieno se in sconto
