@@ -10,6 +10,7 @@
 
 <div class="container">
 
+    <div class="container emp-profile">
     <div class="row mt-4">
 
         <div class="col-lg-4 text-center border-right border-secondery">
@@ -35,6 +36,7 @@
                 <li class="pb-2"><b>Società organizzatrice:</b> Società organizzatrice del concerto </li>
             </ul>
         </div>
+    </div>
     </div>
 </div>
 
