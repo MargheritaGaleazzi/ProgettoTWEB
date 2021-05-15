@@ -73,11 +73,9 @@
     </div>
     <!--end content-->
     <!--  footer -->
-    <footr id="footer_with_contact">
-        <div class="footer">
-            <p>Università Politecnica delle Marche - Corso di <a href="https://www.univpm.it/Entra/"> Tecnologie Web</a></p>
-        </div>
-    </footr>
+    <footer id="footer_with_contact">
+        <div class="footer"></div>
+    </footer>
     <!-- end footer -->
 </body>
 </html>

@@ -75,9 +75,9 @@
     </div>
     <!--end content-->
     <!--  footer -->
-    <footr id="footer_with_contact">
+    <footer id="footer_with_contact">
         <div class="footer"></div>
-    </footr>
+    </footer>
     <!-- end footer -->
 </body>
 </html>
