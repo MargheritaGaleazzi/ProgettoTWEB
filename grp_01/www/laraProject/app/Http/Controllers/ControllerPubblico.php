@@ -44,7 +44,7 @@ class ControllerPubblico extends Controller {
         $evento = $this->_catalogoModel->getEventoByCodice($codice_evento);
         
         return view('evento\dettagliEvento')
-                        ->with('evento', $evento);
+                        ->with('eventoSelezionato', $evento);
     }
     
 

@@ -26,10 +26,10 @@ Route::view('/utente', 'Livello2\AreaUtente2')
         ->name('utente');
 Route::view('/storico', 'Livello2\StoricoUtente2')
         ->name('storico');
-Route::view('/dettagliEvento', 'evento\dettagliEvento')
+//Route::view('/dettagliEvento', 'evento\dettagliEvento')
+        //->name('dettagliEvento');
+Route::get('/dettagliEvento/{codice_evento}', 'ControllerPubblico@mostraDettagli')
         ->name('dettagliEvento');
-//Route::get('/dettagliEvento/{codice_evento}', 'ControllerPubblico@mostraDettagli')
-       // ->name('dettagliEvento');
 
 
 Route::get('/qrcode', function () {
