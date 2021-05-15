@@ -44,9 +44,24 @@ class ControllerPubblico extends Controller {
         $evento = $this->_catalogoModel->getEventoByCodice($codice_evento);
         $titolo = $evento->titolo;
         $prezzo = $evento->prezzo_biglietto;
+        $organizzatore = $evento->societa_organizzatrice;
+        $data_ora = $evento->data_ora;
+        $informazioni = $evento->informazioni;
+        $coordinate_maps = $evento->coordinate_maps;
+        $luogo = $evento->luogo;
+        $stato_evento = $evento->stato_evento;
+        $locandina = $evento->locandina;
         
         return view('evento\dettagliEvento',['titolo'=>$titolo,
-                                                'prezzo'=>$prezzo]);
+                                                'prezzo'=>$prezzo,
+                                                'organizzatore'=>$organizzatore,
+                                                'data_ora'=>$data_ora,
+                                                'informazioni'=>$informazioni,
+                                                'coordinate_maps'=>$coordinate_maps,
+                                                'luogo'=>$luogo,
+                                                'stato_evento'=>$stato_evento,
+                                                'locandina'=>$locandina
+                                            ]);
     }
     
 

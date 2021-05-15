@@ -16,7 +16,10 @@
         <div class="col-lg-4 text-center border-right border-secondery">
             <div class="tab-content row h-100 d-flex justify-content-center align-items-center" id="myTabContent">
                 <div class="tab-pane fade show active col-lg-12" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <img class="img-fluid" src="https://pbs.twimg.com/media/ENktSOKU0AA9Y-6.jpg" />
+                    $immagine={{$locandina}}
+                     <div class="image">
+                        @include('Helper/Locandina', ['attrs' => 'imagefrm', 'imgFile' => $immagine?? ''])
+                    </div>
                 </div>
             </div>
         </div>
@@ -31,9 +34,9 @@
                 Prezzo pieno se in sconto
             </p>
             <ul>
-                <li class="pb-2"><b>Luogo:</b> Luogo del concerto </li>
-                <li class="pb-2"><b>Data e ora:</b> Data e ora del concerto </li>
-                <li class="pb-2"><b>Società organizzatrice:</b> Società organizzatrice del concerto </li>
+                <li class="pb-2"><b>Luogo:</b> {{$luogo}} </li>
+                <li class="pb-2"><b>Data e ora:</b> {{$data_ora}} </li>
+                <li class="pb-2"><b>Società organizzatrice:</b> {{$organizzatore}} </li>
             </ul>
         </div>
     </div>
