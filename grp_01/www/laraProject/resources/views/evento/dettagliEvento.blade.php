@@ -22,7 +22,7 @@
         </div>
         <div class="col-lg-7">
             <h3>
-                $titolo
+                $titolo=>titolo
             </h3>
             <h5>
                 $prezzo_biglietto
