@@ -2394,7 +2394,7 @@ Primary style
   }
   
   a {
-    color: #a9c056;
+    color: #ff3e13;
     text-decoration: none;
   }
   
@@ -2715,7 +2715,7 @@ Primary style
       top: 50%;
       height: 2px;
       width: 13px;
-      background: #cfdca0;
+      background: #ff3e13;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       -webkit-transition-property: -webkit-transform;
