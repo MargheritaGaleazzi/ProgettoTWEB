@@ -17,18 +17,26 @@
     </div>
 
       <section class="faq">
-         <!-- categories -->
+        
       
         
           <ul id="basics" class="faq-group">
-            <li class="faq-title"><h2>Basics</h2></li>
+              
+    @isset($faq)
+    @foreach ($faq as $domanda)
+              
+            <li class="faq-title"><h2>Le risposte alle domande che ci vengono poste più di frequente, clicca sulla domanda di interesse per
+                visualizzare la risposta.</h2></li>
             <li>
-              <a class="trigger" href="#0">How do I change my password?</a>
+              <a class="trigger" href="#0">{{ $domanda->domanda }}</a>
               <div class="faq-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quidem blanditiis delectus corporis, possimus officia sint sequi ex tenetur id impedit est pariatur iure animi non a ratione reiciendis nihil sed consequatur atque repellendus fugit perspiciatis rerum et. Dolorum consequuntur fugit deleniti, soluta fuga nobis. Ducimus blanditiis velit sit iste delectus obcaecati debitis omnis, assumenda accusamus cumque perferendis eos aut quidem! Aut, totam rerum, cupiditate quae aperiam voluptas rem inventore quas, ex maxime culpa nam soluta labore at amet nihil laborum? Explicabo numquam, sit fugit, voluptatem autem atque quis quam voluptate fugiat earum rem hic, reprehenderit quaerat tempore at. Aperiam.</p>
+                <p>{{ $domanda->risposta }}</p>
               </div> <!-- faq-content -->
             </li>
       
+            @endforeach
+
+            @endisset()
             
           </ul> <!-- faq-group -->
         
