@@ -16,9 +16,9 @@
         <div class="col-lg-4 text-center border-right border-secondery">
             <div class="tab-content row h-100 d-flex justify-content-center align-items-center" id="myTabContent">
                 <div class="tab-pane fade show active col-lg-12" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    $immagine={{$locandina}}
+                    
                      <div class="image_little">
-                        @include('Helper/Locandina', ['attrs' => 'imagefrm', 'imgFile' => $immagine?? ''])
+                        @include('Helper/Locandina', ['attrs' => 'imagefrm', 'imgFile' => '{{$locandina}}'])
                     </div>
                 </div>
             </div>
