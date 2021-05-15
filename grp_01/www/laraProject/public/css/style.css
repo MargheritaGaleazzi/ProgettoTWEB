@@ -2330,7 +2330,8 @@ input[type="password"]:placeholder {
   @media screen and (min-width: 480px) {
   
     form {
-      max-width: 480px;
+      max-width: 800px;
+      margin: 0px auto;
     }
  
   }
