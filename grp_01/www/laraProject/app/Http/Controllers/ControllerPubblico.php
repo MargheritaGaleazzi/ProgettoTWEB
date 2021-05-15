@@ -44,7 +44,7 @@ class ControllerPubblico extends Controller {
         $evento = $this->_catalogoModel->getEventoByCodice($codice_evento);
         $titolo = $evento->titolo;
         
-        return view('evento\dettagliEvento',['titolo'=>'bau']);
+        return view('evento\dettagliEvento',['titolo'=>$titolo]);
     }
     
 
