@@ -26,6 +26,8 @@ Route::view('/utente', 'AreaUtente2')
         ->name('utente');
 Route::view('/storico', 'StoricoUtente2')
         ->name('storico');
+Route::view('/dettagliEvento', 'evento\dettagliEvento')
+        ->name('dettagliEvento');
 Route::get('/qrcode', function () {
     return QrCode::size(250)
         ->backgroundColor(224, 122, 114)
