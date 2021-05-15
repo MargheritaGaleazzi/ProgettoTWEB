@@ -30,10 +30,6 @@
         Fine
     @endif
 </div>
-<link href='https://fonts.googleapis.com/css?family=Galindo' rel='stylesheet'>
-<style>
-#pagination{
-    font-family: 'Galindo';font-size: 20px;
-}
-</style>
+
+
 @endif
