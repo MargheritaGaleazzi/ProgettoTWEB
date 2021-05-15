@@ -9,7 +9,7 @@ class Catalogo {
 
     public function getTuttiEventi() {
          
-         return Evento::all();
+         return Evento::paginate(2);
     }
     
     /*public function getEventiFiltrati($descr=null,$reg=null,$date=null) {
