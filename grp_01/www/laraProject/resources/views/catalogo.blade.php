@@ -83,8 +83,9 @@
     @include('pagination.paginator', ['paginator' => $eventi])
 
     @endisset()
+    @endsection
 </div>
 
 
-@endsection
+
 
