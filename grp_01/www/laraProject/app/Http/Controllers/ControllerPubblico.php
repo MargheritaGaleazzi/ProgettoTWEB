@@ -21,7 +21,7 @@ class ControllerPubblico extends Controller {
         $eventi = $this->_catalogoModel->getTuttiEventi();
         
 
-        return view('catalogo')
+        return view('evento\catalogo')
                         ->with('eventi', $eventi);
     }
     
@@ -31,7 +31,7 @@ class ControllerPubblico extends Controller {
         $faq = $this->_faqModel->getfaq();
         
 
-        return view('faq')
+        return view('info\faq')
                         ->with('faq', $faq);
     }
 
