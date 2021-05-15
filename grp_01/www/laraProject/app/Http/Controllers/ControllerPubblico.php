@@ -43,8 +43,10 @@ class ControllerPubblico extends Controller {
         //Mostra la finestra con i dettagli dell'evento selezionato
         $evento = $this->_catalogoModel->getEventoByCodice($codice_evento);
         $titolo = $evento->titolo;
+        $prezzo = $evento->prezzo_biglietto;
         
-        return view('evento\dettagliEvento',['titolo'=>$titolo]);
+        return view('evento\dettagliEvento',['titolo'=>$titolo,
+                                                'prezzo'=>$prezzo]);
     }
     
 

@@ -25,7 +25,7 @@
                 {{ $titolo }}
             </h3>
             <h5>
-                $prezzo_biglietto
+                {{$prezzo}} €
             </h5>
             <p>
                 Prezzo pieno se in sconto
