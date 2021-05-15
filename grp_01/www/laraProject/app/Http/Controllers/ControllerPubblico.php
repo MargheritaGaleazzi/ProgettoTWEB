@@ -42,9 +42,11 @@ class ControllerPubblico extends Controller {
 
         //Mostra la finestra con i dettagli dell'evento selezionato
         $evento = $this->_catalogoModel->getEventoByCodice($codice_evento);
+        $titolo = $evento->titolo;
         
         return view('evento\dettagliEvento')
-                        ->with('eventoSelezionato', $evento);
+                        ->with('eventoSelezionato', $evento)
+                        ->with('titolo', $titolo);
     }
     
 

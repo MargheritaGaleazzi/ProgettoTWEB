@@ -14,7 +14,7 @@ class Catalogo {
     
     public function getEventoByCodice($codice_evento) {
 
-        return Evento::where('codice_evento', $codice_evento);       
+        return Evento::where('codice_evento', $codice_evento)->first();       
     }
     
     /*public function getEventiFiltrati($descr=null,$reg=null,$date=null) {
