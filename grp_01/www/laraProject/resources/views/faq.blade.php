@@ -17,13 +17,9 @@
     </div>
 
       <section class="faq">
-        <ul class="categories">
-          <li><a class="selected" href="#basics">Basics</a></li>
-          <li><a href="#mobile">Mobile</a></li>
-          <li><a href="#account">Account</a></li>
-        </ul> <!-- categories -->
+         <!-- categories -->
       
-        <div class="faq-items">
+        
           <ul id="basics" class="faq-group">
             <li class="faq-title"><h2>Basics</h2></li>
             <li>
@@ -54,7 +50,7 @@
               </div> <!-- faq-content -->
             </li>
           </ul> <!-- faq-group -->
-        </div> <!-- faq-items -->
+        
 
         <a href="#0" class="cd-close-panel">Close</a>
 
