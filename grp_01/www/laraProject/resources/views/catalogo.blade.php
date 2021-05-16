@@ -12,34 +12,78 @@
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <input type="text" class="form-control search-slt" placeholder="Enter Search">
+                            <input type="text" class="form-control search-slt" placeholder="Cerca...">
                         </div>
                       <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <input type="month" class="form-control search-slt" placeholder="Enter Search">
+                            <input type="month" class="form-control search-slt">
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                             <select class="form-control search-slt">
-                                <option>Choose Rating</option>
-<!--                               4 stars and up -->
+                                <option>Seleziona luogo:</option>
                                 <option>
-                                  <a><p>&#9733; &#9733; &#9733; &#9733; &#x2606;</p></a href="#">
+                                  <a><p>Abruzzo</p></a href="#">
                                 </option>
-<!--                               3 stars and up -->
                                 <option>
-                                    <a><p>&#9733; &#9733; &#9733; &#x2606; &#x2606;</p></a href="#">
+                                    <a><p>Basilicata</p></a href="#">
                                 </option>
-  <!--                               2 stars and up -->
                                 <option>
-                                    <a><p>&#9733; &#9733; &#x2606; &#x2606; &#x2606;</p></a href="#">
+                                    <a><p>Calabria</p></a href="#">
                                 </option>
-  <!--                               1 star and up -->
                                 <option>
-                                    <a><p>&#9733; &#x2606; &#x2606; &#x2606; &#x2606;</p></a href="#">
+                                    <a><p>Campania</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>Emilia-Romagna</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>Friuli Venezia Giulia</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>Lazio</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>Liguria</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>Lombardia</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>Marche</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>Molise</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>Piemonte</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>Puglia</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>Sardegna</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>Sicilia</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>Toscana</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>Trentino-Alto Adige</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>Umbria</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>Valle d'Aosta</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>Veneto</p></a href="#">
                                 </option>
                             </select>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <button type="button" class="btn btn-danger wrn-btn">Search</button>
+                            <button type="button" class="btn btn-danger wrn-btn">Cerca!</button>
                         </div>
                     </div>
                 </div>
