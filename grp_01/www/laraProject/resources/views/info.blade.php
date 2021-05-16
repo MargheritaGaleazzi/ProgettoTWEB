@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="blogtitlepage">
-                        <h2>blog</h2>
+                        <h2>Informazioni sul nostro servizio</h2>
                     </div>
                 </div>
             </div>
@@ -35,9 +35,9 @@
                         <figure><img src="images/iscr.png" alt="img" /></figure>
                         <h3>Iscriversi come organizzatori:</h3>
                         
-                        <p> Se sei un organizzatore di eventi è vorresti sponsorizzare e vendere
+                        <p> Se sei un organizzatore di eventi e vorresti sponsorizzare e vendere
                         i tuoi biglietti sul nostro sito, ti basterà contattare
-                        l'amministratore del sito via e-mail.</p>
+                        l'amministratore del sito via <a href= "mailto:tecnologiewebprogettotw@gmail.com"> e-mail.</a></p>
                     </div>
                 </div>
                 

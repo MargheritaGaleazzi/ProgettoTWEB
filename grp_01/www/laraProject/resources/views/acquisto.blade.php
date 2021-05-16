@@ -23,8 +23,6 @@
                 <div class="col my-auto">
                     <h2>Procedi con l'acquisto!</h2>
                 </div>
-                <div class="col-auto text-center my-auto pl-0 pt-sm-4"> <img class="img-fluid my-auto align-items-center mb-0 pt-3" src="{{ asset('/images/logo.jpg') }}" width="115" height="115">    
-                </div>
             </div>
         </div>
         <div class="card-body">
@@ -48,7 +46,7 @@
                                        
                                         <div class="col my-auto"> <small>Quantità : <div class="qty-changer">
             
-            <input id="quant" class="qty-input form-group" type="number" value="1"/>
+            <input id="quant" class="qty-input form-group" type="number" value="1" min="1"/>
             
         </div></small></div>
                                         <div class="col my-auto">
