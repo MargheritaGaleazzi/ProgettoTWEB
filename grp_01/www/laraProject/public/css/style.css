@@ -1997,6 +1997,8 @@ input[type="password"]:placeholder {
   box-sizing: border-box;
 }
 
+/*------------------------------------------------------Stile del profilo utente--------------------------------------------------------*/
+
 .emp-profile{
     padding: 3%;
     margin-top: 3%;
@@ -2058,6 +2060,7 @@ input[type="password"]:placeholder {
     font-weight: 600;
     color: #cc0014;
 }
+/*------------------------------------------------------Stile del biglietti storico--------------------------------------------------------*/
 .ticket {
   font-family: sans-serif;
 
@@ -2182,7 +2185,7 @@ input[type="password"]:placeholder {
 .ticket-1 {
     background-image: url(https://images.unsplash.com/photo-1483101974978-cf266fdf1139?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3289&q=80);
 }
-
+/*------------------------------------------------------Stile del prodotti catalogo--------------------------------------------------------*/
 .strike-text {
     color: red;
     text-decoration: line-through
@@ -2775,6 +2778,9 @@ Primary style
     .no-js .faq-content {
       display: block;
     }
+    
+/*------------------------------------------------------Stile della ricerca nel catalogo--------------------------------------------------------*/
+    
     .search-sec{
     padding: 2rem;
 }
@@ -2798,6 +2804,7 @@ Primary style
     border-radius:0;
 }
 
+/*------------------------------------------------------Stile del paginatore--------------------------------------------------------*/
 #pagination{
     font-family: sans-serif;
     font-size: 20px;
