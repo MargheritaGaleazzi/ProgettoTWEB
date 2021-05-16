@@ -28,6 +28,15 @@ class ControllerPubblico extends Controller {
                         ->with('eventi', $eventi);
     }
     
+    public function mostraRecenti() {
+
+        //Mostra il catalogo con tutti gli eventi
+        $ultimieventi = $this->_catalogoModel->getEventiRecenti();
+        
+        return view('homePubblica')
+                        ->with('ultimieventi', $ultimieventi);
+    }
+    
     public function mostrafaq() {
 
         //Prende tutte le FAQ

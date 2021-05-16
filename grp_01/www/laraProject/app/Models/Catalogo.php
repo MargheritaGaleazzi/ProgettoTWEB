@@ -17,6 +17,11 @@ class Catalogo {
         return Evento::where('codice_evento', $codice_evento)->first();       
     }
     
+        public function getEventiRecenti() {
+
+        return Evento::orderby('data_ora')->limit(2);       
+    }
+    
     /*public function getEventiFiltrati($descr=null,$reg=null,$date=null) {
         $dataDivisa=explode("-",$date);
         //se non specifico descrizone e regione ricerca per data
