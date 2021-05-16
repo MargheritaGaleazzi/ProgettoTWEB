@@ -21,7 +21,7 @@
         <div class="card-header bg-white">
             <div class="media flex-sm-row flex-column-reverse justify-content-between ">
                 <div class="col my-auto">
-                    <h4 class="mb-0">Thanks for your Order,<span class="change-color">Anjali</span> !</h4>
+                    <h2>Procedi con l'acquisto!</h2>
                 </div>
                 <div class="col-auto text-center my-auto pl-0 pt-sm-4"> <img class="img-fluid my-auto align-items-center mb-0 pt-3" src="{{ asset('/images/logo.jpg') }}" width="115" height="115">    
                 </div>
