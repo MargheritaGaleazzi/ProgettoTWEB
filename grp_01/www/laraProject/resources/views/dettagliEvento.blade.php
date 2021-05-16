@@ -49,6 +49,7 @@
             </ul>
         </div>
     </div>
+        @include('Helper/Mappa')
     </div>
 </div>
 
