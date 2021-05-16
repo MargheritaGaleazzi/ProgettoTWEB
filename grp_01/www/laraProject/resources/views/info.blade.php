@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 margin">
                     <div class="news-box">
-                        <figure><img src="images/1.jpg" alt="img" /></figure>
+                        <figure><img src="images/logone.jpg" alt="img" /></figure>
                         <h3>Chi siamo?</h3>
                         <span>★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★</span>
                         <p> Bigliettone è un sito che si occupa della compravendita di biglietti
@@ -32,7 +32,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 margin">
                     <div class="news-box">
-                        <figure><img src="images/2.jpg" alt="img" /></figure>
+                        <figure><img src="images/iscr.png" alt="img" /></figure>
                         <h3>Iscriversi come organizzatori:</h3>
                         <span>★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★</span>
                         <p> Se sei un organizzatore di eventi è vorresti sponsorizzare e vendere
@@ -43,7 +43,7 @@
                 
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     <div class="news-box">
-                        <figure><img src="images/3.jpg" alt="img" /></figure>
+                        <figure><img src="images/biglietti.jpg" alt="img" /></figure>
                         <h3>Presentare il biglietto:</h3>
                         <span>★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★</span>
                         <p> Una volta effettuato l'aqcuisto insieme al biglietto le verrà assegnato
@@ -53,7 +53,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     <div class="news-box">
-                        <figure><img src="images/1.jpg" alt="img" /></figure>
+                        <figure><img src="images/qrread.jpg" alt="img" /></figure>
                         <h3>Stampa del biglietto:</h3>
                         <span>★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★</span>
                         <p> Hai fini dell'accesso al servizio, non è necessario stampare nulla, il codice QR può
@@ -62,7 +62,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     <div class="news-box">
-                        <figure><img src="images/1.jpg" alt="img" /></figure>
+                        <figure><img src="images/organ.jpg" alt="img" /></figure>
                         <h3>I servizi offerti agli organizzatori:</h3>
                         <span>★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★</span>
                         <p> Gli organizzatori sulla nostra piattaforma possono vendere i biglietti per i loro concerti,
@@ -71,7 +71,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     <div class="news-box">
-                        <figure><img src="images/2.jpg" alt="img" /></figure>
+                        <figure><img src="images/conc.jpg" alt="img" /></figure>
                         <h3>Perchè scegliere noi?</h3>
                         <span>★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★</span>
                         <p> Per la nostra grande professionalità, la gamma di concerti offerti 
