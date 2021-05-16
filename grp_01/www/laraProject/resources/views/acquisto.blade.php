@@ -38,11 +38,11 @@
                     <div class="card card-2">
                         <div class="card-body">
                             <div class="media">
-                                <div class="sq align-self-center "> <img class="img-fluid my-auto align-self-center mr-2 mr-md-4 pl-0 p-0 m-0" src="https://i.imgur.com/RJOW4BL.jpg" width="135" height="135" /> </div>
+                                <div class="sq align-self-center "> @include('Helper/LocandinaDettaglio', ['attrs' => 'imagefrm', 'imgFile' => $locandina]) </div>
                                 <div class="media-body my-auto text-right">
                                     <div class="row my-auto flex-column flex-md-row">
                                         <div class="col my-auto">
-                                            <h6 class="mb-0"> Jack Jacs</h6>
+                                            <h6 class="mb-0"> {{ $titolo }}</h6>
                                         </div>
                                         
                                        
@@ -52,7 +52,7 @@
             
         </div></small></div>
                                         <div class="col my-auto">
-                                            <h6 class="mb-0">&#8377;3,600.00</h6>
+                                            <h6 class="mb-0">{{$prezzo}} €</h6>
                                         </div>
                                     </div>
                                 </div>
