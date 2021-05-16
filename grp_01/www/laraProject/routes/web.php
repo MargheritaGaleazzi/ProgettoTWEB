@@ -26,8 +26,8 @@ Route::view('/utente', 'AreaUtente2')
         ->name('utente');
 Route::view('/storico', 'StoricoUtente2')
         ->name('storico');
-//Route::view('/dettagliEvento', 'evento\dettagliEvento')
-        //->name('dettagliEvento');
+Route::view('/acquisto', 'acquisto')
+        ->name('acquisto');
 Route::get('/dettagliEvento/{codice_evento}', 'ControllerPubblico@mostraDettagli')
         ->name('dettagliEvento');
 
