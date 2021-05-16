@@ -24,12 +24,12 @@
     <div class="row mt-4">
 
         <div class="col-lg-4 text-center border-right border-secondery">
-            <div class="tab-content row h-100 d-flex justify-content-center align-items-center" id="myTabContent">
+            <div class="tab-content row h-100 d-flex justify-content-center" id="myTabContent">
                 <div class="tab-pane fade show active col-lg-12" id="home" role="tabpanel" aria-labelledby="home-tab">
                     
-                     
-                        @include('Helper/LocandinaDettaglio', ['attrs' => 'imagefrm', 'imgFile' => $locandina])
                     
+                        @include('Helper/LocandinaDettaglio', ['attrs' => 'imagefrm', 'imgFile' => $locandina])
+                        {{ $informazioni }}
                 </div>
             </div>
         </div>
@@ -48,10 +48,11 @@
                 <li class="pb-2"><b>Data e ora:</b> {{$data_ora}} </li>
                 <li class="pb-2"><b>Società organizzatrice:</b> {{$organizzatore}} </li>
             </ul>
+             {!!$coordinate_maps!!}
         </div>
     </div>
         
-         {!!$coordinate_maps!!}
+        
         
     </div>
 </div>
