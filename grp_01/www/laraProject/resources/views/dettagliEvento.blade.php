@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/searchbar.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}">
 
+
 @extends('layout.zonaPubblica')
 
 @section('title', 'Dettaglio')
@@ -49,7 +50,11 @@
             </ul>
         </div>
     </div>
-        @include('Helper/Mappa')
+        <div>
+          <iframe src="{{$coordinate_maps}}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+     </iframe>
+        </div>
+        
     </div>
 </div>
 
