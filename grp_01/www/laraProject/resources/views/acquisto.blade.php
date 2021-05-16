@@ -48,7 +48,7 @@
                                        
                                         <div class="col my-auto"> <small>Quantità : <div class="qty-changer">
             
-            <input class="qty-input form-group" type="number" value="1"/>
+            <input id="quant" class="qty-input form-group" type="number" value="1"/>
             
         </div></small></div>
                                         <div class="col my-auto">
@@ -92,7 +92,7 @@
                         <h2 class="mb-0 font-weight-bold">TOTALE</h2>
                     </div>
                     <div class="col-auto my-auto ml-auto">
-                        <h5 class="display-3 ">&#8377; 5,528</h5>
+                        <h5 class="display-3 ">document.getElementById('quant').value €</h5>
                     </div>
                     <div class="col-auto my-auto ml-auto">
                         <button>Procedi con il pagamento</button>
