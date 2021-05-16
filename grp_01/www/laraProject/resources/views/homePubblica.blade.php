@@ -20,8 +20,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>Eventi in evidenza</h2>
-                        <p>Sezione degli eventi con copertina dell'evanto, a seguito di un click si apre la pagina dell'evento con i dettagli e la possibilità di acquisto</p>
+                        <h2>Bigliettone</h2>
+                        <p>La tua passione, alla portata di un click!!! Acquista da noi i biglietti per i concerti dei tuoi artisti preferiti, non te ne pentirai!!!</p>
                     </div>
                 </div>
             </div>
@@ -29,11 +29,11 @@
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margin">
                     <div class="Albums-box">
                         <figure>
-                            <a href="images/album1.jpg" class="fancybox" rel="ligthbox">
-                                <img src="images/album1.jpg" class="zoom img-fluid " alt="">
+                            <a href="{{ route('info') }}" class="fancybox" rel="ligthbox">
+                                <img src="{{ asset('/images/about.jpg') }}" class="zoom img-fluid " alt="">
                             </a>
                             <span class="hoverle">
-                        <a href="images/album1.jpg" class="fancybox" rel="ligthbox"><img src="images/search.png"></a>
+                        <a href="{{ route('info') }}" class="fancybox" rel="ligthbox"><img src="images/search.png">Vedi le INFO</a>
                         </span>
                         </figure>
                     </div>
@@ -41,11 +41,11 @@
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margin">
                     <div class="Albums-box">
                         <figure>
-                            <a href="images/album2.jpg" class="fancybox" rel="ligthbox ">
-                                <img src="images/album2.jpg" class="zoom img-fluid " alt="">
+                            <a href="{{ route('faq') }}" class="fancybox" rel="ligthbox ">
+                                <img src="{{ asset('/images/domande.jpg') }}" class="zoom img-fluid " alt="">
                             </a>
                             <span class="hoverle">
-                        <a href="images/album2.jpg" class="fancybox" rel="ligthbox"><img src="images/search.png"></a>
+                        <a href="{{ route('faq') }}" class="fancybox" rel="ligthbox"><img src="images/search.png">Vedi le FAQ</a>
                         </span>
                         </figure>
                     </div>
