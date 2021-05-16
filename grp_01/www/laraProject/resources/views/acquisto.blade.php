@@ -68,10 +68,16 @@
                     <div class="row justify-content-between">
 
                         <div class="flex-sm-col text-right col">
-                            <p class="mb-1"><b>Total</b></p>
+                            <p class="mb-1"><b>Metodo di pagamento</b></p>
                         </div>
                         <div class="flex-sm-col col-auto">
-                            <p class="mb-1">&#8377;4,835</p>
+                            <form action="#">
+                                <select>
+                                <option>Bonifico</option>
+                                <option>Carta di credito</option>
+                                <option>PayPal</option>
+                                </select>
+                            
                         </div>
                     </div>
                     
@@ -83,7 +89,7 @@
             <div class="jumbotron-fluid">
                 <div class="row justify-content-between ">
                                         <div class="col-auto my-auto ">
-                        <h2 class="mb-0 font-weight-bold">TOTALE PAID</h2>
+                        <h2 class="mb-0 font-weight-bold">TOTALE</h2>
                     </div>
                     <div class="col-auto my-auto ml-auto">
                         <h5 class="display-3 ">&#8377; 5,528</h5>
@@ -91,6 +97,7 @@
                     <div class="col-auto my-auto ml-auto">
                         <button>Procedi con il pagamento</button>
                     </div>
+                    </form>
                 </div>
 
             </div>
