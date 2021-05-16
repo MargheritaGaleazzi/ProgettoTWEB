@@ -2809,7 +2809,11 @@ Primary style
     font-family: sans-serif;
     font-size: 20px;
 }
-
+.image_little .image{
+    width:100px;
+    height:100px;
+    object-fit:cover;
+}
 
 
   }

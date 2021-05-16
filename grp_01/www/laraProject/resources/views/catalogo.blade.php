@@ -101,7 +101,7 @@
             <div class="row p-2 bg-white border rounded">
                 <div class="col-md-3 mt-1">
                     <div class="image">
-                        @include('Helper/Locandina', ['attrs' => 'imagefrm', 'imgFile' => $evento->locandina])
+                        @include('Helper/Locandina', ['imgFile' => $evento->locandina])
                     </div>
                 </div>
                 <div class="col-md-6 mt-1">

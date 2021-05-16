@@ -28,7 +28,7 @@
                 <div class="tab-pane fade show active col-lg-12" id="home" role="tabpanel" aria-labelledby="home-tab">
                     
                     
-                        @include('Helper/LocandinaDettaglio', ['attrs' => 'imagefrm', 'imgFile' => $locandina])
+                        @include('Helper/LocandinaDettaglio', ['imgFile' => $locandina])
                         {{ $informazioni }}
                 </div>
             </div>

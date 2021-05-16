@@ -38,7 +38,7 @@
                     <div class="card card-2">
                         <div class="card-body">
                             <div class="media">
-                                <div class="sq align-self-center "> @include('Helper/LocandinaDettaglio', ['attrs' => 'imagefrm', 'imgFile' => $locandina]) </div>
+                                <div class="sq align-self-center "> @include('Helper/LocandinaAcquisto', ['imgFile' => $locandina]) </div>
                                 <div class="media-body my-auto text-right">
                                     <div class="row my-auto flex-column flex-md-row">
                                         <div class="col my-auto">
