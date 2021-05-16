@@ -92,7 +92,7 @@
                         <h2 class="mb-0 font-weight-bold">TOTALE</h2>
                     </div>
                     <div class="col-auto my-auto ml-auto">
-                        <h5 class="display-3 ">document.getElementById('quant').value €</h5>
+                        <h5 class="display-3 ">TOTALE €</h5>
                     </div>
                     <div class="col-auto my-auto ml-auto">
                         <button>Procedi con il pagamento</button>
