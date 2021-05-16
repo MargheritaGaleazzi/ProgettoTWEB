@@ -17,7 +17,7 @@
 @section('content')
 <div class="container-fluid my-5 d-flex justify-content-center">
     <div class="card card-1">
-        <!--Intestazione con logo-->
+        <!--Intestazione-->
         <div class="card-header bg-white">
             <div class="media flex-sm-row flex-column-reverse justify-content-between ">
                 <div class="col my-auto">
@@ -28,7 +28,7 @@
         <div class="card-body">
             <div class="row justify-content-between mb-3">
                 <div class="col-auto">
-                    <h6 class="color-1 mb-0 change-color">Acquista:</h6>
+                    <h6 class="color-1 mb-0 change-color">Stai acquistando:</h6>
                 </div>
             </div>
             <div class="row">

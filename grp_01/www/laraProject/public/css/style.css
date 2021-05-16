@@ -818,12 +818,9 @@
      position: relative;
      border-bottom: solid #eee 1px;
 }
- .main-menu ul>li .sub-down li a::before {
-}
+
  .main-menu ul>li .sub-down li a:hover {
      color: #111111;
-}
- .main-menu ul>li .sub-down li a:hover::before {
 }
  .main-menu ul li:first-child {
      margin-left: 0;
@@ -878,9 +875,7 @@
      display: inline-block;
      vertical-align: middle;
 }
- .main-menu ul>li:nth-child (6) {
-     padding-right: 0px;
-}
+
  .nav>li {
      position: inherit;
      display: inline-block;
@@ -893,8 +888,6 @@
      margin: 0 auto;
      right: 0;
      padding: 15px 0px;
-}
- .sub-full {
 }
  .simple-down {
      padding: 15px;
@@ -1548,14 +1541,7 @@
  .page-top {
      margin-top: 85px;
 }
- img.zoom {
-     width: 100%;
-     object-fit: cover;
-     -webkit-transition: all .3s ease-in-out;
-     -moz-transition: all .3s ease-in-out;
-     -o-transition: all .3s ease-in-out;
-     -ms-transition: all .3s ease-in-out;
-}
+
  .transition {
      -webkit-transform: scale(1.2);
      -moz-transform: scale(1.2);
@@ -2118,7 +2104,6 @@ input[type="password"]:placeholder {
   width: 100px; 
   height: 100px;
   content:"";
-  display: inline-block;
   float: left;
   position: absolute;
   left: -160px;
@@ -2156,7 +2141,7 @@ input[type="password"]:placeholder {
 .ticketbutton{
      position: absolute;
      width:20%;
-     fontsize:10px;
+     font-size:10px;
      color:#FFF;
      text-decoration: none;
   top: 115px;
@@ -2234,6 +2219,11 @@ input[type="password"]:placeholder {
 }
 
 /*--------------------------------------------------------------------- sign up section ---------------------------------------------------------------------*/
+
+.sub-entry {
+  width: 50%;
+  float: left;
+}
 
 *, *:before, *:after {
     -moz-box-sizing: border-box;
