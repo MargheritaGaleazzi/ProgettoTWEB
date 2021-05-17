@@ -15,7 +15,7 @@
 <script type="text/javascript">
             function prezzoTotale(){
                 var totale = document.ordine.elements[1].value * $prezzo;
-                return totale;
+                document.getElementById('totale').innerHTML=totale;
             }
 
         </script>
@@ -100,9 +100,20 @@
                                         <div class="col-auto my-auto ">
                         <h2 class="mb-0 font-weight-bold">TOTALE</h2>
                     </div>
+                    
                     <div class="col-auto my-auto ml-auto">
-                        <h5 class="display-3 ">prezzoTotale() €</h5>
+                        <h5 id="totale" class="display-3 "> €</h5>
                     </div>
+                    
+                    <script>
+            
+                var totale = document.ordine.elements[0].value;
+                document.getElementById('totale').innerHTML=totale;
+            
+
+        </script>
+                    
+                    
                     <div class="col-auto my-auto ml-auto">
                         <button>Procedi con il pagamento</button>
                     </div>
