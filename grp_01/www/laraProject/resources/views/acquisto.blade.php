@@ -10,6 +10,17 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/searchbar.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}">
+
+
+<script type="text/javascript">
+            function prezzoTotale(){
+                var totale = document.ordine.elements[1].value * $prezzo;
+                return totale;
+            }
+
+        </script>
+
+
 @extends('layout.zonaPubblica')
 
 @section('title', 'Dettaglio')
@@ -45,9 +56,9 @@
                                         
                                        
                                         <div class="col my-auto"> <small>Quantità : <div class="qty-changer">
-            
+                                                    <form name='ordine'>
             <input id="quant" class="qty-input form-group" type="number" value="1" min="1"/>
-            
+                                                    </form>
         </div></small></div>
                                         <div class="col my-auto">
                                             <h6 class="mb-0">{{$prezzo}} €</h6>
@@ -75,7 +86,7 @@
                                 <option>Carta di credito</option>
                                 <option>PayPal</option>
                                 </select>
-                            
+                            </form>
                         </div>
                     </div>
                     
@@ -90,7 +101,7 @@
                         <h2 class="mb-0 font-weight-bold">TOTALE</h2>
                     </div>
                     <div class="col-auto my-auto ml-auto">
-                        <h5 class="display-3 ">TOTALE €</h5>
+                        <h5 class="display-3 ">prezzoTotale() €</h5>
                     </div>
                     <div class="col-auto my-auto ml-auto">
                         <button>Procedi con il pagamento</button>
