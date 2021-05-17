@@ -102,12 +102,13 @@
                     </div>
                     
                     <div class="col-auto my-auto ml-auto">
-                        <h5 id="totale" class="display-3 "> €</h5>
+                        <h5 id="totale" class="display-3 ">{{$prezzo}}</h5><h5>€</h5>
                     </div>
                     
                     <script >
           function prezzoTotale() {
-                var totale = document.ordine.elements[0].value;
+                var prezzo = document.ordine.elements[0].value;
+                var totale=prezzo*<?php echo $prezzo; ?>;
                 document.getElementById('totale').innerHTML=totale;
             }
 
