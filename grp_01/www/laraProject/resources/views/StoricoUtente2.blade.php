@@ -18,7 +18,7 @@
   </div>
 
   <div class="ticketlocation">
-      {!! QrCode::generate('Codice Biglietto: '.{{$codice_biglietto}}.'Codice Utente: '.{{$codice_utente}}); !!}
+      {!! QrCode::generate('Codice Biglietto: '); !!}
     <span>KINGSTON TOWN</span>
     </br>
   </div>
