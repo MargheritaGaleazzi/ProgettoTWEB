@@ -54,7 +54,7 @@
                                                     </form>
         </div></small></div>
                                         <div class="col my-auto">
-                                            <h6 class="mb-0">{{$prezzo}} €</h6>
+                                            <h6 class="mb-0">@include('Helper/Prezzo')</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -95,12 +95,18 @@
                     </div>
                     
                     <div class="col-auto my-auto ml-auto">
+                    <?php if($biglietto_scontato==1){
+                    $prezzo=$prezzo-(($prezzo*$sconto)/100);
+                    }?>
                         <h5  class="display-3 "><span id="totale">{{$prezzo}}</span><span>€</span></h5>
                     </div>
                     
                     <script >
+                        
+                        
           function prezzoTotale() {
                 var prezzo = document.ordine.elements[0].value;
+
                 var totale=prezzo*<?php echo $prezzo; ?>;
                 document.getElementById('totale').innerHTML=totale;
             }

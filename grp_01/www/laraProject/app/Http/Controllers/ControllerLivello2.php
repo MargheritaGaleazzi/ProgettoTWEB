@@ -23,8 +23,13 @@ class ControllerLivello2 extends Controller {
         $titolo = $evento->titolo;
         $prezzo = $evento->prezzo_biglietto;
         $locandina = $evento->locandina;
+        $biglietto_scontato = $evento->biglietto_scontato;
+        $sconto = $evento->sconto;
         
         return view('acquisto',['titolo'=>$titolo,
+                                                'evento'=>$evento,
+                                                'biglietto_scontato'=>$biglietto_scontato,
+                                                'sconto'=>$sconto,
                                                 'prezzo'=>$prezzo,
                                                 'locandina'=>$locandina
                                             ]);

@@ -2810,7 +2810,7 @@ Primary style
   font-family: Roboto, sans-serif;
   font-size: 20px;
   del {
-    color: rgba(red, 0.5);
+    color:#eb4034;
     text-decoration: none;
     position: relative;
     &:before {
@@ -2825,12 +2825,7 @@ Primary style
       transform: rotate(-7deg);
     }
   }
-  ins {
-    color: green;
-    font-size: 32px;
-    text-decoration: none;
-    padding: 1em 1em 1em .5em;
-  }
+  
 }
 
 
