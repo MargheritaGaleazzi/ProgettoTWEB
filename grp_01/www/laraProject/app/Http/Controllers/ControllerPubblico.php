@@ -53,8 +53,14 @@ class ControllerPubblico extends Controller {
         $luogo = $evento->luogo;
         $stato_evento = $evento->stato_evento;
         $locandina = $evento->locandina;
+        $biglietto_scontato = $evento->biglietto_scontato;
+        $sconto = $evento->sconto;
         
-        return view('dettagliEvento',['titolo'=>$titolo,
+        
+        return view('dettagliEvento',[          'evento'=>$evento,
+                                                'biglietto_scontato'=>$biglietto_scontato,
+                                                'sconto'=>$sconto,
+                                                'titolo'=>$titolo,
                                                 'prezzo'=>$prezzo,
                                                 'organizzatore'=>$organizzatore,
                                                 'data_ora'=>$data_ora,

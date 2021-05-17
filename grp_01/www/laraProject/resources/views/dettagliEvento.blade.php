@@ -38,7 +38,7 @@
                 {{ $titolo }}
             </h3>
             <h5>
-                {{$prezzo}} €
+                @include('Helper/Prezzo')
             </h5>
             <p>
                 Prezzo pieno se in sconto

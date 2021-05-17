@@ -113,7 +113,7 @@
                 </div>
                 <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                     <div class="d-flex flex-row align-items-center">
-                        <h4 class="mr-1">{{ $evento->prezzo_biglietto }} €</h4><span class="strike-text"></span>
+                        <h4 class="mr-1">@include('Helper/Prezzo')</h4><span class="strike-text"></span>
                     </div>
                     <div class="d-flex flex-column mt-4"><a href="{{route('dettagliEvento',[$evento->codice_evento])}}"><button class="btn btn-primary btn-sm" type="button">Dettagli</button></a>
                         
