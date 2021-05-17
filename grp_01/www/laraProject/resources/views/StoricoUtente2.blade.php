@@ -18,7 +18,7 @@
   </div>
 
   <div class="ticketlocation">
-      {!! QrCode::generate('MyNotePaper'); !!}
+      {!! QrCode::generate('Codice Biglietto: '.{{$codice_biglietto}}.'Codice Utente: '.{{$codice_utente}}); !!}
     <span>KINGSTON TOWN</span>
     </br>
   </div>
