@@ -102,7 +102,7 @@
                     </div>
                     
                     <div class="col-auto my-auto ml-auto">
-                        <h5 id="totale" class="display-3 ">{{$prezzo}}</h5><h5>€</h5>
+                        <h5  class="display-3 "><span id="totale">{{$prezzo}}</span><span>€</span></h5>
                     </div>
                     
                     <script >
