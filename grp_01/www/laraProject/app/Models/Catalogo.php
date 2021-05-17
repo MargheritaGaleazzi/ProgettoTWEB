@@ -17,6 +17,14 @@ class Catalogo {
         return Evento::where('codice_evento', $codice_evento)->first();       
     }
     
+    public function getEventoConFiltri($descr=null, $luogo = null, $data= null) {
+        $eventi=Evento::all();
+        if (is_null($descr)&& is_null($data)) {
+            $eventi=$eventi->where('luogo', $luogo);
+        }        
+        return $eventi->paginate(1);
+    }
+    
     
     /*public function getEventiFiltrati($descr=null,$reg=null,$date=null) {
         $dataDivisa=explode("-",$date);

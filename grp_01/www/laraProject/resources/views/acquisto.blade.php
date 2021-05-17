@@ -12,13 +12,6 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}">
 
 
-<script type="text/javascript">
-            function prezzoTotale(){
-                var totale = document.ordine.elements[1].value * $prezzo;
-                document.getElementById('totale').innerHTML=totale;
-            }
-
-        </script>
 
 
 @extends('layout.zonaPubblica')
