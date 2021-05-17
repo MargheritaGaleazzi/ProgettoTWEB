@@ -21,7 +21,7 @@
                 <div class="col-md-12">
                     <div class="titlepage">
                         <h2>Bigliettone</h2>
-                        <p>La tua passione, alla portata di un click!!! Acquista da noi i biglietti per i concerti dei tuoi artisti preferiti, non te ne pentirai!!!</p>
+                        <p>La tua passione, alla portata di un click! Acquista da noi i biglietti per i concerti dei tuoi artisti preferiti, non te ne pentirai!!!</p>
                     </div>
                 </div>
             </div>
@@ -49,9 +49,17 @@
                         </span>
                         </figure>
                     </div>
-                </div>
-
+                </div>              
             </div>
+            <div>
+                <center>
+                 <h2>Clicca sulla chitarra per effettuare il login!</h2><br>
+                      <img alt="Immagine casa discografica" src="images/mappa.jpg" usemap="#map">
+                      <map name="map">
+                          <area shape="rect" alt="Login" title="Registrati o effettua il login" coords="51,156,129,296" href="{{ route('login') }}">
+                      </map>
+                </center>
+            </div><br>
         </div>
     </div>
     <!-- end Concerti -->
