@@ -56,7 +56,7 @@
                                         
                                        
                                         <div class="col my-auto"> <small>Quantità : <div class="qty-changer">
-                                                    <form name='ordine'>
+                                                    <form name='ordine' onchange="prezzoTotale()">
             <input id="quant" class="qty-input form-group" type="number" value="1" min="1"/>
                                                     </form>
         </div></small></div>
@@ -105,11 +105,11 @@
                         <h5 id="totale" class="display-3 "> €</h5>
                     </div>
                     
-                    <script>
-            
+                    <script >
+          function prezzoTotale() {
                 var totale = document.ordine.elements[0].value;
                 document.getElementById('totale').innerHTML=totale;
-            
+            }
 
         </script>
                     
