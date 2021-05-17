@@ -26,11 +26,12 @@
         <div class="col-lg-4 text-center border-right border-secondery">
             <div class="tab-content row h-100 d-flex justify-content-center" id="myTabContent">
                 <div class="tab-pane fade show active col-lg-12" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    
-                    
                         @include('Helper/LocandinaDettaglio', ['imgFile' => $locandina])
                         {{ $informazioni }}
                 </div>
+                <a href="{{route('acquisto',[$evento->codice_evento])}}">
+                    <button class="btn btn-outline-primary btn-sm mt-2" type="button">Compra</button>
+                </a>
             </div>
         </div>
         <div class="col-lg-7">

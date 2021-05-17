@@ -105,7 +105,9 @@
                     </div>
                 </div>
                 <div class="col-md-6 mt-1">
+                    <a href="{{route('dettagliEvento',[$evento->codice_evento])}}">
                     <p class="nomeprod">{{ $evento->titolo }}</p>
+                    </a>
                     <div class="d-flex flex-row">
                         <div class="mt-1 mb-1 spec-1"><span>{{ $evento->data_ora }}</span><span class="dot"></span><span>{{ $evento->luogo }}</span><span class="dot"></span><span>{{ $evento->societa_organizzatrice }}<br></span></div>
                     </div>
