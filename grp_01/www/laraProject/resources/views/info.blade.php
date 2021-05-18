@@ -56,7 +56,7 @@
                         <figure><img src="images/qrread.jpg" alt="img" /></figure>
                         <h3>Stampa del biglietto:</h3>
                         
-                        <p> Hai fini dell'accesso al servizio, non è necessario stampare nulla, il codice QR può
+                        <p> Ai fini dell'accesso al servizio, non è necessario stampare nulla, il codice QR può
                         essere anche salvato e mostrato dal celulare.  </p>
                     </div>
                 </div>
@@ -75,10 +75,16 @@
                         <h3>Perchè scegliere noi?</h3>
                         
                         <p> Per la nostra grande professionalità, la gamma di concerti offerti 
-                        e la facilità nell'effettuare l'acquisto.</p>
+                            e la facilità nell'effettuare l'acquisto.</p>
                     </div>
                 </div>
             </div>
+            
+            <br><br><h1>MODALITA' DI FORNITURA DEI SERVIZI</h1>
+            <p style="text-align: justify"> Il nostro sito è in grado di mostrarvi tutti gli eventi offerti dalle società organizzatrici: cliccando sull'evento di interesse,
+               è possibile visualizzare tutte le caratteristiche inerenti, con indicazioni riguardo il luogo in cui si svolgerà, la data, la società organizzatrice che offre l'evento,
+               il programma offerto ed informazioni riguardo gli orari di ingresso presso la struttura. Per quanto riguarda l'acquisto dei biglietti, può essere effettuato esclusivamente on-line, 
+               in completa sicurezza e solo dagli utenti registrati al sito. Gli utenti non registrati o non loggati non possono acquistare i biglietti. </p>
         </div>
     </div>
     <!-- end Lastestnews -->
