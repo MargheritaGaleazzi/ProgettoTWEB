@@ -8,7 +8,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="blogtitlepage">
+                        <center>
                         <h2>Informazioni sul nostro servizio</h2>
+                        </center>
                     </div>
                 </div>
             </div>

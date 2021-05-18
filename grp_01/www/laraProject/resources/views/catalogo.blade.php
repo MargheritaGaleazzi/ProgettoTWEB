@@ -6,7 +6,7 @@
 
 
     <section class="search-sec">
-    <div class="container">
+    <div class="container" >
         <form action="#" method="post" novalidate="novalidate">
             <div class="row">
                 <div class="col-lg-12">
@@ -19,7 +19,7 @@
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                             <select class="form-control search-slt">
-                                <option>Seleziona luogo:</option>
+                                <option disabled selected>Seleziona luogo:</option>
                                 <option>
                                   <a><p>Abruzzo</p></a href="#">
                                 </option>
@@ -81,6 +81,26 @@
                                     <a><p>Veneto</p></a href="#">
                                 </option>
                             </select>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                        <select class="form-control search-slt">
+                            <option disabled selected>Societa organizzatrice:</option>
+                                <option>
+                                  <a><p>ConcertoPlanner</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>TheConcertoShoppe</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>PartyLove</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>CasaDelConcerto</p></a href="#">
+                                </option>
+                                <option>
+                                    <a><p>PrixeoEvent</p></a href="#">
+                                </option>
+                        </select> 
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                             <button type="button" class="btn btn-danger wrn-btn">Cerca!</button>

@@ -74,7 +74,9 @@
     <!--end content-->
     <!--  footer -->
     <footer id="footer_with_contact">
-        <div class="footer"></div>
+        <div class="footer">
+            @include('layout/footer')
+        </div>
     </footer>
     <!-- end footer -->
 </body>
