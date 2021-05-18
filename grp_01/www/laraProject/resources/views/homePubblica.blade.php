@@ -15,7 +15,7 @@
     </section>
 
     <!-- Concerti -->
-    <div id="screenshot" class="Albums">
+    <div id="screenshot" class="Albums" >
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
