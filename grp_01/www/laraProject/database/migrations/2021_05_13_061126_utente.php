@@ -16,16 +16,20 @@ class Utente extends Migration
         Schema::create('utente', function (Blueprint $table){
             $table->bigIncrements('codice_utente')->unsigned()->index();
             $table->enum('categoria',['cliente','organizzatore','amministratore']);
-            $table->string('email',40);
-            $table->string('password',30);
-            $table->string('nome',30);
-            $table->string('cognome',30);
+            $table->string('email',40)->unique();
+            $table->string('username',20);
+            $table->string('password');
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('nome',30)->nullable();;
+            $table->string('cognome',30)->nullable();;
             $table->string('via',30)->nullable();
             $table->string('citta',40)->nullable();
             $table->String('cap')->nullable();
             $table->string('sesso')->nullable();
             $table->string('cellulare',10)->nullable();
             $table->string('nome_societa_organizzatrice',40)->nullable();
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 

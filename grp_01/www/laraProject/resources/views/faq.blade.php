@@ -9,7 +9,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="abouttitlepage">
+                        <center>
                         <h2>Frequently Asked Questions</h2>
+                        </center>
                     </div>
                 </div>
             </div>
@@ -21,8 +23,12 @@
       
         
           <ul id="basics" class="faq-group">
-            <li class="faq-title"><h2>Le risposte alle domande che ci vengono poste più di frequente, clicca sulla domanda di interesse per
-                visualizzare la risposta.</h2></li>
+            <li class="faq-title">
+                <center>
+                    <h2>Le risposte alle domande che ci vengono poste più di frequente, clicca sulla domanda di interesse per
+                    visualizzare la risposta.</h2>
+                </center>
+            </li>
               
     @isset($faq)
     @foreach ($faq as $domanda)

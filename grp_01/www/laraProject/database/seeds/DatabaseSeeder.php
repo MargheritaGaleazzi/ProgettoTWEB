@@ -20,70 +20,84 @@ class DatabaseSeeder extends Seeder
             ['id_faq' => 6, 'domanda' => 'Posso vedere i biglietti precedentemente acquistati?', 'risposta' => 'Certamente, basterà accedere alla propria area riservata, dove sarà disponibile un link che rimanda allo storico dei biglietti acquistati.'],
         ]);
         
+        /*
         DB::table('utente')->insert([
-            ['categoria' => 'amministratore', 'email' => 'giuseppe.santi3@mail.com', 'password' => 'giuseppino',
-                'nome' => 'Giuseppe', 'cognome' => 'Santi', 'via' => 'Piagi', 'citta' => 'Ancona',
+           
+            ['categoria' => 'amministratore', 'email' => 'giuseppe.santi3@mail.com', 'username' => '', 'password' => 'giuseppino',
+                'email_verified_at' => Null, 'nome' => 'Giuseppe', 'cognome' => 'Santi', 'via' => 'Piagi', 'citta' => 'Ancona',
                 'cap' => '60121', 'sesso' => 'M', 'cellulare' => '3556768542', 'nome_societa_organizzatrice' => Null],
-            ['categoria' => 'organizzatore', 'email' => 'maria.cerrato@live.com', 'password' => 'mery88',
-                'nome' => 'Maria', 'cognome' => 'Cerrato', 'via' => 'Donnola', 'citta' => 'Perugia',
-                'cap' => '59439', 'sesso' => 'F', 'cellulare' => '3542047281', 'nome_societa_organizzatrice' => 'PartyLove'],
-            ['categoria' => 'organizzatore', 'email' => 'marco.ferrero78@alice.com', 'password' => 'ferrero03',
-                'nome' => 'Marco', 'cognome' => 'Ferrero', 'via' => 'Sudini', 'citta' => 'Roma',
-                'cap' => '23918', 'sesso' => 'M', 'cellulare' => '3920173645', 'nome_societa_organizzatrice' => 'ConcertoPlanner'],
-            ['categoria' => 'organizzatore', 'email' => 'aleale.gallo@dumbi.com', 'password' => 'Ale7685',
-                'nome' => 'Alessandro', 'cognome' => 'Gallo', 'via' => 'Bindi', 'citta' => 'Firenze',
-                'cap' => '38462', 'sesso' => 'M', 'cellulare' => '3924163529' , 'nome_societa_organizzatrice' => 'CasaDelConcerto'],
-            ['categoria' => 'organizzatore', 'email' => 'francy.penna@outlook.it', 'password' => 'Francesca67',
-                'nome' => 'Francesca', 'cognome' => 'Penna', 'via' => 'Londini', 'citta' => 'Bologna',
-                'cap' => '49271', 'sesso' => 'F', 'cellulare' => '3684930603' , 'nome_societa_organizzatrice' => 'PrixeoEvents'],
-            ['categoria' => 'organizzatore', 'email' => 'davide.amerio@mailco.it', 'password' => 'DavideAmerico78',
-                'nome' => 'Davide', 'cognome' => 'Americo', 'via' => 'Ondina', 'citta' => 'Bari',
-                'cap' => '69574', 'sesso' => 'M', 'cellulare' => '3283659409' , 'nome_societa_organizzatrice' => 'TheConcertoShoppe'],
-            ['categoria' => 'cliente', 'email' => 'mario.bianchi@gmail.com', 'password' => 'mario123',
-                'nome' => 'Mario', 'cognome' => 'Bianchi', 'via' => 'Monfalcone', 'citta' => 'Torino',
+            ['categoria' => 'organizzatore', 'email' => 'partylove@live.com', 'username' => '', 'password' => 'mery88',
+                'email_verified_at' => Null, 'nome' => Null, 'cognome' => Null, 'via' => 'Donnola', 'citta' => 'Perugia',
+                'cap' => '59439', 'sesso' => Null, 'cellulare' => '3542047281', 'nome_societa_organizzatrice' => 'PartyLove'],
+            ['categoria' => 'organizzatore', 'email' => 'concerto.planner@alice.com', 'username' => '', 'password' => 'ferrero03',
+                'email_verified_at' => Null, 'nome' => Null, 'cognome' => Null, 'via' => 'Sudini', 'citta' => 'Roma',
+                'cap' => '23918', 'sesso' => Null, 'cellulare' => '3920173645', 'nome_societa_organizzatrice' => 'ConcertoPlanner'],
+            ['categoria' => 'organizzatore', 'email' => 'casadelconcerto@dumbi.com', 'username' => '', 'password' => 'Ale7685',
+                'email_verified_at' => Null, 'nome' => Null, 'cognome' => Null, 'via' => 'Bindi', 'citta' => 'Firenze',
+                'cap' => '38462', 'sesso' => Null, 'cellulare' => '3924163529' , 'nome_societa_organizzatrice' => 'CasaDelConcerto'],
+            ['categoria' => 'organizzatore', 'email' => 'prixeo.events12@outlook.it', 'username' => '', 'password' => 'Francesca67',
+                'email_verified_at' => Null, 'nome' => Null, 'cognome' => Null, 'via' => Null, 'citta' => 'Bologna',
+                'cap' => '49271', 'sesso' => Null, 'cellulare' => '3684930603' , 'nome_societa_organizzatrice' => 'PrixeoEvents'],
+            ['categoria' => 'organizzatore', 'email' => 'theconcertoshoppe@mailco.it', 'username' => '', 'password' => 'DavideAmerico78',
+                'email_verified_at' => Null, 'nome' => Null, 'cognome' => Null, 'via' => 'Ondina', 'citta' => 'Bari',
+                'cap' => '69574', 'sesso' => Null, 'cellulare' => '3283659409' , 'nome_societa_organizzatrice' => 'TheConcertoShoppe'],
+            ['categoria' => 'cliente', 'email' => 'mario.bianchi@gmail.com', 'username' => '', 'password' => 'mario123',
+                'email_verified_at' => Null, 'nome' => 'Mario', 'cognome' => 'Bianchi', 'via' => 'Monfalcone', 'citta' => 'Torino',
                 'cap' => '10122', 'sesso' => 'M', 'cellulare' => '3355268759', 'nome_societa_organizzatrice' => Null],
-            ['categoria' => 'cliente', 'email' => 'brendalina@alice.it', 'password' => 'brendiLina1234567',
-                'nome' => 'Lina', 'cognome' => 'Brenda', 'via' => 'Bellaria', 'citta' => 'Roma',
+            ['categoria' => 'cliente', 'email' => 'brendalina@alice.it', 'username' => '', 'password' => 'brendiLina1234567',
+                'email_verified_at' => Null, 'nome' => 'Lina', 'cognome' => 'Brenda', 'via' => 'Bellaria', 'citta' => 'Roma',
                 'cap' => '00127', 'sesso' => 'F', 'cellulare' => '3357220036', 'nome_societa_organizzatrice' => Null],
-            ['categoria' => 'cliente', 'email' => 'gianni.roveri@gmail.com', 'password' => 'gGgG3030',
-                'nome' => 'Gianni', 'cognome' => 'Roveri', 'via' => 'Degli abeti', 'citta' => 'Ancona',
+            ['categoria' => 'cliente', 'email' => 'gianni.roveri@gmail.com', 'username' => '', 'password' => 'gGgG3030',
+                'email_verified_at' => Null, 'nome' => 'Gianni', 'cognome' => 'Roveri', 'via' => 'Degli abeti', 'citta' => 'Ancona',
                 'cap' => '60131', 'sesso' => 'M', 'cellulare' => '3333620125', 'nome_societa_organizzatrice' => Null],
-            ['categoria' => 'cliente', 'email' => 'bellkort@gmail.com', 'password' => 'bkioio25478',
-                'nome' => 'Beleriana', 'cognome' => 'Kort', 'via' => 'Piccoli', 'citta' => 'Macerata',
+            ['categoria' => 'cliente', 'email' => 'bellkort@gmail.com', 'username' => '', 'password' => 'bkioio25478',
+                'email_verified_at' => Null, 'nome' => 'Beleriana', 'cognome' => 'Kort', 'via' => 'Piccoli', 'citta' => 'Macerata',
                 'cap' => '62100', 'sesso' => 'F', 'cellulare' => '3339996587', 'nome_societa_organizzatrice' => Null],
-            ['categoria' => 'cliente', 'email' => 'maria.pia@alice.it', 'password' => 'MariaLaPia',
-                'nome' => 'Maria Pia', 'cognome' => 'Rossi', 'via' => 'Verdi', 'citta' => 'Palermo',
+            ['categoria' => 'cliente', 'email' => 'maria.pia@alice.it', 'username' => '', 'password' => 'MariaLaPia',
+                'email_verified_at' => Null, 'nome' => 'Maria Pia', 'cognome' => 'Rossi', 'via' => 'Verdi', 'citta' => 'Palermo',
                 'cap' => '90128', 'sesso' => 'F', 'cellulare' => '3333332548', 'nome_societa_organizzatrice' => Null],
             
         ]);
-        // $this->call(UsersTableSeeder::class);
+         * 
+         */
+        
          
         DB::table('evento')->insert([
             ['societa_organizzatrice' => 'ConcertoPlanner', 'prezzo_biglietto' => 100.00, 'biglietto_scontato' => 0, 'sconto' => 25, 'data_ora' => '2021:07:03 21:30:00',
                 'informazioni' => 'Vasco torna in concerto con NonStopLive! Vieni anche tu ad ascoltarlo dal vivo, una esperienza indimenticabile da vivere presso Autodromo Internazionale Enzo e Dino Ferrari ad Imola, il giorno 3 luglio 2021. Dai, ti aspettiamo!',
                 'titolo' => 'NonStopLive', 'totale_biglietti_evento' => 4000, 'biglietti_rimanenti' => 4000, 
                 'coordinate_maps' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2853.339630991969!2d11.712162215520328!3d44.34407377910367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132b4a7474d71167%3A0x81177e3551c217a6!2sAutodromo%20Enzo%20e%20Dino%20Ferrari!5e0!3m2!1sit!2sit!4v1621159580971!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',
-                'luogo' => 'Emilia Romagna', 'stato_evento' => 'aperto', 'locandina' => 'vasco.jpg'],
+                'luogo' => 'Emilia Romagna', 'stato_evento' => 'aperto', 'locandina' => 'vasco.jpg',
+                'programma_evento' => 'Nella mattinata del giorno 3 luglio 2021, a partire dalle ore 10, il personale della struttura che ospita l evento controllera i biglietti e fara entrare a scaglioni i partecipanti. A partire dalle ore 15, iniziera la diretta della radio Buonasera direttamente sul palco. Alle ore 21 il concerto verra aperto da Annalisa, nota cantante italiana. La durata prevista del concerto è di circa tre ore, con un numero di circa venticinque esibizioni.',
+                'indicazioni' => 'È possibile raggiungere Imola sia in auto (prendendo l autostrada A14 Bologna-Taranto), sia in treno (la stazione di imola dista 2 km dalla struttura). È possibile inoltre raggiungere la localita anche in aereo, con meta presso l aeroporto di Bologna o Forli, che distano da Imola rispettivamente 35km e 30 km (da qui è possibile poi prendere una navetta che porta fino alla struttura).'],
             ['societa_organizzatrice' => 'CasaDelConcerto', 'prezzo_biglietto' => 170.00, 'biglietto_scontato' => 0, 'sconto' => 30, 'data_ora' => '2021:07:10 20:45:00',
                 'informazioni' => 'John Legend torna in concerto! Vieni anche tu ad ascoltarlo dal vivo, una esperienza indimenticabile da vivere presso Piazza Napoleone a Lucca, il giorno 10 luglio 2021. Dai, ti aspettiamo!',
                 'titolo' => 'John Legend', 'totale_biglietti_evento' => 10000, 'biglietti_rimanenti' => 10000, 
                 'coordinate_maps' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2877.6956196270157!2d10.502908999999999!3d43.841408799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d5838a16d74ecb%3A0x975f20ba2efb457e!2sP.za%20Napoleone%2C%2055100%20Lucca%20LU!5e0!3m2!1sen!2sit!4v1621339438325!5m2!1sen!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',
-                'luogo' => 'Toscana', 'stato_evento' => 'aperto', 'locandina' => 'john_legend.jpg'],
+                'luogo' => 'Toscana', 'stato_evento' => 'aperto', 'locandina' => 'john_legend.jpg',
+                'programma_evento' => 'Nella mattinata del giorno 10 luglio 2021, a partire dalle ore 09:30, il personale della struttura che ospita l evento controllera i biglietti e fara entrare a scaglioni i partecipanti. A partire dalle ore 14, iniziera la diretta della radio ConNoi direttamente sul palco. Alle ore 20 il concerto verra aperto da Ed Sheeran, noto cantante irlandese. La durata prevista del concerto è di circa due ore ore e mezza, con un numero di circa venti esibizioni.',
+                'indicazioni' => 'È possibile raggiungere Lucca sia in auto (prendendo autostrada A11 Firenze Mare, A11 Lucca - Viareggio, A12 Genova - Rosignano - Versilia - Lucca), sia in treno (scendendo presso la stazione ferroviaria di Lucca). È possibile inoltre raggiungere la localita anche in aereo, con meta presso aeroporto di Pisa o Firenze, che distano da Imola rispettivamente 20km e 80 km (da qui è possibile poi prendere una navetta che porta fino alla struttura).'],
             ['societa_organizzatrice' => 'PrixeoEvents', 'prezzo_biglietto' => 130.00, 'biglietto_scontato' => 0, 'sconto' => 20, 'data_ora' => '2021:08:07 21:40:00',
                 'informazioni' => 'James Blunt torna in concerto con Once upon a mind Tour! Vieni anche tu ad ascoltarlo dal vivo, una esperienza indimenticabile da vivere presso Forte Arena a Cagliari, il giorno 7 agosto 2021. Dai, ti aspettiamo!',
                 'titolo' => 'Once upon a mind Tour', 'totale_biglietti_evento' => 70000, 'biglietti_rimanenti' => 70000, 
                 'coordinate_maps' => '<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d49642.9846034525!2d8.850429549999998!3d38.953988949999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sForte%20Arena%2C%20Santa%20Margherita%20di%20Pula%20SS%20195%20km%2039600%2C%2009100%20CAGLIARI%20%2C%20Italia!5e0!3m2!1sen!2sit!4v1621339745900!5m2!1sen!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',
-                'luogo' => 'Lombardia', 'stato_evento' => 'aperto', 'locandina' => 'james_blunt.jpg'],
+                'luogo' => 'Sardegna', 'stato_evento' => 'aperto', 'locandina' => 'james_blunt.jpg',
+                'programma_evento' => 'Nella mattinata del giorno 7 agosto 2021, a partire dalle ore 09:40, il personale della struttura che ospita l evento controllera i biglietti e fara entrare a scaglioni i partecipanti. A partire dalle ore 14:30, iniziera la diretta della radio 110 direttamente sul palco. Alle ore 20:10 il concerto verra aperto da Ariana Grande, nota cantante statunitense. La durata prevista del concerto è di circa tre ore e mezza, con un numero di circa trenta esibizioni.',
+                'indicazioni' => 'È possibile raggiungere Cagliari sia in nave (attraverso diverse navi giornaliere provenienti da Genova, Civitavecchia, Napoli, Trapani e Palermo), sia in treno (scendendo presso la stazione ferroviaria di Cagliari). È possibile inoltre raggiungere la localita anche in aereo, con meta presso l aeroporto internazionale di Elmas, che dista da Cagliari 3 km (da qui è possibile poi prendere una navetta che porta fino alla struttura).'],
             ['societa_organizzatrice' => 'TheConcertoShoppe', 'prezzo_biglietto' => 30.00, 'biglietto_scontato' => 0, 'sconto' => 30, 'data_ora' => '2021:08:11 21:00:00',
                 'informazioni' => 'Carl Brave torna in concerto! Vieni anche tu ad ascoltarlo dal vivo, una esperienza indimenticabile da vivere presso Arena di Verona, il giorno 11 agosto 2021. Dai, ti aspettiamo!',
                 'titolo' => 'Carl Brave', 'totale_biglietti_evento' => 13000, 'biglietti_rimanenti' => 13000, 
                 'coordinate_maps' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.5289667432207!2d10.992168715556563!3d45.438995779100644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477f5f4675b6a4fb%3A0x972d445bd29ff3f5!2sArena%20di%20Verona!5e0!3m2!1sit!2sit!4v1621159695321!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',
-                'luogo' => 'Veneto', 'stato_evento' => 'aperto', 'locandina' => 'carlbrave.jpg'],
+                'luogo' => 'Veneto', 'stato_evento' => 'aperto', 'locandina' => 'carlbrave.jpg',
+                'programma_evento' => 'Nella mattinata del giorno 11 agosto 2021, a partire dalle ore 09:20, il personale della struttura che ospita l evento controllera i biglietti e fara entrare a scaglioni i partecipanti. A partire dalle ore 15, iniziera la diretta della radio Emma direttamente sul palco. Alle ore 20:30 il concerto verra aperto da Franco126, cantante italiano. La durata prevista del concerto è di circa due ore e mezza, con un numero di circa venti esibizioni.',
+                'indicazioni' => 'È possibile raggiungere Verona sia in auto (attraverso l autostrada A4 e A22), sia in treno (scendendo presso la stazione ferroviaria di Verona). È possibile inoltre raggiungere la localita anche in aereo, con meta presso l aeroporto di Verona VALERIO CATULLO, che dista da Verona 12 km (da qui è possibile poi prendere una navetta che porta fino alla struttura).'],
             ['societa_organizzatrice' => 'PartyLove', 'prezzo_biglietto' => 35.00, 'biglietto_scontato' => 0, 'sconto' => 10, 'data_ora' => '2021:08:17 20:15:00',
                 'informazioni' => 'Emma Marrone torna in concerto con FortunaLive! Vieni anche tu ad ascoltarla dal vivo, una esperienza indimenticabile da vivere presso Unipol Arena a Casalecchio di Reno, il giorno 18 agosto 2021. Dai, ti aspettiamo!',
                 'titolo' => 'FortunaLive', 'totale_biglietti_evento' => 22000, 'biglietti_rimanenti' => 22000, 
                 'coordinate_maps' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.421075088596!2d11.245921115487306!3d44.486038179101556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd68911c059af%3A0x84c9dbd8d81468cf!2sUnipol%20Arena!5e0!3m2!1sit!2sit!4v1621159142587!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',
-                'luogo' => 'Emilia Romagna', 'stato_evento' => 'aperto', 'locandina' => 'emmafortuna.jpg'],
+                'luogo' => 'Emilia Romagna', 'stato_evento' => 'aperto', 'locandina' => 'emmafortuna.jpg',
+                'programma_evento' => 'Nella mattinata del giorno 17 agosto 2021, a partire dalle ore 09:00, il personale della struttura che ospita l evento controllera i biglietti e fara entrare a scaglioni i partecipanti. A partire dalle ore 14, iniziera la diretta della radio Luisa direttamente sul palco. Alle ore 19:30 il concerto verra aperto da Alessandra Amoroso, nota cantante italiana. La durata prevista del concerto è di circa tre ore, con un numero di circa venticinque esibizioni.',
+                'indicazioni' => 'È possibile raggiungere Casalecchio di Reno sia in auto (attraverso l autostrada A1), sia in treno (scendendo presso la stazione ferroviaria di Casalecchio di Reno). È possibile inoltre raggiungere la localita anche in aereo, con meta presso l aeroporto di Bologna Guglielmo Marconi, che dista da Casalecchio di Reno 25 km (da qui è possibile poi prendere una navetta che porta fino alla struttura).'],
             ['societa_organizzatrice' => 'TheConcertoShoppe', 'prezzo_biglietto' => 70.00, 'biglietto_scontato' => 0, 'sconto' => 30, 'data_ora' => '2021:09:21 21:00:00',
                 'informazioni' => 'Sfera Ebbasta torna in concerto con Famoso Tour! Vieni anche tu ad ascoltarlo dal vivo, una esperienza indimenticabile da vivere presso PalaAlpitour a Torino, il giorno 21 settembre 2021. Dai, ti aspettiamo!',
                 'titolo' => 'Famoso Tour', 'totale_biglietti_evento' => 20000, 'biglietti_rimanenti' => 20000, 
@@ -162,10 +176,15 @@ class DatabaseSeeder extends Seeder
             
         ]);
         
+        /*
         DB::table('biglietto')->insert([
+           
             ['codice_utente' => 7, 'codice_evento' => 1, 'metodo_pagamento' => 'bonifico', 'data_acquisto' => '2020:07:04 09:23:57', 'prezzo_acquisto' => 35.00],
             ['codice_utente' => 7, 'codice_evento' => 1, 'metodo_pagamento' => 'bonifico', 'data_acquisto' => '2020:07:04 09:25:37', 'prezzo_acquisto' => 35.00],
             ['codice_utente' => 7, 'codice_evento' => 2, 'metodo_pagamento' => 'paypal', 'data_acquisto' => '2020:05:19 12:24:56', 'prezzo_acquisto' => 100.00],
+           
         ]);
+         * 
+         */
     }
 }

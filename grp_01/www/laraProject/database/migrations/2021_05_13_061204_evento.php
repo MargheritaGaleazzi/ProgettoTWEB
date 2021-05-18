@@ -28,6 +28,9 @@ class Evento extends Migration
             $table->string('luogo',100);
             $table->enum('stato_evento',['aperto','chiuso'])->default('aperto');
             $table->text('locandina')->nullable();
+            $table->string('programma_evento',2500);
+            $table->string('indicazioni',2500);
+            
         });
     }
 
