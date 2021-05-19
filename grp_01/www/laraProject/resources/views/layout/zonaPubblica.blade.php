@@ -73,6 +73,7 @@
     </div>
     <!--end content-->
     <!--  footer -->
+    
     @include('layout/footer')
    
     <!-- end footer -->
