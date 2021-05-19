@@ -13,7 +13,7 @@ class Utente extends Migration
      */
     public function up()
     {
-        Schema::create('utente', function (Blueprint $table){
+        Schema::create('users', function (Blueprint $table){
             $table->bigIncrements('codice_utente')->unsigned()->index();
             $table->enum('categoria',['cliente','organizzatore','amministratore']);
             $table->string('email',40)->unique();
@@ -40,6 +40,6 @@ class Utente extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('category');
+        Schema::dropIfExists('users');
     }
 }

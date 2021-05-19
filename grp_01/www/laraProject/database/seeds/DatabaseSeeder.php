@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         ]);
         
         
-        DB::table('utente')->insert([
+        DB::table('users')->insert([
            
             ['categoria' => 'amministratore', 'email' => 'giuseppe.santi3@mail.com', 'username' => 'adminadmin', 'password' => 'X1XS5jXS',
                 'email_verified_at' => Null, 'nome' => 'Giuseppe', 'cognome' => 'Santi', 'via' => 'Piagi', 'citta' => 'Ancona',
