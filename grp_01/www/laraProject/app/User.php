@@ -17,6 +17,7 @@ class User extends Authenticatable {
      */
     protected $fillable = [
         'name', 'surname', 'email', 'username', 'password',
+        //aggiunti surnae e username
     ];
 
     /**
@@ -26,6 +27,7 @@ class User extends Authenticatable {
      */
     protected $hidden = [
         'username', 'password', 'remember_token',
+        //attributi che non devono essere mai mostrati
     ];
 
     /**

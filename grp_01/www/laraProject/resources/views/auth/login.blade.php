@@ -3,19 +3,18 @@
 @section('title', 'Registrazione')
 
 @section('content')
-<div class="static">
-    <h3>Login</h3>
-    <p>Utilizza questa form per autenticarti al sito</p>
-
     <div class="container-contact">
-        <div class="wrap-contact1">
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+
+                <!-- Tab Title -->
+                <h2 class="active"> Accedi </h2>
+
             {{ Form::open(array('route' => 'login', 'class' => 'contact-form')) }}
-            
-             <div  class="wrap-input">
-                 <p> Se non hai già un account <a  href="{{ route('register') }}">registrati</a></p>
-             </div>            
-             <div  class="wrap-input">
-                {{ Form::label('username', 'Nome Utente', ['class' => 'label-input']) }}
+
+             <div  class="wrapper fadeInDown">
+
+                {{ Form::label('username', 'Nome Utente', ['class' => 'fadeIn second']) }}
                 {{ Form::text('username', '', ['class' => 'input','id' => 'username']) }}
                 @if ($errors->first('username'))
                 <ul class="errors">
@@ -26,8 +25,8 @@
                 @endif
             </div>
             
-             <div  class="wrap-input">
-                {{ Form::label('password', 'Password', ['class' => 'label-input']) }}
+             <div  class="wrapper fadeInDown">
+                {{ Form::label('password', 'Password', ['class' => 'fadeIn third']) }}
                 {{ Form::password('password', ['class' => 'input', 'id' => 'password']) }}
                 @if ($errors->first('password'))
                 <ul class="errors">
@@ -38,11 +37,12 @@
                 @endif
             </div>
             
-            <div class="container-form-btn">                
-                {{ Form::submit('Login', ['class' => 'form-btn1']) }}
+            <div class="wrapper fadeInDown">                
+                {{ Form::submit('Login', ['class' => 'fadeIn fourth']) }}
             </div>
             
             {{ Form::close() }}
+        </div>
         </div>
     </div>
 
