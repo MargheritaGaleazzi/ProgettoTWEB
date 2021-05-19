@@ -12,19 +12,25 @@
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <!--{{ Form::open(array('route' => 'catalogoFiltrato', 'id' => 'filtro', 'files' => true, 'class' => 'col-lg-3 col-md-3 col-sm-12 p-0')) }}
+                            {{ Form::text('luogo', '', ['class' => 'form-control search-slt']) }}
+                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                           {{ Form::submit('Cerca!', ['class' => 'btn btn-danger wrn-btn']) }}-->
                             <input type="text" class="form-control search-slt" placeholder="Cerca...">
+                                                         {{ Form::open(array('route' => 'catalogoFiltrato', 'id' => 'filtro', 'files' => true, 'class' => 'col-lg-3 col-md-3 col-sm-12 p-0')) }}
+                                {{ Form::select('luogo', $luoghi, '', ['class' => 'form-control search-slt']) }}
+                           <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                           {{ Form::submit('Cerca!', ['class' => 'btn btn-danger wrn-btn']) }}
+                          <!--<button type="submit" class="btn btn-danger wrn-btn" value="Cerca">Cerca!</button>-->
+                        </div>
+                        {{Form::close()}}
+                        </div>
                         </div>
                       <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                             <input type="month" class="form-control search-slt">
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                             {{ Form::open(array('route' => 'catalogoFiltrato', 'id' => 'filtro', 'files' => true, 'class' => 'col-lg-3 col-md-3 col-sm-12 p-0')) }}
-                                {{ Form::select('luogo', $luoghi, '', ['class' => 'form-control search-slt','id' => 'luogo']) }}
-                           <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                           {{ Form::submit('Cerca!', ['class' => 'btn btn-danger wrn-btn']) }}
-                          <!-- <button type="submit" class="btn btn-danger wrn-btn" value="Cerca">Cerca!</button>-->
-                        </div>
-                        {{Form::close()}}
+
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                         <select class="form-control search-slt">
