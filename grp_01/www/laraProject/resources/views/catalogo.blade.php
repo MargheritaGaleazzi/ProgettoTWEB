@@ -18,69 +18,13 @@
                             <input type="month" class="form-control search-slt">
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <select class="form-control search-slt">
-                                <option disabled selected>Seleziona luogo:</option>
-                                <option>
-                                  <a><p>Abruzzo</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Basilicata</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Calabria</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Campania</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Emilia-Romagna</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Friuli Venezia Giulia</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Lazio</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Liguria</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Lombardia</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Marche</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Molise</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Piemonte</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Puglia</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Sardegna</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Sicilia</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Toscana</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Trentino-Alto Adige</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Umbria</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Valle d'Aosta</p></a href="#">
-                                </option>
-                                <option>
-                                    <a><p>Veneto</p></a href="#">
-                                </option>
-                            </select>
+                             {{ Form::open(array('route' => 'catalogoFiltrato', 'id' => 'filtro', 'files' => true, 'class' => 'col-lg-3 col-md-3 col-sm-12 p-0')) }}
+                                {{ Form::select('luogo', $luoghi, '', ['class' => 'form-control search-slt','id' => 'luogo']) }}
+                           <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                           {{ Form::submit('Cerca!', ['class' => 'btn btn-danger wrn-btn']) }}
+                          <!-- <button type="submit" class="btn btn-danger wrn-btn" value="Cerca">Cerca!</button>-->
+                        </div>
+                        {{Form::close()}}
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                         <select class="form-control search-slt">
@@ -101,9 +45,6 @@
                                     <a><p>PrixeoEvent</p></a href="#">
                                 </option>
                         </select> 
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <button type="button" class="btn btn-danger wrn-btn">Cerca!</button>
                         </div>
                     </div>
                 </div>

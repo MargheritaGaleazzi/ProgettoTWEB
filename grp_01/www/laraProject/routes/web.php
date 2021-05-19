@@ -24,6 +24,9 @@ Route::view('/info', 'info')
 Route::get('/catalogo', 'ControllerPubblico@mostraCatalogo')
         ->name('catalogo');
 
+Route::post('/catalogo', 'ControllerPubblico@mostraCatalogoFiltrato')
+        ->name('catalogoFiltrato');
+
 Route::get('/catalogo/acquisto/{codice_evento}', 'ControllerLivello2@acquisto')
         ->name('acquisto');
 

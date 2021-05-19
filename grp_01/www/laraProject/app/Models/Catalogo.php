@@ -14,15 +14,20 @@ class Catalogo {
     
     public function getEventoByCodice($codice_evento) {
 
-        return Evento::where('codice_evento', $codice_evento)->first();       
+        return Evento::where('codice_evento', $codice_evento)->first();      
+    }
+    
+    public function getEventiFiltrati($luogo){
+        return Evento::where('luogo', $luogo)->paginate(4);
     }
     
     public function getEventoConFiltri($descr=null, $luogo = null, $data= null) {
-        $eventi=Evento::all();
+        /*$eventi=Evento::all();
         if (is_null($descr)&& is_null($data)) {
             $eventi=$eventi->where('luogo', $luogo);
-        }        
-        return $eventi->paginate(1);
+        }       
+        $eventi=$eventi->where('luogo', $luogo);*/
+        return Evento::where('luogo', $luogo)->first();
     }
     
     

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Catalogo;
 use App\Models\Resources\FAQ;
+use App\Http\Requests\FiltroRequest;
 
 
 class ControllerPubblico extends Controller {
@@ -22,10 +23,21 @@ class ControllerPubblico extends Controller {
 
         //Mostra il catalogo con tutti gli eventi
         $eventi = $this->_catalogoModel->getTuttiEventi();
-        
+        $luoghi = $this->_catalogoModel->getTuttiEventi()->pluck('luogo');
 
         return view('catalogo')
-                        ->with('eventi', $eventi);
+                        ->with('eventi', $eventi)
+                        ->with('luoghi', $luoghi);
+    }
+    
+    public function mostraCatalogoFiltrato(FiltroRequest $request){
+        $luoghi = $this->_catalogoModel->getTuttiEventi()->pluck('luogo');
+        $luogo = $request->get('luogo');
+        $eventi = $this->_catalogoModel->getEventiFiltrati($luogo);
+
+        return view('catalogo')
+                         ->with('eventi', $eventi)->with('luoghi', $luoghi);
+ 
     }
     
 
