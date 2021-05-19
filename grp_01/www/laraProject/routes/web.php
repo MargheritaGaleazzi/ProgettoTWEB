@@ -24,10 +24,10 @@ Route::view('/info', 'info')
 Route::get('/catalogo', 'ControllerPubblico@mostraCatalogo')
         ->name('catalogo');
 
-Route::get('/acquisto/{codice_evento}', 'ControllerLivello2@acquisto')
+Route::get('/catalogo/acquisto/{codice_evento}', 'ControllerLivello2@acquisto')
         ->name('acquisto');
 
-Route::get('/dettagliEvento/{codice_evento}', 'ControllerPubblico@mostraDettagli')
+Route::get('/catalogo/dettagliEvento/{codice_evento}', 'ControllerPubblico@mostraDettagli')
         ->name('dettagliEvento');
 
 // ROTTE PER AUTENTICAZIONE
