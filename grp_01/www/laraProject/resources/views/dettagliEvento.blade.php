@@ -51,8 +51,18 @@
                 <li class="pb-2"><b>Data e ora:</b> {{$data_ora}} </li>
                 <li class="pb-2"><b>Società organizzatrice:</b> {{$organizzatore}} </li>
             </ul>
-             {!!$coordinate_maps!!}
+             {!!$coordinate_maps!!} 
         </div>
+        <div>
+            <br><br><b>PROGRAMMA EVENTO:</b><br>
+                 {{$programma_evento}}
+             
+        </div> 
+        <div>
+                <br><b>COME RAGGIUNGERE LA STRUTTURA:</b><br>
+                 {{$indicazioni}}
+             
+        </div>   
     </div>
         
         
