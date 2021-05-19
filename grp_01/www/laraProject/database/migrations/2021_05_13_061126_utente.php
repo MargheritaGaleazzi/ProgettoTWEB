@@ -20,8 +20,8 @@ class Utente extends Migration
             $table->string('username',20);
             $table->string('password');
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('nome',30)->nullable();;
-            $table->string('cognome',30)->nullable();;
+            $table->string('nome',30)->nullable();
+            $table->string('cognome',30)->nullable();
             $table->string('via',30)->nullable();
             $table->string('citta',40)->nullable();
             $table->String('cap')->nullable();

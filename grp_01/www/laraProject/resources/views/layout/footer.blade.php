@@ -1,4 +1,4 @@
-<footer id="footer_with_contact" style='background-color: black;height: 40%'>
+<footer id="footer_with_contact" style='background-color: black;height: 50%'>
         <div class="footer">
             
             <div style='float: left; background: black; width: 50%;padding-left: 500px;'>   

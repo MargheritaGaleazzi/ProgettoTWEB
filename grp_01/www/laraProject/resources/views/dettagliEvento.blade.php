@@ -43,9 +43,7 @@
             <h5>
                 @include('Helper/Prezzo')
             </h5>
-            <p>
-                Prezzo pieno se in sconto
-            </p>
+
             <ul>
                 <li class="pb-2"><b>Luogo:</b> {{$luogo}} </li>
                 <li class="pb-2"><b>Data e ora:</b> {{$data_ora}} </li>
