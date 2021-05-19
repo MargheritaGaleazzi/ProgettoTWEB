@@ -6,6 +6,11 @@ use App\Models\Resources\Evento;
 
 
 class Catalogo {
+    
+        public function getTuttiEventiSenzaPaginate() {
+         
+         return Evento::all();
+    }
 
     public function getTuttiEventi() {
          
