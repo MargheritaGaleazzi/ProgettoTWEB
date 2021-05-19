@@ -73,11 +73,8 @@
     </div>
     <!--end content-->
     <!--  footer -->
-    <footer id="footer_with_contact">
-        <div class="footer">
-            @include('layout/footer')
-        </div>
-    </footer>
+    @include('layout/footer')
+   
     <!-- end footer -->
 </body>
 </html>

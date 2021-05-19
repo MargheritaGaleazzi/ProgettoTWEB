@@ -1654,7 +1654,8 @@
 }
  .footer {
      background: black;
-     padding-top: 90px;
+     padding-top: 30px;
+     margin-top: 50px;
 }
  .footer .address h3 {
      color: #fff;
@@ -1824,9 +1825,7 @@
 
 /* BASIC */
 
-html {
-  background-color: black;
-}
+
 
 body {
   font-family: "Poppins", sans-serif;
