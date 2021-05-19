@@ -1,4 +1,4 @@
-@extends('layout.zonaPubblica')
+{{-- @extends('layout.zonaPubblica')
 
 @section('title', 'Login')
 
@@ -32,3 +32,4 @@
     </div>
 </div>
 @endsection
+ --}}

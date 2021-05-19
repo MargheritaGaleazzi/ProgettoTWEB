@@ -8,13 +8,13 @@
             <div id="formContent">
 
                 <!-- Tab Title -->
-                <h2 class="active"> Accedi </h2>
+                <h2 class="active"> Accedi all'area riservata </h2>
 
             {{ Form::open(array('route' => 'login', 'class' => 'contact-form')) }}
 
              <div  class="wrapper fadeInDown">
 
-                {{ Form::label('username', 'Nome Utente', ['class' => 'fadeIn second']) }}
+                {{ Form::label('username', 'Nome utente', ['class' => 'fadeIn second']) }}
                 {{ Form::text('username', '', ['class' => 'input','id' => 'username']) }}
                 @if ($errors->first('username'))
                 <ul class="errors">
@@ -38,10 +38,15 @@
             </div>
             
             <div class="wrapper fadeInDown">                
-                {{ Form::submit('Login', ['class' => 'fadeIn fourth']) }}
+                {{ Form::submit('Accedi', ['class' => 'fadeIn fourth']) }}
             </div>
             
             {{ Form::close() }}
+
+            <!-- Iscrizione -->
+            <div id="formFooter">
+                <a class="underlineHover" href="{{route('register')}}" title="Storico">Iscriviti</a>
+              </div>
         </div>
         </div>
     </div>
