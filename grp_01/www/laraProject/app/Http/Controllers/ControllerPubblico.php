@@ -55,6 +55,8 @@ class ControllerPubblico extends Controller {
         $locandina = $evento->locandina;
         $biglietto_scontato = $evento->biglietto_scontato;
         $sconto = $evento->sconto;
+        $programma_evento=$evento->programma_evento;
+        $indicazioni=$evento->indicazioni;
         
         
         return view('dettagliEvento',[          'evento'=>$evento,
@@ -68,7 +70,9 @@ class ControllerPubblico extends Controller {
                                                 'coordinate_maps'=>$coordinate_maps,
                                                 'luogo'=>$luogo,
                                                 'stato_evento'=>$stato_evento,
-                                                'locandina'=>$locandina
+                                                'locandina'=>$locandina,
+                                                'programma_evento'=>$programma_evento,
+                                                'indicazioni'=>$indicazioni
                                             ]);
     }
     
