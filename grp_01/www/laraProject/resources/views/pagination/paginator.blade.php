@@ -11,16 +11,16 @@
 
     
     @if ($paginator->currentPage() != 1)
-        <a href="{{ $paginator->previousPageUrl() }}">&lt; Precedente</a> |
+        <a href="{{ $paginator->previousPageUrl() }}"><img src="{{ asset('/images/leftRossa.png') }}" alt="precedente" /></a> |
     @else
-        &lt; Precedente |
+        <img src="{{ asset('/images/left.png') }}" alt="precedente" /> |
     @endif
 
     
     @if ($paginator->hasMorePages())
-        <a href="{{ $paginator->nextPageUrl() }}">Successivo &gt;</a> |
+        <a href="{{ $paginator->nextPageUrl() }}"><img src="{{ asset('/images/rightRossa.png') }}" alt="successivo" /></a> |
     @else
-        Successivo &gt; |
+        <img src="{{ asset('/images/right.png') }}" alt="successivo" /> |
     @endif
 
     

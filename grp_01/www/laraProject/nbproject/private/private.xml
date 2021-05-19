@@ -3,15 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/Progetto/grp_01/www/laraProject/resources/views/layout/zonaUtente2.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Progetto/grp_01/www/laraProject/resources/views/info.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Progetto/grp_01/www/laraProject/resources/views/homePubblica.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Progetto/grp_01/www/laraProject/resources/views/layout/zonaPubblica.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Progetto/grp_01/www/laraProject/public/css/style.css</file>
-            <file>file:/C:/xampp/htdocs/Progetto/grp_01/www/laraProject/database/seeds/DatabaseSeeder.php</file>
-            <file>file:/C:/xampp/htdocs/Progetto/grp_01/www/laraProject/resources/views/layout/navBarPubblica.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Progetto/grp_01/www/laraProject/database/migrations/2021_05_13_061204_evento.php</file>
-            <file>file:/C:/xampp/htdocs/Progetto/grp_01/www/laraProject/resources/views/layout/footer.blade.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/layout/footer.blade.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/layout/zonaPubblica.blade.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/layout/zonaUtente2.blade.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/app/Models/Resources/Evento.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/public/css/style.css</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/database/migrations/2021_05_13_061204_evento.php</file>
         </group>
     </open-files>
 </project-private>
