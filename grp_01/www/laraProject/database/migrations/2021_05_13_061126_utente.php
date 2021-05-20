@@ -14,7 +14,7 @@ class Utente extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table){
-            $table->bigIncrements('codice_utente')->unsigned()->index();
+            $table->bigIncrements('id')->unsigned()->index();
             $table->enum('categoria',['cliente','organizzatore','amministratore']);
             $table->string('email',40)->unique();
             $table->string('username',20);

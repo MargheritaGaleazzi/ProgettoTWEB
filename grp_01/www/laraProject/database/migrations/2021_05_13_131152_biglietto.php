@@ -15,8 +15,8 @@ class Biglietto extends Migration
     {
         Schema::create('biglietto', function (Blueprint $table){
             $table->bigIncrements('codice_biglietto')->unsigned()->index();
-            $table->bigInteger('codice_utente')->unsigned()->index();
-            $table->foreign('codice_utente')->references('codice_utente')->on('users');
+            $table->bigInteger('id')->unsigned()->index();
+            $table->foreign('id')->references('id')->on('users');
             $table->bigInteger('codice_evento')->unsigned()->index();
             $table->foreign('codice_evento')->references('codice_evento')->on('evento');
             $table->enum('metodo_pagamento',['bonifico','carta di credito','paypal']);
