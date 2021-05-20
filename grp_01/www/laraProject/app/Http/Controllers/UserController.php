@@ -12,7 +12,7 @@ class userController extends Controller {
 
     public function index() {
         $role = auth()->user()->categoria;
-        /*switch ($role) {
+        switch ($role) {
             case 'amministratore': view('AreaAdmin');
                 break;
             case 'cliente': view('AreaUtente2');
@@ -20,7 +20,7 @@ class userController extends Controller {
             case 'organizzatore': view('AreaOrganizzatore');
                 break;
             default: return view('homePubblica');
-        }*/
+        }
         return view('homePubblica');
     }
 }

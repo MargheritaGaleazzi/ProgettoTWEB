@@ -37,7 +37,7 @@ use AuthenticatesUsers;
         switch ($role) {
             case 'amministratore': return '/amministratore';
                 break;
-            case 'cliente': return '/utente';
+            case 'cliente': return '/cliente';
                 break;
             case 'organizzatore': return '/organizzatore';
                 break;

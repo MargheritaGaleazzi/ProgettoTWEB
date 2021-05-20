@@ -51,8 +51,8 @@ Route::post('register', 'Auth\RegisterController@register');
 //FINE
 
 // ROTTE POST AUTENTICAZIONE
-Route::view('/utente', 'AreaUtente2')
-        ->name('utente');
+Route::view('/cliente', 'AreaUtente2')
+        ->name('cliente');
 
 Route::view('/storico', 'StoricoUtente2')
         ->name('storico');
