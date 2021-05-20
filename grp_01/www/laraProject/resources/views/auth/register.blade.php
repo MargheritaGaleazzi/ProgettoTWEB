@@ -162,7 +162,7 @@
                         <div class="form-group row">
                             {{ Form::label('sesso', 'Sesso', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                            {{ Form::select('sesso',$gen ,'', ['class' => 'input','id' => 'sesso']) }}
+                            {{ Form::select('sesso',$gen ,'Preferisco non specificarlo', ['class' => 'input','id' => 'sesso']) }}
                                 @if ($errors->first('sesso'))
                                     <ul class="errors">
                                     @foreach ($errors->get('sesso') as $message)

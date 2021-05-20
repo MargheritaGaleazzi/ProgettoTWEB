@@ -8,11 +8,11 @@
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h1>
-                                        Kshiti Ghelani
+                                        {{ Auth::user()->nome }} {{ Auth::user()->cognome }}
                                     </h1>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                    <p class="nav-link active" id="home-tab" data-toggle="tab" href="{{ route('login') }}" title="login" role="tab" aria-controls="home" aria-selected="true">Le mie Info:</p>
+                                    <p class="nav-link active" id="home-tab" data-toggle="tab" title="login" role="tab" aria-controls="home" aria-selected="true">Le mie Info:</p>
                                 </li>
                             </ul>
                         </div>
@@ -28,10 +28,10 @@
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>User Id</label>
+                                                <label>Username</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Kshiti123</p>
+                                                <p>{{ Auth::user()->username }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -39,7 +39,7 @@
                                                 <label>Nome</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Kshiti Ghelani</p>
+                                                <p>{{ Auth::user()->nome }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -47,7 +47,7 @@
                                                 <label>Cognome</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>kshitighelani@gmail.com</p>
+                                                <p>{{ Auth::user()->cognome }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -55,7 +55,7 @@
                                                 <label>E-mail</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>123 456 7890</p>
+                                                <p>{{ Auth::user()->email }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -63,7 +63,7 @@
                                                 <label>Via</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Web Developer and Designer</p>
+                                                <p>{{ Auth::user()->via }}</p>
                                             </div>
                                             </div>
                                         <div class="row">
@@ -71,7 +71,7 @@
                                                 <label>Città</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Web Developer and Designer</p>
+                                                <p>{{ Auth::user()->citta }}</p>
                                             </div>
                                             </div>
                                         <div class="row">
@@ -79,7 +79,7 @@
                                                 <label>CAP</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Web Developer and Designer</p>
+                                                <p>{{ Auth::user()->cap }}</p>
                                             </div>
                                             </div>
                                         <div class="row">
@@ -87,7 +87,7 @@
                                                 <label>Sesso</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Web Developer and Designer</p>
+                                                <p>{{ Auth::user()->sesso }}</p>
                                             </div>
                                             </div>
                                         <div class="row">
@@ -95,7 +95,7 @@
                                                 <label>Cellulare</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Web Developer and Designer</p>
+                                                <p>{{ Auth::user()->cellulare }}</p>
                                             </div>
                                         </div>
                             </div>

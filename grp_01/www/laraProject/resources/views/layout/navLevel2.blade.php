@@ -4,6 +4,12 @@
     <li> <a href="{{ route('info') }}" title="Info">Info</a> </li>
     <li> <a href="{{ route('faq') }}" title="FAQ">FAQ</a> </li>
     <li> <a href="{{route('storico')}}" title="Storico">I tuoi acquisti</a></li>
-    <li> <a href="{{route('homePubblica')}}" title="Home">Logout</a></li>
+    @auth
+        <li><a href="" title="Esci dal sito" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+        </form>
+    @endauth  
+    
 </ul>
 
