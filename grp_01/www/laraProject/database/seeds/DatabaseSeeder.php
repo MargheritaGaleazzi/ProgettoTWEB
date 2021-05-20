@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
             ['categoria' => 'organizzatore', 'email' => 'casadelconcerto@live.com', 'username' => 'orgaorga', 'password' => 'X1XS5jXS',
                 'email_verified_at' => Null, 'nome' => Null, 'cognome' => Null, 'via' => 'Donnola', 'citta' => 'Perugia',
                 'cap' => '59439', 'sesso' => Null, 'cellulare' => '3542047281', 'nome_societa_organizzatrice' => 'CasaDelConcerto'],
-            ['categoria' => 'cliente', 'email' => 'mario.bianchi@gmail.com', 'username' => 'clieclie', 'password' => 'X1XS5jXS',
+            ['categoria' => 'cliente', 'email' => 'mario.bianchi@gmail.com', 'username' => 'clieclie', 'password' => Hash::make('clieclie'),
                 'email_verified_at' => Null, 'nome' => 'Mario', 'cognome' => 'Bianchi', 'via' => 'Monfalcone', 'citta' => 'Torino',
                 'cap' => '10122', 'sesso' => 'M', 'cellulare' => '3355268759', 'nome_societa_organizzatrice' => Null],
         ]);
