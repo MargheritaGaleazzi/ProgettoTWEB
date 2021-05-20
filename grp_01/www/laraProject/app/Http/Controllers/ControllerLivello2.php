@@ -14,7 +14,7 @@ class ControllerLivello2 extends Controller {
     
     public function __construct() {
         $this->middleware('can:isUser');
-        $this->_utenteModel = new Utente;
+        //$this->_utenteModel = new Utente;
         $this->_catalogoModel = new Catalogo;   
     }
     
