@@ -23,19 +23,25 @@ class ControllerPubblico extends Controller {
 
         //Mostra il catalogo con tutti gli eventi
         $eventi = $this->_catalogoModel->getTuttiEventi();
-        $luoghi = $this->_catalogoModel->getTuttiEventiSenzaPaginate()->pluck('luogo', 'luogo');
+        $filtro_luoghi = $this->_catalogoModel->getTuttiEventiSenzaPaginate()->pluck('luogo', 'luogo');
+        $filtro_societa = $this->_catalogoModel->getTuttiEventiSenzaPaginate()->pluck('societa_organizzatrice', 'societa_organizzatrice');
         return view('catalogo')
                         ->with('eventi', $eventi)
-                        ->with('luoghi', $luoghi);
+                        ->with('luoghi', $filtro_luoghi)
+                        ->with('societa', $filtro_societa);
     }
     
     public function mostraCatalogoFiltrato(FiltroRequest $request){
-        $luoghi = $this->_catalogoModel->getTuttiEventiSenzaPaginate()->pluck('luogo', 'luogo');
+        $filtro_luoghi = $this->_catalogoModel->getTuttiEventiSenzaPaginate()->pluck('luogo', 'luogo');
+        $filtro_societa = $this->_catalogoModel->getTuttiEventiSenzaPaginate()->pluck('societa_organizzatrice', 'societa_organizzatrice');
         $luogo = $request->get('luogo');
-        $eventi = $this->_catalogoModel->getEventiFiltrati($luogo);
-
+        $societa = $request->get('societa');
+        $data = $request->get('data');
+        $eventi = $this->_catalogoModel->getEventiFiltrati($luogo, $societa, $data);
         return view('catalogo')
-                         ->with('eventi', $eventi)->with('luoghi', $luoghi);
+                         ->with('eventi', $eventi)
+                        ->with('luoghi', $filtro_luoghi)
+                        ->with('societa', $filtro_societa);
         
     }
     
