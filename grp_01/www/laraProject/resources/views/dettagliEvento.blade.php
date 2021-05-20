@@ -29,7 +29,7 @@
                     @include('Helper/LocandinaDettaglio', ['imgFile' => $locandina])
                 </div>
                 <div>
-                    {{ $informazioni }}
+                    <br><br><b>{{ $informazioni }}</b>
                 </div>
                 @can('isUser')
                 <a href="{{route('acquisto',[$evento->codice_evento])}}">
