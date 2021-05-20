@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Resources\Utente;
+
 use App\Models\Catalogo;
 
 
@@ -9,8 +9,8 @@ use App\Models\Catalogo;
 class ControllerLivello2 extends Controller {
 
     protected $_catalogoModel;
-    protected $_faqModel;
-    protected $_utenteModel;
+
+
     
     
     public function __construct() {
