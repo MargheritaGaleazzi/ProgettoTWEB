@@ -3,12 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/xampp/htdocs/Repository%20Github/ProgettoTWEB/grp_01/www/laraProject/app/Http/Controllers/ControllerPubblico.php</file>
-            <file>file:/D:/xampp/htdocs/Repository%20Github/ProgettoTWEB/grp_01/www/laraProject/database/seeds/DatabaseSeeder.php</file>
-            <file>file:/D:/xampp/htdocs/Repository%20Github/ProgettoTWEB/grp_01/www/laraProject/resources/views/catalogo.blade.php</file>
-            <file>file:/D:/xampp/htdocs/Repository%20Github/ProgettoTWEB/grp_01/www/laraProject/.env</file>
-            <file>file:/D:/xampp/htdocs/Repository%20Github/ProgettoTWEB/grp_01/www/laraProject/app/Http/Requests/FiltroRequest.php</file>
-            <file>file:/D:/xampp/htdocs/Repository%20Github/ProgettoTWEB/grp_01/www/laraProject/app/Models/Catalogo.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/.env</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/database/migrations/2021_05_13_061126_utente.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/app/Http/Controllers/AdminController.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/auth/login.blade.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/AreaUtente2.blade.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/app/Http/Middleware/Authenticate.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/app/Models/Resources/Utente.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/app/Http/Controllers/Auth/RegisterController.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/database/migrations/2021_05_13_131152_biglietto.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/resources/views/layout/navLevel2.blade.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/app/Http/Controllers/UserController.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/app/User.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/routes/web.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/app/Http/Controllers/Auth/LoginController.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/database/migrations/2021_05_13_061204_evento.php</file>
+            <file>file:/D:/programmi/xampp/htdocs/ProgettoTWEB/grp_01/www/laraProject/database/seeds/DatabaseSeeder.php</file>
         </group>
     </open-files>
 </project-private>

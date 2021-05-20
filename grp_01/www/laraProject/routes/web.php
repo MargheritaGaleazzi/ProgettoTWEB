@@ -54,6 +54,12 @@ Route::post('register', 'Auth\RegisterController@register');
 Route::view('/cliente', 'AreaUtente2')
         ->name('cliente');
 
+Route::view('/amministratore', 'AreaAdmin')
+        ->name('amministratore');
+
+Route::view('/organizzatore', 'AreaUtente3')
+        ->name('organizzatore');
+
 Route::view('/storico', 'StoricoUtente2')
         ->name('storico');
 

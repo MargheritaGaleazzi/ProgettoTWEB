@@ -6,6 +6,9 @@
     @can('isAdmin')
     <li><a href="{{ route('amministratore') }}" title="Home Admin">Area amministratore</a></li>
 @endcan
+@can('isOrganizator')
+    <li><a href="{{ route('organizzatore') }}" title="Home Organizzatore">Area organizzatore</a></li>
+@endcan
 @can('isUser')
     <li><a href="{{ route('cliente') }}" title="Home User">Area privata</a></li>
 @endcan
