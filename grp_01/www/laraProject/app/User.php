@@ -16,7 +16,7 @@ class User extends Authenticatable {
      * @var array
      */
     protected $fillable = [
-        'name', 'surname', 'email', 'username', 'password',
+        'nome', 'cognome', 'email', 'username', 'password','via','citta','cap','sesso','cellulare',
         //aggiunti surnae e username
     ];
 
@@ -42,7 +42,7 @@ class User extends Authenticatable {
     //verifica che l'utente loggato abbia il ruolo che ci serev
     public function hasRole($role) {
         $role = (array)$role;
-        return in_array($this->role, $role);
+        return in_array($this->categoria, $role);
     }
 
 }

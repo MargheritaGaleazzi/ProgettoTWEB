@@ -5,69 +5,108 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="address">
-                <div class="wrapper fadeInDown">{{ __('Register') }}</div>
+                <div class="wrapper fadeInDown">REGISTRATI</div>
 
                 <div class="address">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+                    {{ Form::open(array('route' => 'register')) }}
+                    
+                        <!--Nome Utente Registrazione-->
+                        <div class="address">
+                        <div class="form-group row">
+                            {{ Form::label('nome', 'Nome', ['class' => 'label-input']) }}
+                            <div class="col-md-6">
+                            {{ Form::text('nome', '', ['class' => 'input', 'id' => 'nome']) }}
+                                    @if ($errors->first('nome'))
+                                        <ul class="errors">
+                                        @foreach ($errors->get('nome') as $message)
+                                        <li>{{ $message }}</li>
+                                        @endforeach
+                                        </ul>
+                                    @endif
+                            </div>
+                        </div>
+                        </div>
+
+                        <!--Cognome Utente Registrazione-->
+                        <div class="address">
+                        <div class="form-group row">
+                            {{ Form::label('cognome', 'Cognome', ['class' => 'label-input']) }}
+                            <div class="col-md-6">
+                            {{ Form::text('cognome', '', ['class' => 'input', 'id' => 'cognome']) }}
+                                @if ($errors->first('cognome'))
+                                        <ul class="errors">
+                                        @foreach ($errors->get('conome') as $message)
+                                        <li>{{ $message }}</li>
+                                        @endforeach
+                                        </ul>
+                                    @endif
+                            </div>
+                        </div>
+                        </div>
                         
+                        <!--E-mail Utente Registrazione-->
                         <div class="address">
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nome') }}</label>
-
+                            {{ Form::label('email', 'Email', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                            {{ Form::text('email', '', ['class' => 'input','id' => 'email']) }}
+                                @if ($errors->first('email'))
+                                    <ul class="errors">
+                                    @foreach ($errors->get('email') as $message)
+                                    <li>{{ $message }}</li>
+                                    @endforeach
+                                    </ul>
+                                @endif
+                            </div>
+                        </div>
+                        </div>
+                        
+                        <!--Username Utente Registrazione-->
+                        <div class="address">
+                        <div class="form-group row">
+                            {{ Form::label('username', 'Username', ['class' => 'label-input']) }}
+                            <div class="col-md-6">
+                            {{ Form::text('username', '', ['class' => 'input','id' => 'username']) }}
+                                @if ($errors->first('username'))
+                                    <ul class="errors">
+                                    @foreach ($errors->get('username') as $message)
+                                    <li>{{ $message }}</li>
+                                    @endforeach
+                                    </ul>
+                                @endif
+                            </div>
+                        </div>
+                        </div>
+                        
+                        <!--Password Utente Registrazione-->
+                        <div class="address">
+                        <div class="form-group row">
+                            {{ Form::label('password', 'Password', ['class' => 'label-input']) }}
+                            <div class="col-md-6">
+                            {{ Form::password('password', ['class' => 'input', 'id' => 'password']) }}
+                                @if ($errors->first('password'))
+                                    <ul class="errors">
+                                    @foreach ($errors->get('password') as $message)
+                                    <li>{{ $message }}</li>
+                                    @endforeach
+                                    </ul>
+                                @endif
                             </div>
                         </div>
                         </div>
 
-                        <div class="address">
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Indirizzo e-mail') }}</label>
+                        
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-                        </div>
-
-                        <div class="address">
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="fadeIn third @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-                        </div>
-
-                        <div class="address">
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="fadeIn third" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-                        </div>
+                        
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
 
                         <div class="wrapper fadeInDown">
                             <div class="col-md-6 offset-md-3">
@@ -77,6 +116,8 @@
                             </div>
                         </div>
                     </form>
+                    
+                    
                 </div>
             </div>
         </div>

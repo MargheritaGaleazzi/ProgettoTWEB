@@ -13,7 +13,13 @@ class ControllerLivello2 extends Controller {
     
     
     public function __construct() {
+        $this->middleware('can:isUser');
+        $this->_utenteModel = new Utente;
         $this->_catalogoModel = new Catalogo;   
+    }
+    
+    public function index() {
+        return view('AreaUtente2');
     }
 
     public function acquisto($codice_evento) {

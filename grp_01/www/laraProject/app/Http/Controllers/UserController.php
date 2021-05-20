@@ -11,6 +11,15 @@ class userController extends Controller {
     }
 
     public function index() {
-        return view('user');
+        $role = auth()->user()->categoria;
+        switch ($role) {
+            case 'amministratore': view('AreaAdmin');
+                break;
+            case 'cliente': view('AreaUtente2');
+                break;
+            case 'organizzatore': view('AreaOrganizzatore');
+                break;
+            default: return view('homePubblica');
+        }
     }
 }

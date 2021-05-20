@@ -45,7 +45,7 @@
 
             <!-- Iscrizione -->
             <div id="formFooter">
-                <a class="underlineHover" href="{{route('register')}}" title="Storico">Iscriviti</a>
+                <a class="underlineHover" href="{{route('register')}}">Iscriviti</a>
               </div>
         </div>
         </div>
