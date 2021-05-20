@@ -31,12 +31,15 @@ use AuthenticatesUsers;
      *
      * @var string
      */
+//LOGIN CONTROLLER BIGLIETTONE
     protected function redirectTo() {        
-        $role = auth()->user()->role;
+        $role = auth()->user()->categoria;
         switch ($role) {
-            case 'admin': return '/admin';
+            case 'amministratore': return '/amministratore';
                 break;
-            case 'user': return '/user';
+            case 'cliente': return '/utente';
+                break;
+            case 'organizzatore': return '/organizzatore';
                 break;
             default: return '/';
         };
