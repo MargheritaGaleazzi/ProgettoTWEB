@@ -26,8 +26,8 @@
 
                         <label for="sesso">Sesso:</label>
                         <select name="sesso" id="sesso" class="fadeIn second" required>
-                          <option value="femmina">Femmina</option>
-                          <option value="maschio">Maschio</option>
+                          <option value="F">F</option>
+                          <option value="M">M</option>
                         </select>
                         
                         <input type="number" id="cellulare" class="fadeIn second" name="login" placeholder="cellulare"required>
