@@ -6,23 +6,16 @@
         <div class="col-md-8">
             <div class="address">
                 <div class="wrapper fadeInDown">REGISTRATI</div>
-
+<?php $ut=Auth::user();?>
                 <div class="address">
-                    {{ Form::open(array('route' => 'modificalivello2')) }}
-                    <?php $name=Auth::user()->nome; 
-                            $surname=Auth::user()->cognome;
-                            $email=Auth::user()->email;
-                            $via=Auth::user()->via;
-                            $citta=Auth::user()->citta;
-                            $cap=Auth::user()->cap;
-                            $sesso=Auth::user()->sesso;
-                            $cellulare=Auth::user()->cellulare;?>
+                    {{ Form::model($ut, ['method'=>'PUT',
+                            'route'=>['user.update',$ut->id]]) }}
                         <!--Nome Utente Registrazione-->
                         <div class="address">
                         <div class="form-group row">
                             {{ Form::label('nome', 'Nome', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                            {{ Form::text('nome', "$name", ['class' => 'input', 'id' => 'nome']) }}
+                            {{ Form::text('nome', old('nome'), ['class' => 'input', 'id' => 'nome']) }}
                                     @if ($errors->first('nome'))
                                         <ul class="errors">
                                         @foreach ($errors->get('nome') as $message)
@@ -39,7 +32,7 @@
                         <div class="form-group row">
                             {{ Form::label('cognome', 'Cognome', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                            {{ Form::text('cognome', "$surname", ['class' => 'input', 'id' => 'cognome']) }}
+                            {{ Form::text('cognome', old('cognome'), ['class' => 'input', 'id' => 'cognome']) }}
                                 @if ($errors->first('cognome'))
                                         <ul class="errors">
                                         @foreach ($errors->get('conome') as $message)
@@ -56,7 +49,7 @@
                         <div class="form-group row">
                             {{ Form::label('email', 'Email', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                            {{ Form::text('email', "$email", ['class' => 'input','id' => 'email']) }}
+                            {{ Form::text('email', old('email'), ['class' => 'input','id' => 'email']) }}
                                 @if ($errors->first('email'))
                                     <ul class="errors">
                                     @foreach ($errors->get('email') as $message)
@@ -117,7 +110,7 @@
                         <div class="form-group row">
                             {{ Form::label('via', 'Via', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                            {{ Form::text('via', "$via", ['class' => 'input','id' => 'via']) }}
+                            {{ Form::text('via', old('via'), ['class' => 'input','id' => 'via']) }}
                                 @if ($errors->first('via'))
                                     <ul class="errors">
                                     @foreach ($errors->get('via') as $message)
@@ -134,7 +127,7 @@
                         <div class="form-group row">
                             {{ Form::label('citta', 'Citta', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                            {{ Form::text('citta', "$citta", ['class' => 'input','id' => 'citta']) }}
+                            {{ Form::text('citta', old('citta'), ['class' => 'input','id' => 'citta']) }}
                                 @if ($errors->first('citta'))
                                     <ul class="errors">
                                     @foreach ($errors->get('citta') as $message)
@@ -151,7 +144,7 @@
                         <div class="form-group row">
                             {{ Form::label('cap', "CAP", ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                            {{ Form::text('cap', "$cap", ['class' => 'input','id' => 'cap']) }}
+                            {{ Form::text('cap', old('cap'), ['class' => 'input','id' => 'cap']) }}
                                 @if ($errors->first('cap'))
                                     <ul class="errors">
                                     @foreach ($errors->get('cap') as $message)
@@ -169,7 +162,7 @@
                         <div class="form-group row">
                             {{ Form::label('sesso', 'Sesso', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                            {{ Form::select('sesso',$gen ,"$sesso", ['class' => 'input','id' => 'sesso']) }}
+                            {{ Form::select('sesso',$gen ,old('sesso'), ['class' => 'input','id' => 'sesso']) }}
                                 @if ($errors->first('sesso'))
                                     <ul class="errors">
                                     @foreach ($errors->get('sesso') as $message)
@@ -186,7 +179,7 @@
                         <div class="form-group row">
                             {{ Form::label('cellulare', 'Cellulare', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                            {{ Form::text('cellulare', "$cellulare", ['class' => 'input','id' => 'cellulare']) }}
+                            {{ Form::text('cellulare', old('cellulare'), ['class' => 'input','id' => 'cellulare']) }}
                                 @if ($errors->first('cellulare'))
                                     <ul class="errors">
                                     @foreach ($errors->get('cellulare') as $message)

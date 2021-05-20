@@ -157,7 +157,7 @@
                         </div>
                         
                         <!--Sesso Utente Registrazione-->
-                        <?php $gen=['M','F']; ?>
+                        <?php $gen=['M'=>'M','F'=>'F']; ?>
                         <div class="address">
                         <div class="form-group row">
                             {{ Form::label('sesso', 'Sesso', ['class' => 'label-input']) }}

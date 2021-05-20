@@ -72,6 +72,8 @@ Route::get('/qrcode', function () {
         ->generate('Margherita Galeazzi');
 })->name('qrcode');
 
+Route::resource('user','ControllerLivello2');
+
 
 /* Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home'); */

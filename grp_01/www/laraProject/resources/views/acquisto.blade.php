@@ -12,8 +12,6 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}">
 
 
-
-
 @extends('layout.zonaPubblica')
 
 @section('title', 'Dettaglio')
@@ -48,11 +46,16 @@
                                         </div>
                                         
                                        
-                                        <div class="col my-auto"> <small>Quantità : <div class="qty-changer">
+                                        <div class="col my-auto"> 
+                                            <small>Quantità : 
+                                                <div class="qty-changer">
                                                     <form name='ordine' onchange="prezzoTotale()">
-            <input id="quant" class="qty-input form-group" type="number" value="1" min="1"/>
+                                                        <input id="quant" class="qty-input form-group" type="number" value="1" min="1" max="1000"/>
                                                     </form>
-        </div></small></div>
+                                                </div>
+                                            </small>
+                                        </div>
+
                                         <div class="col my-auto">
                                             <h6 class="mb-0">@include('Helper/Prezzo')</h6>
                                         </div>
