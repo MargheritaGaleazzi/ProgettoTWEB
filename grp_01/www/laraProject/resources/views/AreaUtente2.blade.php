@@ -18,7 +18,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <a><input type="submit" class="profile-edit-btn" name="btnAddMore" value="Modifica Profilo"/></a>
+                        <a href="{{route('modificalivello2')}}" title="Modifica profilo"><input type="submit" class="profile-edit-btn" name="btnAddMore" value="Modifica Profilo"/></a>
                     </div>
                 </div>
                 <div class="row">

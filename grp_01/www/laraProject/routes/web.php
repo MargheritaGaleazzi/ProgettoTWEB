@@ -63,6 +63,9 @@ Route::view('/organizzatore', 'AreaUtente3')
 Route::view('/storico', 'StoricoUtente2')
         ->name('storico');
 
+Route::view('/modificalivello2', 'ModificaUtente2')
+        ->name('modificalivello2');
+
 Route::get('/qrcode', function () {
     return QrCode::size(250)
         ->backgroundColor(224, 122, 114)

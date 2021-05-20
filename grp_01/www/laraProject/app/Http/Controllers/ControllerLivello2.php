@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Resources\Utente;
 use App\Models\Catalogo;
 
 
@@ -9,13 +9,14 @@ use App\Models\Catalogo;
 class ControllerLivello2 extends Controller {
 
     protected $_catalogoModel;
+    protected $_utenteModel;
 
 
     
     
     public function __construct() {
         $this->middleware('can:isUser');
-        //$this->_utenteModel = new Utente;
+        $this->_utenteModel = new Utente;
         $this->_catalogoModel = new Catalogo;   
     }
     
@@ -40,6 +41,22 @@ class ControllerLivello2 extends Controller {
                                                 'prezzo'=>$prezzo,
                                                 'locandina'=>$locandina
                                             ]);
+    }
+    
+    public function modificaDati($newnome,$newcognome,$newemail,$newsesso,$newcitta,$newvia,$newcap,$newcellulare) {
+
+        //Mostra la finestra con i dettagli dell'evento selezionato
+        $utente_id = Auth::user()->id;
+        $ut=$this->_utenteModel->getUtenteById($utente_id);
+        $ut->nome=$newnome;
+        $ut->conome=$newcognome;
+        $ut->email=$newemail;
+        $ut->sesso=$newsesso;
+        $ut->citta=$newcitta;
+        $ut->via=$newvia;
+        $ut->cap=$newcap;
+        $ut->cellulare=$newcellulare;
+        return view('cliente');
     }
     
 

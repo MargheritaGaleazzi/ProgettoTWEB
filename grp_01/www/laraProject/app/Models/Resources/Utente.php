@@ -10,5 +10,9 @@ class Utente extends Model{
     protected $primaryKey = 'id';
     public $timestamps = false;
     
+    public function getUtenteById($id) {
+
+        return Evento::where('id', $id)->first();      
+    }
     
 }
