@@ -35,7 +35,7 @@
                             {{ Form::text('cognome', '', ['class' => 'input', 'id' => 'cognome']) }}
                                 @if ($errors->first('cognome'))
                                         <ul class="errors">
-                                        @foreach ($errors->get('conome') as $message)
+                                        @foreach ($errors->get('cognome') as $message)
                                         <li>{{ $message }}</li>
                                         @endforeach
                                         </ul>
