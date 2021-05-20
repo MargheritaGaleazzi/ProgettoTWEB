@@ -9,8 +9,15 @@ use App\Models\Catalogo;
 class ControllerLivello2 extends Controller {
 
     protected $_catalogoModel;
+<<<<<<< HEAD
+    
+=======
     protected $_faqModel;
     protected $_utenteModel;
+<<<<<<< Updated upstream
+=======
+>>>>>>> 62288764ff603cb1fc903d434d01983fafc87066
+>>>>>>> Stashed changes
     
     
     public function __construct() {
