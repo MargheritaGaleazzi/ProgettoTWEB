@@ -7,54 +7,34 @@
 
 <section class="search-sec">
     <div class="container" >
-        <form action="#" method="post" novalidate="novalidate">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <!--{{ Form::open(array('route' => 'catalogoFiltrato', 'id' => 'filtro', 'files' => true, 'class' => 'col-lg-3 col-md-3 col-sm-12 p-0')) }}
-                            {{ Form::text('luogo', '', ['class' => 'form-control search-slt']) }}
-                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                           {{ Form::submit('Cerca!', ['class' => 'btn btn-danger wrn-btn']) }}-->
-                            <input type="text" class="form-control search-slt" placeholder="Cerca...">
-                            {{ Form::open(array('route' => 'catalogoFiltrato', 'id' => 'filtro', 'files' => true)) }}
-                            {{ Form::select('luogo', $luoghi, '', ['class' => 'form-control search-slt', 'placeholder'=>'> Scegli una regione <']) }}
-                            {{ Form::select('societa', $societa, '', ['class' => 'form-control search-slt', 'placeholder'=>'> Scegli una società <']) }}
-                            {{ Form::label('data', 'Scegli una data')}}
-                            {{ Form::datetime('data', \Carbon\Carbon::create()->format('m-Y'), ['class' => 'form-control search-slt']) }}
-                            {{ Form::submit('Cerca!', ['class' => 'btn btn-danger wrn-btn']) }}
-                            <!--<button type="submit" class="btn btn-danger wrn-btn" value="Cerca">Cerca!</button>-->
-                        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                        {{ Form::open(array('route' => 'catalogoFiltrato', 'id' => 'filtro', 'files' => true)) }}
+                        {{ Form::select('luogo', $luoghi, '', ['class' => 'form-control search-slt', 'placeholder'=>'> Scegli una regione <']) }}
+                        {{ Form::select('societa', $societa, '', ['class' => 'form-control search-slt', 'placeholder'=>'> Scegli una società <']) }}
+                        {{ Form::label('data', 'Scegli una data')}}
+                        {{ Form::datetime('data', \Carbon\Carbon::create()->format('m-Y'), ['class' => 'form-control search-slt']) }}
+                        {{ Form::submit('Applica Filtro', ['class' => 'btn btn-primary btn-sm']) }}
+                        <button type="submit" class="btn btn-danger wrn-btn" value="Cerca">Cerca!</button>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-
-                </div>
-                <!--<div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                    <select class="form-control search-slt">
-                        <option disabled selected>Societa organizzatrice:</option>
-                        <option>
-                        <a><p>ConcertoPlanner</p></a href="#">
-                        </option>
-                        <option>
-                        <a><p>TheConcertoShoppe</p></a href="#">
-                        </option>
-                        <option>
-                        <a><p>PartyLove</p></a href="#">
-                        </option>
-                        <option>
-                        <a><p>CasaDelConcerto</p></a href="#">
-                        </option>
-                        <option>
-                        <a><p>PrixeoEvent</p></a href="#">
-                        </option>
-                    </select> 
-                </div>-->
+                <!--<input type="text" class="form-control search-slt" placeholder="Cerca...">-->
             </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                        {{ Form::text('ricerca', '', ['class' => 'form-control search-slt', 'placeholder' => 'Cerca...']) }}
+                        {{ Form::submit('Avvia la ricerca', ['class' => 'btn btn-primary btn-sm']) }}
+                        {{Form::close()}}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-</form>
-</div>
 </section>
 
 <div class="container">

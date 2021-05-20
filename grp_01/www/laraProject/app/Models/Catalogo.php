@@ -22,6 +22,13 @@ class Catalogo {
         return Evento::where('codice_evento', $codice_evento)->first();      
     }
     
+    public function getEventiRicercati($testo){
+        return Evento::where('informazioni', 'LIKE', '%'.$testo.'%')
+                ->orWhere('luogo', 'LIKE', '%'.$testo.'%')
+                ->orWhere('data_ora', 'LIKE', '%'.$testo.'%')
+                ->paginate(4);
+    }
+    
     public function getEventiFiltrati($luogo = null, $societa = null, $data = null){
         if (is_null($luogo) && is_null($societa) && $data=='01-0000'){
             return Evento::paginate(4);
