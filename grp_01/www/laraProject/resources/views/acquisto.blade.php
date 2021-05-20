@@ -47,11 +47,17 @@
                                         
                                        
                                         <div class="col my-auto"> 
-                                            <small>Quantità : 
+                                            <!--<small>Quantità : 
                                                 <div class="qty-changer">
-                                                    <form name='ordine' onchange="prezzoTotale()">
-                                                        <input id="quant" class="qty-input form-group" type="number" value="1" min="1" max="1000"/>
-                                                    </form>
+                                                    <!--<form name='ordine' onchange="prezzoTotale()">-->
+                                                    <?php $ut=Auth::user();?>
+                                                        {{ Form::open(array('route' => 'creaBiglietto')) }}
+                            {{ Form::label('quantita', 'Quantità', ['class' => 'label-input']) }}
+                            {{ Form::number('quantita', '', ['class' => 'input', 'id' => 'quantita']) }}
+                            
+                            
+                                                       <!-- <input id="quant" class="qty-input form-group" type="number" value="1" min="1" max="1000"/>
+                                                    </form>-->
                                                 </div>
                                             </small>
                                         </div>
@@ -76,13 +82,22 @@
                             <p class="mb-1"><b>Metodo di pagamento</b></p>
                         </div>
                         <div class="flex-sm-col col-auto">
-                            <form action="#">
+                            <?php $pag=['bonifico','carta di credito','paypal'];
+                            if($biglietto_scontato==1){
+                    $prezzo=$prezzo-(($prezzo*$sconto)/100);
+                    }?>
+                            {{ Form::label('metodo_pagamento', 'Metodo di Pagamento', ['class' => 'label-input']) }}
+                            {{ Form::select('metodo_pagamento',$pag ,'', ['class' => 'input','id' => 'metodo_pagamento']) }}
+                            {{ Form::hidden('prezzo', $prezzo) }}
+                            {{ Form::hidden('id', $ut->id) }}
+                            {{ Form::hidden('codice_evento', $evento->codice_evento) }}
+                           <!-- <form action="#">
                                 <select>
                                 <option>Bonifico</option>
                                 <option>Carta di credito</option>
                                 <option>PayPal</option>
                                 </select>
-                            </form>
+                            </form>-->
                         </div>
                     </div>
                     
@@ -118,7 +133,9 @@
                     
                     
                     <div class="col-auto my-auto ml-auto">
-                        <button>Procedi con il pagamento</button>
+                        <!--<button>Procedi con il pagamento</button>-->
+                        {{ Form::submit('Acquista', ['class' => 'form-btn1']) }}
+                        {{ Form::close() }}
                     </div>
                     </form>
                 </div>

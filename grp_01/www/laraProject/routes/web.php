@@ -73,6 +73,8 @@ Route::get('/qrcode', function () {
 })->name('qrcode');
 
 Route::resource('user','ControllerLivello2');
+Route::post('creaBiglietto', 'ControllerLivello2@creaBiglietto')
+        ->name('creaBiglietto');
 
 
 /* Auth::routes();

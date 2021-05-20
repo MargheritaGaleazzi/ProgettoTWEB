@@ -156,7 +156,8 @@
                         </div>
                         </div>
                         
-                        <!--Sesso Utente Registrazione-->
+                        <!--Sesso Utente Registrazion<?php $gen=['M','F']; ?>
+                        <div class="e-->
                         <?php $gen=['M','F']; ?>
                         <div class="address">
                         <div class="form-group row">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Resources\Utente;
+use App\Models\Resources\Biglietto;
 use App\Models\Catalogo;
 use Illuminate\Http\Request;
 
@@ -75,6 +76,17 @@ class ControllerLivello2 extends Controller {
     return redirect('cliente');
 }
     
+    public function creaBiglietto(Request $request)
+    {
+        $biglietto=new Biglietto;
+        $biglietto->id=$request->id;
+        $biglietto->codice_evento=$request->codice_evento;
+        $biglietto->metodo_pagamento=$request->metodo_pagamento;
+        $biglietto->prezzo_acquisto=($request->prezzo)*($request->quantita);
+        $biglietto->save();
+        
+        return redirect('/');
+    }
 
 }
 
