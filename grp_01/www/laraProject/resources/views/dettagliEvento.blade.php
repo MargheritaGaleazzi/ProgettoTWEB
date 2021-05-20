@@ -31,9 +31,11 @@
                 <div>
                     {{ $informazioni }}
                 </div>
+                @can('isUser')
                 <a href="{{route('acquisto',[$evento->codice_evento])}}">
                     <button class="btn btn-outline-primary btn-sm mt-2" type="button">Compra</button>
                 </a>
+                @endcan
             </div>
         </div>
         <div class="col-lg-7">

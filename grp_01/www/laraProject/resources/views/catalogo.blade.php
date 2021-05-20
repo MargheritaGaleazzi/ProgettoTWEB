@@ -83,8 +83,9 @@
                         <h4 class="mr-1">@include('Helper/Prezzo')</h4><span class="strike-text"></span>
                     </div>
                     <div class="d-flex flex-column mt-4"><a href="{{route('dettagliEvento',[$evento->codice_evento])}}"><button class="btn btn-primary btn-sm" type="button">Dettagli</button></a>
-
+@can('isUser')
                         <a href="{{route('acquisto',[$evento->codice_evento])}}"><button class="btn btn-outline-primary btn-sm mt-2" type="button">Compra</button></a>
+                   @endcan
                     </div>
                 </div>
             </div>
