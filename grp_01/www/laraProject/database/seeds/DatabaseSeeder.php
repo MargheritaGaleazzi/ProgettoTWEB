@@ -23,10 +23,10 @@ class DatabaseSeeder extends Seeder
         
         DB::table('users')->insert([
            
-            ['categoria' => 'amministratore', 'email' => 'giuseppe.santi3@mail.com', 'username' => 'adminadmin', 'password' => 'X1XS5jXS',
+            ['categoria' => 'amministratore', 'email' => 'giuseppe.santi3@mail.com', 'username' => 'adminadmin', 'password' => Hash::make('adminadmin'),
                 'email_verified_at' => Null, 'nome' => 'Giuseppe', 'cognome' => 'Santi', 'via' => 'Piagi', 'citta' => 'Ancona',
                 'cap' => '60121', 'sesso' => 'M', 'cellulare' => '3556768542', 'nome_societa_organizzatrice' => Null],
-            ['categoria' => 'organizzatore', 'email' => 'casadelconcerto@live.com', 'username' => 'orgaorga', 'password' => 'X1XS5jXS',
+            ['categoria' => 'organizzatore', 'email' => 'casadelconcerto@live.com', 'username' => 'orgaorga', 'password' => Hash::make('orgaorga'),
                 'email_verified_at' => Null, 'nome' => Null, 'cognome' => Null, 'via' => 'Donnola', 'citta' => 'Perugia',
                 'cap' => '59439', 'sesso' => Null, 'cellulare' => '3542047281', 'nome_societa_organizzatrice' => 'CasaDelConcerto'],
             ['categoria' => 'cliente', 'email' => 'mario.bianchi@gmail.com', 'username' => 'clieclie', 'password' => Hash::make('clieclie'),
