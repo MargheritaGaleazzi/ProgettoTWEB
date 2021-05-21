@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Admin;
 use App\Models\Resources\Utente;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 
 class AdminController extends Controller {
@@ -42,20 +45,41 @@ class AdminController extends Controller {
     }
     
     public function aggiungiOrganizzatore(Request $request) {
+        
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|string|email|unique:users|max:255',
+            'nome_societa_organizzatrice' => 'required|string|max:255',
+            'username' => 'required|string|min:8|unique:users',
+            'password' => 'required|string|min:8|confirmed',
+            'via' => 'required|string',
+            'citta' => 'required|string',
+            'cap' => 'required|string|min:5|max:5',
+            'sesso' => 'required|string',
+            'cellulare' => 'string',
+        ]);
+        
+
+        if ($validator->fails()) {
+            return redirect('AggiungiOrganizzatore')
+                        ->withErrors($validator)
+                        ->withInput();
+        }
 
         $organizzatore = new Utente;
         $organizzatore->categoria='organizzatore';
         $organizzatore->email=$request->email;
         $organizzatore->username=$request->username;
         $organizzatore->password=Hash::make($request->password);
-        $organizzatore->via=$Request->via;
-        $organizzatore->citta=$Request->citta;
-        $organizzatore->cap=$Request->cap;
-        $organizzatore->cellulare=$Request->cellulare;
-        $organizzatore->nome_societa_organizzatrice=$Request->nome_societa_organizzatrice;
+        $organizzatore->via=$request->via;
+        $organizzatore->citta=$request->citta;
+        $organizzatore->cap=$request->cap;
+        $organizzatore->cellulare=$request->cellulare;
+        $organizzatore->nome_societa_organizzatrice=$request->nome_societa_organizzatrice;
+        $organizzatore->sesso=$request->sesso;
         $organizzatore->save();
 
-        return redirect()->action('AdminController@index');
+        return redirect('/');
     }
+    
 
 }

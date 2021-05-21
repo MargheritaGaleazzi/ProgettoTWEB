@@ -53,7 +53,7 @@
 
 
 <div class="headertable">ORGANIZZATORI 
-    <a href="#"><button class="btn btn-sm" type="button">Inserisci nuovo</button></a>
+    <a href="{{route('AggiungiOrganizzatore')}}"><button class="btn btn-sm" type="button">Inserisci nuovo</button></a>
 </div>
    <table class="user" cellspacing="0">
       <tr>
@@ -64,6 +64,7 @@
          <th width="180">Citta</th>
          <th width="180">CAP</th>
          <th width="180">Cellulare</th>
+         <th width="180">Sesso</th>
          <th></th>
       </tr>
     @isset($organizzatori)
@@ -76,6 +77,7 @@
          <td>{{ $organizzatore->citta }}</td>
          <td>{{ $organizzatore->cap }}</td>
          <td> {{ $organizzatore->cellulare }} </td>
+         <td> {{ $organizzatore->sesso }} </td>
          <td> <a href="#"><button class="btn btn-primary btn-sm" type="button">Elimina</button></a> </td>
          <td> <a href="#"><button class="btn btn-primary btn-sm" type="button">Modifica</button></a> </td>
       </tr>

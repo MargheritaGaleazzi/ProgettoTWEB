@@ -83,5 +83,9 @@ Route::view('/gestioneFAQ', 'gestioneFAQ')
 Route::get('/gestioneUtenti', 'AdminController@vediutenti')
         ->name('gestioneUtenti')->middleware('can:isAdmin');
 
+Route::view('AggiungiOrganizzatore', 'RegistrazioneOrganizzatore')
+        ->name('AggiungiOrganizzatore')->middleware('can:isAdmin');
+Route::post('AggiungiOrganizzatore', 'AdminController@aggiungiOrganizzatore')->middleware('can:isAdmin');
+
 /* Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home'); */
