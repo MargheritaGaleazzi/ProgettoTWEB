@@ -6,6 +6,7 @@ use App\Models\Resources\Biglietto;
 use App\Models\Resources\Evento;
 use App\Models\Catalogo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 
 
@@ -83,6 +84,16 @@ class ControllerLivello2 extends Controller {
     
     public function creaBiglietto(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'metodo_pagamento' => 'required',
+        ]);
+        
+        if ($validator->fails()) {
+            return redirect('acquisto')
+                        ->withErrors($validator)
+                        ->withInput();
+        }
+        
         $biglietto=new Biglietto;
         $biglietto->id=$request->id;
         $biglietto->codice_evento=$request->codice_evento;
