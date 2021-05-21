@@ -76,6 +76,8 @@ class ControllerPubblico extends Controller {
         $sconto = $evento->sconto;
         $programma_evento = $evento->programma_evento;
         $indicazioni = $evento->indicazioni;
+        $partecipero = $evento->partecipero;
+        $biglietti_rimanenti = $evento->biglietti_rimanenti;
 
 
         return view('dettagliEvento', ['evento' => $evento,
@@ -91,7 +93,10 @@ class ControllerPubblico extends Controller {
             'stato_evento' => $stato_evento,
             'locandina' => $locandina,
             'programma_evento' => $programma_evento,
-            'indicazioni' => $indicazioni
+            'indicazioni' => $indicazioni,
+            'partecipero' => $partecipero,
+            'biglietti_rimanenti' => $biglietti_rimanenti,
+            'sconto' => $sconto
         ]);
     }
 

@@ -7,26 +7,17 @@
 
 <section class="search-sec">
     <div class="container" >
-        <div class="row">
-            <div class="col-lg-12">
+        <center>
+        <div class="d-flex justify-content-center row">
+            <div class="col-md-10">
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                        {{ Form::open(array('route' => 'catalogoFiltrato', 'id' => 'filtro', 'files' => true)) }}
+                        {{ Form::open(array('route' => 'catalogoFiltrato', 'id' => 'filtro', 'files' => true, 'style' => 'float:left')) }}
                         {{ Form::select('luogo', $luoghi, '', ['class' => 'form-control search-slt', 'placeholder'=>'> Scegli una regione <']) }}
                         {{ Form::select('societa', $societa, '', ['class' => 'form-control search-slt', 'placeholder'=>'> Scegli una società <']) }}
                         {{ Form::label('data', 'Scegli una data')}}
                         {{ Form::datetime('data', \Carbon\Carbon::create()->format('m-Y'), ['class' => 'form-control search-slt']) }}
-                        {{ Form::submit('Applica Filtro', ['class' => 'btn btn-primary btn-sm']) }}
-                        <button type="submit" class="btn btn-danger wrn-btn" value="Cerca">Cerca!</button>
-                    </div>
-                </div>
-                <!--<input type="text" class="form-control search-slt" placeholder="Cerca...">-->
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                        {{ Form::submit('Applica il filtro', ['class' => 'btn btn-primary btn-sm']) }}
                         {{ Form::text('ricerca', '', ['class' => 'form-control search-slt', 'placeholder' => 'Cerca...']) }}
                         {{ Form::submit('Avvia la ricerca', ['class' => 'btn btn-primary btn-sm']) }}
                         {{Form::close()}}
@@ -34,9 +25,10 @@
                 </div>
             </div>
         </div>
-    </div>
+        </center>
+    </div> 
 </section>
-
+ 
 <div class="container">
     @isset($eventi)
     @foreach ($eventi as $evento)
@@ -54,7 +46,12 @@
                         <p class="nomeprod">{{ $evento->titolo }}</p>
                     </a>
                     <div class="d-flex flex-row">
-                        <div class="mt-1 mb-1 spec-1"><span>{{ $evento->data_ora }}</span><span class="dot"></span><span>{{ $evento->luogo }}</span><span class="dot"></span><span>{{ $evento->societa_organizzatrice }}<br></span></div>
+                        <div class="mt-1 mb-1 spec-1">
+                            <span>{{ $evento->data_ora }}</span>
+                            <span class="dot"></span><span>{{ $evento->luogo }}</span>
+                            <span class="dot"></span><span>{{ $evento->societa_organizzatrice }}<br></span>
+                            <span class="dot"></span><span>{{ $evento->stato_evento }}</span>
+                        </div>
                     </div>
                     <p class="text-justify text-truncate para mb-0">{{ $evento->informazioni }}<br><br></p>
                 </div>
@@ -63,7 +60,7 @@
                         <h4 class="mr-1">@include('Helper/Prezzo')</h4><span class="strike-text"></span>
                     </div>
                     <div class="d-flex flex-column mt-4"><a href="{{route('dettagliEvento',[$evento->codice_evento])}}"><button class="btn btn-primary btn-sm" type="button">Dettagli</button></a>
-@can('isUser')
+                   @can('isUser')
                         <a href="{{route('acquisto',[$evento->codice_evento])}}"><button class="btn btn-outline-primary btn-sm mt-2" type="button">Compra</button></a>
                    @endcan
                     </div>

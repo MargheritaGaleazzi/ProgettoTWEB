@@ -50,6 +50,9 @@
                 <li class="pb-2"><b>Luogo:</b> {{$luogo}} </li>
                 <li class="pb-2"><b>Data e ora:</b> {{$data_ora}} </li>
                 <li class="pb-2"><b>Società organizzatrice:</b> {{$organizzatore}} </li>
+                <li class="pb-2"><b>Stato evento:</b> {{$stato_evento}} </li>
+                <li class="pb-2"><b>Biglietti rimanenti:</b> {{$biglietti_rimanenti}} </li>
+                <li class="pb-2"><b>Partecipero':</b> {{$partecipero}} </li>
             </ul>
              {!!$coordinate_maps!!} 
         </div>

@@ -87,6 +87,16 @@
                è possibile visualizzare tutte le caratteristiche inerenti, con indicazioni riguardo il luogo in cui si svolgerà, la data, la società organizzatrice che offre l'evento,
                il programma offerto ed informazioni riguardo gli orari di ingresso presso la struttura. Per quanto riguarda l'acquisto dei biglietti, può essere effettuato esclusivamente on-line, 
                in completa sicurezza e solo dagli utenti registrati al sito. Gli utenti non registrati o non loggati non possono acquistare i biglietti. </p>
+       
+            <br><br><h1>LE NOSTRE SEDI ALL'ESTERO</h1>
+            <center>
+            <table border style='text-align: center;' width='45%'>
+               <tr><th>Luogo</th><th>Indirizzo</th></tr> 
+               <tr><th>Francia</th><td>118 Boulevard Saint-Germain, 75006 Toulouse</td></tr>
+               <tr><th>Germania</th><td>Am Steinlein 2, 97753 Karlstadt</td></tr>
+               <tr><th>Spagna</th><td>Calle Saturno, 61, 50012 Zaragoza</td></tr> 
+            </table>
+            </center>
         </div>
     </div>
     <!-- end Lastestnews -->
