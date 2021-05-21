@@ -13,7 +13,6 @@ class AdminController extends Controller {
 
     public function __construct() {
         $this->middleware('can:isAdmin');
-        $this->_adminModel = new Admin;
         $this->_utenteModel = new Utente;
     }
 
@@ -27,6 +26,21 @@ class AdminController extends Controller {
                         ->with('cats', $prodCats);
     } */
 
+    public function vediUtenti(){
+        $utenti=$this->_utenteModel->getUtenti();
+        $clienti=[];
+        $organizzatori=[];
+        foreach ($utenti as $utente){
+            if ($utente->categoria=='organizzatore'){
+                array_push($organizzatori,$utente);
+            } else if ($utente->categoria=='cliente'){
+                array_push($clienti,$utente);
+            }
+        }
+        return view('gestioneUtenti', ['clienti' => $clienti,
+                                    'organizzatori'=>$organizzatori]);
+    }
+    
     public function aggiungiOrganizzatore(Request $request) {
 
         $organizzatore = new Utente;

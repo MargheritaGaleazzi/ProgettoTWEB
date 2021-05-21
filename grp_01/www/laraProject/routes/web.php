@@ -80,7 +80,7 @@ Route::post('creaBiglietto', 'ControllerLivello2@creaBiglietto')
 Route::view('/gestioneFAQ', 'gestioneFAQ')
         ->name('gestioneFAQ')->middleware('can:isAdmin');
 
-Route::view('/gestioneUtenti', 'gestioneUtenti')
+Route::get('/gestioneUtenti', 'AdminController@vediutenti')
         ->name('gestioneUtenti')->middleware('can:isAdmin');
 
 /* Auth::routes();

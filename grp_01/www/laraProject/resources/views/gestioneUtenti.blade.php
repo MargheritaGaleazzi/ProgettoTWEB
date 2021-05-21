@@ -20,7 +20,6 @@
 
 <div class="table-users">
    <div class="headertable">CLIENTI</div>
-   
    <table class="user" cellspacing="0">
       <tr>
          <th width="180">E-mail</th>
@@ -34,19 +33,54 @@
          <th width="180">Cellulare</th>
          <th></th>
       </tr>
-
+    @isset($clienti)
+    @foreach ($clienti as $cliente)
       <tr>
-         <td>EMAIL@EMAIL.IT</td>
-         <td>USERNAME</td>
-         <td>NOME</td>
-         <td>COGNOME</td>
-         <td>VIAVIAVIA</td>
-         <td> CITTA </td>
-         <td> CAP </td>
-         <td> SESSO </td>
-         <td> CELLULARE </td>
+         <td>{{ $cliente->email }}</td>
+         <td>{{ $cliente->username }}</td>
+         <td>{{ $cliente->nome }}</td>
+         <td>{{ $cliente->cognome }}</td>
+         <td>{{ $cliente->via }}</td>
+         <td> {{ $cliente->citta }} </td>
+         <td> {{ $cliente->cap }} </td>
+         <td> {{ $cliente->sesso }} </td>
+         <td> {{ $cliente->cellulare }} </td>
          <td> <a href="#"><button class="btn btn-primary btn-sm" type="button">Elimina</button></a> </td>
       </tr>
+    @endforeach
+    @endisset()
+   </table>
+
+
+<div class="headertable">ORGANIZZATORI 
+    <a href="#"><button class="btn btn-sm" type="button">Inserisci nuovo</button></a>
+</div>
+   <table class="user" cellspacing="0">
+      <tr>
+         <th width="180">E-mail</th>
+         <th width="180">Username</th>
+         <th width="180">Nome società</th>
+         <th width="180">Via</th>
+         <th width="180">Citta</th>
+         <th width="180">CAP</th>
+         <th width="180">Cellulare</th>
+         <th></th>
+      </tr>
+    @isset($organizzatori)
+    @foreach ($organizzatori as $organizzatore)
+      <tr>
+         <td>{{ $organizzatore->email }}</td>
+         <td>{{ $organizzatore->username }}</td>
+         <td> {{ $organizzatore->nome_societa_organizzatrice }} </td>
+         <td>{{ $organizzatore->via }}</td>
+         <td>{{ $organizzatore->citta }}</td>
+         <td>{{ $organizzatore->cap }}</td>
+         <td> {{ $organizzatore->cellulare }} </td>
+         <td> <a href="#"><button class="btn btn-primary btn-sm" type="button">Elimina</button></a> </td>
+         <td> <a href="#"><button class="btn btn-primary btn-sm" type="button">Modifica</button></a> </td>
+      </tr>
+    @endforeach
+    @endisset()
    </table>
 </div>
 

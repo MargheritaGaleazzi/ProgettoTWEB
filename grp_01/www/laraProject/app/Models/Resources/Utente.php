@@ -12,7 +12,11 @@ class Utente extends Model{
     
     public function getUtenteById($id) {
 
-        return Evento::where('id', $id)->first();      
+        return Utente::where('id', $id)->first();      
+    }
+    
+    public function getUtenti() {
+        return Utente::all();      
     }
     
 }
