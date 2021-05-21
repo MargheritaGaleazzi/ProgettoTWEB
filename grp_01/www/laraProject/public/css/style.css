@@ -2060,7 +2060,7 @@ input[type="password"]:placeholder {
   -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
             filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3)); 
   display: block;
-  margin: auto auto auto auto;
+  margin: auto auto auto 20px;
   color: #fff;;
 }
 
@@ -2082,7 +2082,7 @@ input[type="password"]:placeholder {
 }
 
 .ticketartist {
-  font-size: 30px;
+  font-size: 25px;
   margin: 10px 100px 0 40px;
   float: left;
   font-weight: bold;
