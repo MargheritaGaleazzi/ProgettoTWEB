@@ -38,13 +38,8 @@ class AdminController extends Controller {
         $organizzatore->citta=$Request->citta;
         $organizzatore->cap=$Request->cap;
         $organizzatore->cellulare=$Request->cellulare;
-        $
+        $organizzatore->nome_societa_organizzatrice=$Request->nome_societa_organizzatrice;
         $organizzatore->save();
-
-        if (!is_null($locandinaName)) {
-            $destinationPath = public_path() . 'public/images/locandine';
-            $locandina->move($destinationPath, $locandinaName);
-        };
 
         return redirect()->action('AdminController@index');
     }

@@ -76,6 +76,12 @@ Route::resource('user','ControllerLivello2');
 Route::post('creaBiglietto', 'ControllerLivello2@creaBiglietto')
         ->name('creaBiglietto');
 
+//rotte amministratore
+Route::view('/gestioneFAQ', 'gestioneFAQ')
+        ->name('gestioneFAQ')->middleware('can:isAdmin');
+
+Route::view('/gestioneUtenti', 'gestioneUtenti')
+        ->name('gestioneUtenti')->middleware('can:isAdmin');
 
 /* Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home'); */
