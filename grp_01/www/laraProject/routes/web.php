@@ -66,10 +66,10 @@ Route::get('/storico/{id}', 'ControllerLivello2@mostraStorico')
 Route::view('/modificalivello2', 'ModificaUtente2')
         ->name('modificalivello2');
 
-Route::get('/qrcode', function () {
+Route::get('/qrcode/{stringa}', function ($stringa) {
     return QrCode::size(250)
         ->backgroundColor(224, 122, 114)
-        ->generate('Margherita Galeazzi');
+        ->generate("$stringa");
 })->name('qrcode');
 
 Route::resource('user','ControllerLivello2');
