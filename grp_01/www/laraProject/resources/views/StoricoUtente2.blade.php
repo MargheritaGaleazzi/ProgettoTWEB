@@ -37,7 +37,8 @@
   </div>
 
   <div class="ticketlocation">
-      <?php $stringa= "Codice biglietto:{$biglietto->codice_biglietto}";?>
+      <?php $stringa= "Codice biglietto:{$biglietto->codice_biglietto}, per il concerto:{$eventi[$biglietto->codice_biglietto]->titolo}, "
+      . "numero di biglietti:{$biglietto->quantita}";?>
       {!! QrCode::generate("$stringa"); !!}
     <span>{{$eventi[$biglietto->codice_biglietto]->luogo}}</span>
     </br>
