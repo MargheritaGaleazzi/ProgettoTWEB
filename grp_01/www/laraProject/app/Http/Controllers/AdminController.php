@@ -81,5 +81,29 @@ class AdminController extends Controller {
         return redirect('/');
     }
     
+    public function update(Request $request, $id)
+{
+        
+        
+        $organizzatore= Utente::find($id);
+        $organizzatore->categoria='organizzatore';
+        $organizzatore->email=$request->email;
+        $organizzatore->username=$request->username;
+        $organizzatore->via=$request->via;
+        $organizzatore->citta=$request->citta;
+        $organizzatore->cap=$request->cap;
+        $organizzatore->cellulare=$request->cellulare;
+        $organizzatore->nome_societa_organizzatrice=$request->nome_societa_organizzatrice;
+        $organizzatore->sesso=$request->sesso;
+        $organizzatore->save();
+  
+
+    return redirect('gestione Utenti');
+}
+public function FormOrganizzatori($id) {
+    $organizzatore= Utente::find($id);
+    return view('ModificaOrganizzatore', ['organizzatore' => $organizzatore]);
+    
+}
 
 }

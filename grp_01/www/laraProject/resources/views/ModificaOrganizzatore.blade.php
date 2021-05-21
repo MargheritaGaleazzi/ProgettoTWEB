@@ -1,24 +1,25 @@
-@extends('layout.zonaUtente2')
+
+@extends('layout.zonaAdmin')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="address">
-                <div class="wrapper fadeInDown">REGISTRATI</div>
-<?php $ut=Auth::user();?>
+                <div class="wrapper fadeInDown">Modifica Organizzatore</div>
+
                 <div class="address">
-                    {{ Form::model($ut, ['method'=>'PUT',
-                            'route'=>['user.update',$ut->id]]) }}
-                        <!--Nome Utente Registrazione-->
+                    {{ Form::model($organizzatore, ['method'=>'PUT',
+                            'route'=>['admin.update',$organizzatore->id]]) }}
+                        <!--Nome società Utente Registrazione-->
                         <div class="address">
                         <div class="form-group row">
-                            {{ Form::label('nome', 'Nome', ['class' => 'label-input']) }}
+                            {{ Form::label('nome_societa_organizzatrice', 'Nome società', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                            {{ Form::text('nome', old('nome'), ['class' => 'input', 'id' => 'nome']) }}
-                                    @if ($errors->first('nome'))
+                            {{ Form::text('nome_societa_organizzatrice', old('nome_societa_organizzatrice'), ['class' => 'input', 'id' => 'nome_societa_organizzatrice']) }}
+                                @if ($errors->first('nome_societa_organizzatrice'))
                                         <ul class="errors">
-                                        @foreach ($errors->get('nome') as $message)
+                                        @foreach ($errors->get('nome_societa_organizzatrice') as $message)
                                         <li>{{ $message }}</li>
                                         @endforeach
                                         </ul>
@@ -27,22 +28,6 @@
                         </div>
                         </div>
 
-                        <!--Cognome Utente Registrazione-->
-                        <div class="address">
-                        <div class="form-group row">
-                            {{ Form::label('cognome', 'Cognome', ['class' => 'label-input']) }}
-                            <div class="col-md-6">
-                            {{ Form::text('cognome', old('cognome'), ['class' => 'input', 'id' => 'cognome']) }}
-                                @if ($errors->first('cognome'))
-                                        <ul class="errors">
-                                        @foreach ($errors->get('conome') as $message)
-                                        <li>{{ $message }}</li>
-                                        @endforeach
-                                        </ul>
-                                    @endif
-                            </div>
-                        </div>
-                        </div>
                         
                         <!--E-mail Utente Registrazione-->
                         <div class="address">
@@ -61,12 +46,12 @@
                         </div>
                         </div>
                         
-                       <!-- <!--Username Utente Registrazione
+                        <!--Username Utente -->
                         <div class="address">
                         <div class="form-group row">
                             {{ Form::label('username', 'Username', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                            {{ Form::text('username', '', ['class' => 'input','id' => 'username']) }}
+                            {{ Form::text('username', old('username'), ['class' => 'input','id' => 'username']) }}
                                 @if ($errors->first('username'))
                                     <ul class="errors">
                                     @foreach ($errors->get('username') as $message)
@@ -105,7 +90,7 @@
                         </div>
                         </div>
                         
-                        <!--Via Utente Registrazione-->
+<!--Via Utente Registrazione-->
                         <div class="address">
                         <div class="form-group row">
                             {{ Form::label('via', 'Via', ['class' => 'label-input']) }}
@@ -219,3 +204,4 @@
     </div>
 </div>
 @endsection
+

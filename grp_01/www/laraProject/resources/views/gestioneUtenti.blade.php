@@ -79,7 +79,7 @@
          <td> {{ $organizzatore->cellulare }} </td>
          <td> {{ $organizzatore->sesso }} </td>
          <td> <a href="#"><button class="btn btn-primary btn-sm" type="button">Elimina</button></a> </td>
-         <td> <a href="#"><button class="btn btn-primary btn-sm" type="button">Modifica</button></a> </td>
+         <td> <a href="{{route('modificaorganizzatore',[$organizzatore])}}"><button class="btn btn-primary btn-sm" type="button">Modifica</button></a> </td>
       </tr>
     @endforeach
     @endisset()

@@ -87,5 +87,10 @@ Route::view('AggiungiOrganizzatore', 'RegistrazioneOrganizzatore')
         ->name('AggiungiOrganizzatore')->middleware('can:isAdmin');
 Route::post('AggiungiOrganizzatore', 'AdminController@aggiungiOrganizzatore')->middleware('can:isAdmin');
 
+Route::resource('admin','AdminController');
+Route::get('/modificaorganizzatore/{id}/modifica', 'AdminController@FormOrganizzatori')
+        ->name('modificaorganizzatore')->middleware('can:isAdmin');
+
+
 /* Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home'); */
