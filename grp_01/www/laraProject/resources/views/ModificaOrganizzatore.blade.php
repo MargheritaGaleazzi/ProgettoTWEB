@@ -1,4 +1,15 @@
-
+<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/animate.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/jquery-ui.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.mCustomScrollbar.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/meanmenu.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/nice-select.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/owl.carousel.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/searchbar.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}">
 @extends('layout.zonaAdmin')
 
 @section('content')
@@ -6,7 +17,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="address">
-                <div class="wrapper fadeInDown">Modifica Organizzatore</div>
+                <div>Modifica Organizzatore</div>
 
                 <div class="address">
                     {{ Form::model($organizzatore, ['method'=>'PUT',
@@ -190,7 +201,7 @@
                     
                     
 
-                        <div class="wrapper fadeInDown">
+                        <div>
                             <div class="col-md-6 offset-md-3">
                                 {{ Form::submit('Modifica', ['class' => 'form-btn1']) }}
                             </div>

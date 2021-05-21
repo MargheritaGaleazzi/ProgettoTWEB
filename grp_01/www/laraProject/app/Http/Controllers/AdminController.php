@@ -83,7 +83,23 @@ class AdminController extends Controller {
     
     public function update(Request $request, $id)
 {
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|string|email|unique:users|max:255',
+            'nome_societa_organizzatrice' => 'required|string|max:255',
+            'username' => 'required|string|min:8|unique:users',
+            'via' => 'required|string',
+            'citta' => 'required|string',
+            'cap' => 'required|string|min:5|max:5',
+            'sesso' => 'required|string',
+            'cellulare' => 'string',
+        ]);
         
+
+        if ($validator->fails()) {
+            return redirect()->route('modificaorganizzatore',[$id])
+                        ->withErrors($validator)
+                        ->withInput();
+        }
         
         $organizzatore= Utente::find($id);
         $organizzatore->categoria='organizzatore';
@@ -98,7 +114,7 @@ class AdminController extends Controller {
         $organizzatore->save();
   
 
-    return redirect('gestione Utenti');
+    return redirect('gestioneUtenti');
 }
 public function FormOrganizzatori($id) {
     $organizzatore= Utente::find($id);
