@@ -53,7 +53,7 @@
                                                     <?php $ut=Auth::user();?>
                                                         {{ Form::open(array('route' => 'creaBiglietto')) }}
                             {{ Form::label('quantita', 'Quantità', ['class' => 'label-input']) }}
-                            {{ Form::number('quantita', '', ['class' => 'input', 'id' => 'quantita']) }}
+                            {{ Form::number('quantita', '', ['min' => '1', 'max' => $evento->biglietti_rimanenti, 'class' => 'input', 'id' => 'quantita']) }}
                             
                             
                                                        <!-- <input id="quant" class="qty-input form-group" type="number" value="1" min="1" max="1000"/>
