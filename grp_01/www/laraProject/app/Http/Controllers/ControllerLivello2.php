@@ -88,6 +88,7 @@ class ControllerLivello2 extends Controller {
         $biglietto->codice_evento=$request->codice_evento;
         $biglietto->metodo_pagamento=$request->metodo_pagamento;
         $biglietto->prezzo_acquisto=($request->prezzo)*($request->quantita);
+        $biglietto->quantita=$request->quantita;
         $biglietto->save();
         
         return redirect('/');
