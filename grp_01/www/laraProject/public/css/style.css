@@ -2097,6 +2097,7 @@ input[type="password"]:placeholder {
   font-weight: bold;
   -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
             filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3)); 
+  margin-left: 34px;
 }
 
 .ticketlocation::before {

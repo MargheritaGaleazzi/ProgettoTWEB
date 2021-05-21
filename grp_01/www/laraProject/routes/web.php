@@ -60,7 +60,7 @@ Route::view('/amministratore', 'AreaAdmin')
 Route::view('/organizzatore', 'AreaUtente3')
         ->name('organizzatore');
 
-Route::view('/storico', 'StoricoUtente2')
+Route::get('/storico/{id}', 'ControllerLivello2@mostraStorico')
         ->name('storico');
 
 Route::view('/modificalivello2', 'ModificaUtente2')

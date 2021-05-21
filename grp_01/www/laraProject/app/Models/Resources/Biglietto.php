@@ -12,11 +12,16 @@ class Biglietto extends Model{
     
     // Realazione One-To-One con Utente
     public function codUtente() {
-        return $this->hasOne(Utente::class, 'codice_utente', 'codice_utente');
+        return $this->hasOne(Utente::class, 'id', 'id');
     }
     
     // Realazione One-To-One con Evento
     public function codEvento() {
         return $this->hasOne(Evento::class, 'codice_evento', 'codice_evento');
+    }
+    
+    public function getBigliettiUtente($id){
+         $biglietti=Biglietto::where('id',$id)->get();
+         return $biglietti->all();
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Resources\Utente;
 use App\Models\Resources\Biglietto;
+use App\Models\Resources\Evento;
 use App\Models\Catalogo;
 use Illuminate\Http\Request;
 
@@ -12,6 +13,8 @@ class ControllerLivello2 extends Controller {
 
     protected $_catalogoModel;
     protected $_utenteModel;
+    protected $_bigliettogoModel;
+    protected $_eventoModel;
 
 
     
@@ -19,7 +22,9 @@ class ControllerLivello2 extends Controller {
     public function __construct() {
         $this->middleware('can:isUser');
         $this->_utenteModel = new Utente;
-        $this->_catalogoModel = new Catalogo;   
+        $this->_catalogoModel = new Catalogo; 
+        $this->_bigliettoModel = new Biglietto;
+        $this->_eventoModel = new Evento; 
     }
     
     public function index() {
@@ -86,6 +91,33 @@ class ControllerLivello2 extends Controller {
         $biglietto->save();
         
         return redirect('/');
+    }
+    
+    public function mostraStorico($id) {
+
+        //Mostra lo storico con tutti gli eventi
+        $biglietti = $this->_bigliettoModel->getBigliettiUtente($id);
+        $eventi=[];
+        foreach ($biglietti as $biglietto){
+          $indice=$biglietto->codice_biglietto;
+          $evento = $this->_catalogoModel->getEventoByCodice($biglietto->codice_evento); 
+          $eventi[$indice]=$evento;
+        }
+       /*$codice_biglietto=$this->codice_biglietto;
+        $codice_evento=$this->codice_evento;
+        $evento=$this->_eventoModel->getEventoByCodice($codice_evento);
+        $titolo = $evento->titolo;
+        $data_ora = $evento->data_ora;
+        $luogo = $evento->luogo;*/
+        
+    return view('StoricoUtente2', ['biglietti' => $biglietti,
+                                    'eventi'=>$eventi])
+                        /*->with('codice_biglietto', $codice_biglietto)
+                        ->with('codice_evento', $codice_evento)
+                        ->with('evento', $evento)
+                        ->with('titolo', $titolo)
+                        ->with('data_ora', $data_ora)
+                        ->with('luogo', $luogo)*/;
     }
 
 }
