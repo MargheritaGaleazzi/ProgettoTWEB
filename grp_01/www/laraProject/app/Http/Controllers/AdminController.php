@@ -3,20 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
-use App\Models\Resources\Product;
-use App\Http\Requests\NewProductRequest;
+use App\Models\Resources\Utente;
+
 
 class AdminController extends Controller {
 
     protected $_adminModel;
+    protected $_utenteModel;
 
     public function __construct() {
         $this->middleware('can:isAdmin');
         $this->_adminModel = new Admin;
+        $this->_utenteModel = new Utente;
     }
 
     public function index() {
-        return view('AreaUtente3');
+        return view('AreaAdmin');
     }
 
     /* public function addProduct() {
@@ -25,19 +27,19 @@ class AdminController extends Controller {
                         ->with('cats', $prodCats);
     } */
 
-    public function storeProduct(NewProductRequest $request) {
+    public function aggiungiOrganizzatore(Request $request) {
 
-        if ($request->hasFile('locandina')) {
-            $locandina = $request->file('locandina');
-            $locandinaName = $locandina->getClientOriginalName();
-        } else {
-            $locandinaName = NULL;
-        }
-
-        $evento = new Evento;
-        $evento->fill($request->validated());
-        $evento->locandina = $locandinaName;
-        $evento->save();
+        $organizzatore = new Utente;
+        $organizzatore->categoria='organizzatore';
+        $organizzatore->email=$request->email;
+        $organizzatore->username=$request->username;
+        $organizzatore->password=Hash::make($request->password);
+        $organizzatore->via=$Request->via;
+        $organizzatore->citta=$Request->citta;
+        $organizzatore->cap=$Request->cap;
+        $organizzatore->cellulare=$Request->cellulare;
+        $
+        $organizzatore->save();
 
         if (!is_null($locandinaName)) {
             $destinationPath = public_path() . 'public/images/locandine';
