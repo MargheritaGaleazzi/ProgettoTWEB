@@ -32,7 +32,18 @@ class ControllerPubblico extends Controller {
         $filtro_luoghi = $this->_catalogoModel->getTuttiEventiSenzaPaginate()->pluck('luogo', 'luogo');
         $filtro_societa = $this->_catalogoModel->getTuttiEventiSenzaPaginate()->pluck('societa_organizzatrice', 'societa_organizzatrice');
         if ($request->get('ricerca') != '') {
-            $eventi = $this->_catalogoModel->getEventiRicercati($request->get('ricerca'));
+            if(str_contains($request->get('ricerca'), ',')){
+                $ricercaArrayGrezzo = explode(',', $request->get('ricerca'));
+                $ricercaArray = array();
+                foreach($ricercaArrayGrezzo as $elementoRicerca){
+                    $elementoFinale = ltrim($elementoRicerca, ' ');
+                    array_push($ricercaArray, $elementoFinale);
+                }
+                $eventi = $this->_catalogoModel->getEventiRicercati($ricercaArray);
+            }
+            else{
+                $eventi = $this->_catalogoModel->getEventiRicercati($request->get('ricerca'));
+            }
         } else {
             $luogo = $request->get('luogo');
             $societa = $request->get('societa');

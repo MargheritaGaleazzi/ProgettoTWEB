@@ -23,6 +23,19 @@ class Catalogo {
     }
     
     public function getEventiRicercati($testo){
+        if(is_array($testo)){
+            if(count($testo)==3){
+                return Evento::where('informazioni', 'LIKE', '%'.strval($testo[0]).'%')
+                        ->where('luogo', 'LIKE', '%'.strval($testo[1]).'%')
+                        ->where('data_ora', 'LIKE', '%'.strval($testo[2]).'%')
+                        ->paginate(4);
+            }
+            elseif(count($testo)==2){
+                return Evento::where('informazioni', 'LIKE', '%'.strval($testo[0]).'%')
+                        ->where('luogo', 'LIKE', '%'.strval($testo[1]).'%')
+                        ->paginate(4);
+            }
+        }
         return Evento::where('informazioni', 'LIKE', '%'.$testo.'%')
                 ->orWhere('luogo', 'LIKE', '%'.$testo.'%')
                 ->orWhere('data_ora', 'LIKE', '%'.$testo.'%')
