@@ -53,7 +53,7 @@
                                                     <?php $ut=Auth::user();?>
                                                         {{ Form::open(array('route' => 'creaBiglietto')) }}
                             {{ Form::label('quantita', 'Quantità', ['class' => 'label-input']) }}
-                            {{ Form::number('quantita', '', ['min' => '1', 'max' => $evento->biglietti_rimanenti, 'class' => 'input', 'id' => 'quantita']) }}
+                            {{ Form::number('quantita', '1', ['min' => '1', 'max' => $evento->biglietti_rimanenti, 'class' => 'input', 'id' => 'quantita', 'onchange'=>'prezzoTotale(this.value)']) }}
                             
                             
                                                        <!-- <input id="quant" class="qty-input form-group" type="number" value="1" min="1" max="1000"/>
@@ -87,7 +87,7 @@
                     $prezzo=$prezzo-(($prezzo*$sconto)/100);
                     }?>
                             {{ Form::label('metodo_pagamento', 'Metodo di Pagamento', ['class' => 'label-input']) }}
-                            {{ Form::select('metodo_pagamento',$pag ,'', ['class' => 'input','id' => 'metodo_pagamento']) }}
+                            {{ Form::select('metodo_pagamento',$pag ,'bonifico', ['class' => 'input','id' => 'metodo_pagamento']) }}
                             {{ Form::hidden('prezzo', $prezzo) }}
                             {{ Form::hidden('id', $ut->id) }}
                             {{ Form::hidden('codice_evento', $evento->codice_evento) }}
@@ -122,10 +122,9 @@
                     <script >
                         
                         
-          function prezzoTotale() {
-                var prezzo = document.ordine.elements[0].value;
-
-                var totale=prezzo*<?php echo $prezzo; ?>;
+          function prezzoTotale($quant) {
+                
+                var totale=$quant*<?php echo $prezzo; ?>;
                 document.getElementById('totale').innerHTML=totale;
             }
 
