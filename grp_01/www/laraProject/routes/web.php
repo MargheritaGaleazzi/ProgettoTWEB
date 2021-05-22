@@ -98,7 +98,7 @@ Route::get('EliminaFAQ/{id}', 'AdminController@cancellafaq')
 Route::view('AggiungiFAQ', 'NuovaFAQ')
         ->name('AggiungiFAQ')->middleware('can:isAdmin');
 Route::post('AggiungiFAQ', 'AdminController@aggiungifaq')->middleware('can:isAdmin');
-//Route::resource('faq','ControllerFAQ')->middleware('can:isAdmin');
+Route::resource('faqs','ControllerFAQ');
 Route::get('/modificafaq/{id}/modifica', 'AdminController@FormFAQ')
         ->name('modificafaq')->middleware('can:isAdmin');
 

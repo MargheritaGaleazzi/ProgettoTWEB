@@ -21,7 +21,7 @@
 
                 <div class="address">
                     {{ Form::model($faq, ['method'=>'PUT',
-                            'route'=>['updatefaq',$faq->id_faq]]) }}
+                            'route'=>['faqs.update',$faq->id_faq]]) }}
                         <!--Domanda FAQ da Modificare-->
                         <div class="address">
                         <div class="form-group row">
