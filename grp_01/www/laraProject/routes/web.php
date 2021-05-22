@@ -90,14 +90,18 @@ Route::post('AggiungiOrganizzatore', 'AdminController@aggiungiOrganizzatore')->m
 Route::resource('admin','AdminController');
 Route::get('/modificaorganizzatore/{id}/modifica', 'AdminController@FormOrganizzatori')
         ->name('modificaorganizzatore')->middleware('can:isAdmin');
+Route::get('EliminaUtente/{id}', 'AdminController@cancella')
+        ->name('EliminaUtente')->middleware('can:isAdmin');
 //ADMIN gestione FAQ
 Route::get('EliminaFAQ/{id}', 'AdminController@cancellafaq')
         ->name('EliminaFAQ')->middleware('can:isAdmin');
 Route::view('AggiungiFAQ', 'NuovaFAQ')
         ->name('AggiungiFAQ')->middleware('can:isAdmin');
 Route::post('AggiungiFAQ', 'AdminController@aggiungifaq')->middleware('can:isAdmin');
+//Route::resource('faq','ControllerFAQ')->middleware('can:isAdmin');
 Route::get('/modificafaq/{id}/modifica', 'AdminController@FormFAQ')
         ->name('modificafaq')->middleware('can:isAdmin');
+
 
 
 /* Auth::routes();
