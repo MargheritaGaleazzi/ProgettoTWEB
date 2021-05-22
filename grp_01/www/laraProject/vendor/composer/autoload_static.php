@@ -459,6 +459,7 @@ class ComposerStaticInit786d54b7a32e7fc62cb444a73ed76b5c
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
@@ -478,7 +479,6 @@ class ComposerStaticInit786d54b7a32e7fc62cb444a73ed76b5c
         'App\\Models\\Resources\\Evento' => __DIR__ . '/../..' . '/app/Models/Resources/Evento.php',
         'App\\Models\\Resources\\FAQ' => __DIR__ . '/../..' . '/app/Models/Resources/FAQ.php',
         'App\\Models\\Resources\\Utente' => __DIR__ . '/../..' . '/app/Models/Resources/Utente.php',
-        'App\\Models\\Storico' => __DIR__ . '/../..' . '/app/Models/Storico.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
