@@ -40,6 +40,62 @@ class AdminController extends Controller {
         return view('gestioneFAQ')
                         ->with('faq', $faq);
     }
+    
+    public function cancellafaq($id) {
+        FAQ::find($id)->delete();
+        return redirect('gestioneFAQ');
+    }
+    
+    public function aggiungifaq(Request $request) {
+        
+        $validator = Validator::make($request->all(), [
+            'domanda' => 'required|string|unique:faq|max:255',
+            'risposta' => 'required|string|max:255',
+        ]);
+        
+
+        if ($validator->fails()) {
+            return redirect('NuovaFAQ')
+                        ->withErrors($validator)
+                        ->withInput();
+        }
+
+        $faq = new FAQ;
+        $faq->domanda=$request->domanda;
+        $faq->risposta=$request->risposta;
+        $faq->save();
+
+        return redirect('gestioneFAQ');
+    }
+    
+     public function updatefaq(Request $request, $id)
+{
+        $validator = Validator::make($request->all(), [
+            'domanda' => 'required|string|max:255',
+            'risposta' => 'required|string|max:255',
+        ]);
+        
+
+        if ($validator->fails()) {
+            return redirect()->route('modificafaq',[$id])
+                        ->withErrors($validator)
+                        ->withInput();
+        }
+        
+        $faq= FAQ::find($id);
+        $faq->domanda=$request->domanda;
+        $faq->risposta=$request->risposta;
+        $faq->save();
+  
+
+    return redirect('gestioneFAQ');
+}
+
+public function FormFAQ($id) {
+    $faq= FAQ::find($id);
+    return view('ModificaFaq', ['faq' => $faq]);
+    
+}
 
     public function vediUtenti(){
         $utenti=$this->_utenteModel->getUtenti();

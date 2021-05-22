@@ -19,7 +19,9 @@
 @section('content')
 
 <div class="table-users">
-   <div class="headertable">FAQ</div>
+   <div class="headertable">FAQ
+   <a href="{{route('AggiungiFAQ')}}"><button class="btn btn-sm" type="button">Inserisci nuovo</button></a>
+   </div>
    <table class="user" cellspacing="0" width="75%">
       <tr>
          <th width="180">Domanda</th>
@@ -30,8 +32,8 @@
       <tr>
          <td>{{ $fa->domanda }}</td>
          <td>{{ $fa->risposta }}</td>
-         <td> <a href="{{route('EliminaUtente',[$fa->id_faq])}}"><button class="btn btn-primary btn-sm" type="button">Elimina</button></a> </td>
-         <td> <a href="{{route('modificaorganizzatore',[$fa])}}"><button class="btn btn-primary btn-sm" type="button">Modifica</button></a> </td>
+         <td> <a href="{{route('EliminaFAQ',[$fa->id_faq])}}"><button class="btn btn-primary btn-sm" type="button">Elimina</button></a> </td>
+         <td> <a href="{{route('modificafaq',[$fa])}}"><button class="btn btn-primary btn-sm" type="button">Modifica</button></a> </td>
       </tr>
     @endforeach
     @endisset()
