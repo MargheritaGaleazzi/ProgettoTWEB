@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Admin;
 use App\Models\Resources\Utente;
+use App\Models\Resources\FAQ;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -13,10 +14,12 @@ class AdminController extends Controller {
 
     protected $_adminModel;
     protected $_utenteModel;
+    protected $_faqModel;
 
     public function __construct() {
         $this->middleware('can:isAdmin');
         $this->_utenteModel = new Utente;
+        $this->_faqModel = new FAQ;
     }
 
     public function index() {
@@ -28,6 +31,15 @@ class AdminController extends Controller {
         return view('product.insert')
                         ->with('cats', $prodCats);
     } */
+    public function mostrafaq() {
+
+        //Prende tutte le FAQ
+        $faq = $this->_faqModel->getfaq();
+
+
+        return view('gestioneFAQ')
+                        ->with('faq', $faq);
+    }
 
     public function vediUtenti(){
         $utenti=$this->_utenteModel->getUtenti();

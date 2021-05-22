@@ -77,7 +77,7 @@ Route::post('creaBiglietto', 'ControllerLivello2@creaBiglietto')
         ->name('creaBiglietto');
 
 //rotte amministratore
-Route::view('/gestioneFAQ', 'gestioneFAQ')
+Route::get('/gestioneFAQ', 'AdminController@mostrafaq')
         ->name('gestioneFAQ')->middleware('can:isAdmin');
 
 Route::get('/gestioneUtenti', 'AdminController@vediutenti')
