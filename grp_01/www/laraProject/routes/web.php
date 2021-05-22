@@ -91,6 +91,9 @@ Route::resource('admin','AdminController');
 Route::get('/modificaorganizzatore/{id}/modifica', 'AdminController@FormOrganizzatori')
         ->name('modificaorganizzatore')->middleware('can:isAdmin');
 
+Route::get('EliminaUtente/{id}', 'AdminController@cancella')
+        ->name('EliminaUtente')->middleware('can:isAdmin');
+
 
 /* Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home'); */

@@ -122,4 +122,9 @@ public function FormOrganizzatori($id) {
     
 }
 
+    public function cancella($id) {
+        Utente::find($id)->delete();
+        return redirect('gestioneUtenti');
+    }
+
 }

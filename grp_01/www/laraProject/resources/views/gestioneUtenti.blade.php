@@ -45,7 +45,7 @@
          <td> {{ $cliente->cap }} </td>
          <td> {{ $cliente->sesso }} </td>
          <td> {{ $cliente->cellulare }} </td>
-         <td> <a href="#"><button class="btn btn-primary btn-sm" type="button">Elimina</button></a> </td>
+         <td> <a href="{{route('EliminaUtente',[$cliente->id])}}"><button class="btn btn-primary btn-sm" type="button">Elimina</button></a> </td>
       </tr>
     @endforeach
     @endisset()
