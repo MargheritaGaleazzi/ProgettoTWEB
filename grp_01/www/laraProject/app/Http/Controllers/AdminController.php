@@ -84,7 +84,7 @@ class AdminController extends Controller {
     public function update(Request $request, $id)
 {
         $validator = Validator::make($request->all(), [
-            'email' => 'required|string|email|unique:users|max:255',
+            'email' => 'required|string|email|max:255',
             'nome_societa_organizzatrice' => 'required|string|max:255',
             'username' => 'required|string|min:8|unique:users',
             'via' => 'required|string',
