@@ -102,6 +102,10 @@ class ControllerLivello2 extends Controller {
         $biglietto->quantita=$request->quantita;
         $biglietto->save();
         
+        $evento=Evento::find($request->codice_evento);
+        $evento->biglietti_rimanenti=($evento->biglietti_rimanenti)-($request->quantita);
+        $evento->save();
+        
         return redirect('/');
     }
     
