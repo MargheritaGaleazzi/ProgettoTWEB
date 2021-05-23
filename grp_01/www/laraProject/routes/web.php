@@ -101,6 +101,8 @@ Route::post('AggiungiFAQ', 'AdminController@aggiungifaq')->middleware('can:isAdm
 Route::resource('faqs','ControllerFAQ')->middleware('can:isAdmin');
 Route::get('/modificafaq/{id}/modifica', 'AdminController@FormFAQ')
         ->name('modificafaq')->middleware('can:isAdmin');
+Route::get('/statistiche/{id}/vedi', 'AdminController@statistiche')
+        ->name('statistiche')->middleware('can:isAdmin');
 
 
 

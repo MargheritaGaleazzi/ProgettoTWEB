@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Admin;
 use App\Models\Resources\Utente;
+use App\Models\Resources\Biglietto;
+use App\Models\Resources\Evento;
 use App\Models\Resources\FAQ;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -172,6 +174,27 @@ public function FormOrganizzatori($id) {
     public function cancella($id) {
         Utente::find($id)->delete();
         return redirect('gestioneUtenti');
+    }
+    
+    public function statistiche($id) {
+        $organizzatore=Utente::find($id);
+        $tutti_eventi=Evento::where('societa_organizzatrice',"==",$organizzatore->nome_societa_organizzatrice)->get();
+        $tutti_biglietti=[];
+        $incasso=0;
+        //$biglietti_disponibili=0;
+        $biglietti_venduti=0;
+        foreach ($tutti_eventi as $evento){
+            $biglietti=Biglietto::where('codice_evento','==',$evento->codice_evento)->get();
+            array_push($tutti_biglietti,$biglietti);
+        }
+        foreach ($tutti_biglietti as $biglietto) {
+            $incasso=$incasso+$biglietto->prezzo_acquisto;
+            $biglietti_venduti=$biglietti_venduti+$biglietto->quantita;
+        }
+       
+        return view('Statistiche', ['organizzatore' => $organizzatore,
+                                    'incasso'=>$incasso,
+                                    'biglietti_venduti'=>$biglietti_venduti]); 
     }
 
 }

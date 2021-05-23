@@ -80,6 +80,7 @@
          <td> {{ $organizzatore->sesso }} </td>
          <td> <a href="{{route('EliminaUtente',[$organizzatore->id])}}"><button class="btn btn-primary btn-sm" type="button">Elimina</button></a> </td>
          <td> <a href="{{route('modificaorganizzatore',[$organizzatore])}}"><button class="btn btn-primary btn-sm" type="button">Modifica</button></a> </td>
+         <td> <a href="{{route('statistiche',[$organizzatore])}}"><button class="btn btn-primary btn-sm" type="button">Statistiche</button></a> </td>
       </tr>
     @endforeach
     @endisset()
