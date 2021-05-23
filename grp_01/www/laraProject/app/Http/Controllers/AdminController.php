@@ -178,18 +178,28 @@ public function FormOrganizzatori($id) {
     
     public function statistiche($id) {
         $organizzatore=Utente::find($id);
-        $tutti_eventi=Evento::where('societa_organizzatrice',"==",$organizzatore->nome_societa_organizzatrice)->get();
-        $tutti_biglietti=[];
+        $tutti_eventi=Evento::all();
+        $id_eventi=[];
+        $tutti_biglietti=Biglietto::all();
+        $biglietti=[];
         $incasso=0;
         //$biglietti_disponibili=0;
         $biglietti_venduti=0;
         foreach ($tutti_eventi as $evento){
-            $biglietti=Biglietto::where('codice_evento','==',$evento->codice_evento)->get();
-            array_push($tutti_biglietti,$biglietti);
+            if ($evento->societa_organizzatrice==$organizzatore->nome_societa_organizzatrice){
+            array_push($id_eventi,$evento->codice_evento);
+            }
         }
         foreach ($tutti_biglietti as $biglietto) {
-            $incasso=$incasso+$biglietto->prezzo_acquisto;
-            $biglietti_venduti=$biglietti_venduti+$biglietto->quantita;
+            foreach ($id_eventi as $id){
+                if($biglietto->codice_evento==$id){
+                    array_push($biglietti,$biglietto);
+                }
+            }
+        }
+        foreach ($biglietti as $bigl){
+            $incasso=$incasso+$bigl->prezzo_acquisto;
+            $biglietti_venduti=$biglietti_venduti+$bigl->quantita;
         }
        
         return view('Statistiche', ['organizzatore' => $organizzatore,
