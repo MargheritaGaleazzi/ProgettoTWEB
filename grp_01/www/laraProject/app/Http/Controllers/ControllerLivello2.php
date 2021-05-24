@@ -154,7 +154,7 @@ class ControllerLivello2 extends Controller {
             $evento->save();*/
             
         
-        return redirect('/');
+        return redirect('catalogo');
     }
 
 }
