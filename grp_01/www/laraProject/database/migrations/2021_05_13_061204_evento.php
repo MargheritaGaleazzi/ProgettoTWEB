@@ -30,7 +30,7 @@ class Evento extends Migration
             $table->text('locandina')->nullable();
             $table->string('programma_evento',2500);
             $table->string('indicazioni',2500);
-            $table->integer('partecipero');
+            
             
         });
     }

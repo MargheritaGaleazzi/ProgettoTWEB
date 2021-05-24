@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Catalogo;
 use App\Models\Resources\FAQ;
+use App\Models\Resources\Partecipero;
 use App\Http\Requests\FiltroRequest;
 
 class ControllerPubblico extends Controller {
@@ -87,8 +88,9 @@ class ControllerPubblico extends Controller {
         $sconto = $evento->sconto;
         $programma_evento = $evento->programma_evento;
         $indicazioni = $evento->indicazioni;
-        $partecipero = $evento->partecipero;
         $biglietti_rimanenti = $evento->biglietti_rimanenti;
+        
+        $partecipero=Partecipero::where('codice_evento','=',$codice_evento)->count();
 
 
         return view('dettagliEvento', ['evento' => $evento,
