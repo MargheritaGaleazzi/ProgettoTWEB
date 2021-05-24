@@ -35,6 +35,12 @@
                 <a href="{{route('acquisto',[$evento->codice_evento])}}">
                     <button class="btn btn-outline-primary btn-sm mt-2" type="button">Compra</button>
                 </a>
+                {{ Form::open(array('route' => 'partecipero')) }}
+                {{ Form::hidden('id', Auth::user()->id) }}
+                {{ Form::hidden('codice_evento', $evento->codice_evento) }}
+                {{ Form::submit('Parteciperò', ['class' => 'form-btn1']) }}
+                        {{ Form::close() }}
+                
                 @endcan
             </div>
         </div>

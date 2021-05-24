@@ -17,7 +17,7 @@ class Partecipero extends Migration
             $table->bigIncrements('id')->unsigned()->index();
             $table->bigInteger('codice_utente');
             $table->bigInteger('codice_evento');
-            $table->bigInteger('n_partecipero');
+            
         });
     }
 

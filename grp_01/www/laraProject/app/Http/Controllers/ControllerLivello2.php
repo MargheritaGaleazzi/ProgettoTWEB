@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Resources\Utente;
 use App\Models\Resources\Biglietto;
 use App\Models\Resources\Evento;
+use App\Models\Resources\Partecipero;
 use App\Models\Catalogo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -134,6 +135,22 @@ class ControllerLivello2 extends Controller {
                         ->with('titolo', $titolo)
                         ->with('data_ora', $data_ora)
                         ->with('luogo', $luogo)*/;
+    }
+    
+    public function partecipero(Request $request){
+       
+       
+            $partecip=new Partecipero;
+            $partecip->codice_utente=$request->id;
+            $partecip->codice_evento=$request->codice_evento;
+            $partecip->save();
+            
+            $evento=Evento::find($request->codice_evento);
+            $evento->partecipero=($evento->partecipero)+1;
+            $evento->save();
+            
+        
+        return redirect('/');
     }
 
 }

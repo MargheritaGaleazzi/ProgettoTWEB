@@ -76,6 +76,9 @@ Route::resource('user','ControllerLivello2');
 Route::post('creaBiglietto', 'ControllerLivello2@creaBiglietto')
         ->name('creaBiglietto');
 
+Route::post('partecipero', 'ControllerLivello2@partecipero')
+        ->name('partecipero');
+
 //rotte amministratore
 Route::get('/gestioneFAQ', 'AdminController@mostrafaq')
         ->name('gestioneFAQ')->middleware('can:isAdmin');
