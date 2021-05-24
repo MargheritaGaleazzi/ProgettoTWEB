@@ -183,11 +183,15 @@ public function FormOrganizzatori($id) {
         $tutti_biglietti=Biglietto::all();
         $biglietti=[];
         $incasso=0;
-        //$biglietti_disponibili=0;
+        $biglietti_totali=0;
+        $biglietti_rimasti=0;
         $biglietti_venduti=0;
+        
         foreach ($tutti_eventi as $evento){
             if ($evento->societa_organizzatrice==$organizzatore->nome_societa_organizzatrice){
             array_push($id_eventi,$evento->codice_evento);
+            $biglietti_totali=$biglietti_totali+$evento->totale_biglietti_evento;
+            $biglietti_rimasti=$biglietti_rimasti+$evento->biglietti_rimanenti;
             }
         }
         foreach ($tutti_biglietti as $biglietto) {
@@ -201,10 +205,14 @@ public function FormOrganizzatori($id) {
             $incasso=$incasso+$bigl->prezzo_acquisto;
             $biglietti_venduti=$biglietti_venduti+$bigl->quantita;
         }
+        $percent_bv=round((($biglietti_venduti*100)/$biglietti_totali),2);
        
         return view('Statistiche', ['organizzatore' => $organizzatore,
                                     'incasso'=>$incasso,
-                                    'biglietti_venduti'=>$biglietti_venduti]); 
+                                    'biglietti_venduti'=>$biglietti_venduti,
+                                    'biglietti_totali'=>$biglietti_totali,
+                                    'biglietti_rimasti'=>$biglietti_rimasti,
+                                    'percent_bv'=>$percent_bv]); 
     }
 
 }

@@ -54,31 +54,30 @@
                                                 <p>{{ $biglietti_venduti }}</p>
                                             </div>
                                         </div>
-                                       <!-- <div class="row">
+                                        <div class="row">
                                             <div class="col-md-6">
-                                                <label>Cognome</label>
+                                                <label>Biglietti rimasti</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ Auth::user()->cognome }}</p>
+                                                <p>{{ $biglietti_rimasti }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>E-mail</label>
+                                                <label>Biglietti Totali</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ Auth::user()->email }}</p>
+                                                <p>{{ $biglietti_totali }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Via</label>
+                                                <label>Percentuale Venduti su Totale</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ Auth::user()->via }}</p>
+                                                <p>{{ $percent_bv }}%</p>
                                             </div>
-                                            </div>
-                                        <div class="row">
+                                        <!--<div class="row">
                                             <div class="col-md-6">
                                                 <label>Città</label>
                                             </div>
