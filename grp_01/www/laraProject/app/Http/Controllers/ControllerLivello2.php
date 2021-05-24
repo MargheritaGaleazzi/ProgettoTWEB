@@ -139,15 +139,19 @@ class ControllerLivello2 extends Controller {
     
     public function partecipero(Request $request){
        
+        /*$gia=Partecipero::where('codice_utente', $request->id)->where('codice_evento', $request->codice_evento)->get();*/
        
-            $partecip=new Partecipero;
+        $partecip = Partecipero::firstOrCreate(['codice_utente' => $request->id,
+                                                'codice_evento'=>$request->codice_evento]);
+       
+            /*$partecip=new Partecipero;
             $partecip->codice_utente=$request->id;
             $partecip->codice_evento=$request->codice_evento;
             $partecip->save();
             
             $evento=Evento::find($request->codice_evento);
             $evento->partecipero=($evento->partecipero)+1;
-            $evento->save();
+            $evento->save();*/
             
         
         return redirect('/');

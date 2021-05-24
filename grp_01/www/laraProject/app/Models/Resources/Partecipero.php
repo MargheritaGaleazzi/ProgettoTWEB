@@ -19,4 +19,5 @@ class Partecipero extends Model{
     protected $table = 'partecipero';
     protected $primaryKey = 'id';
     public $timestamps = false;
+    protected $fillable = ['codice_utente','codice_evento'];
 }
