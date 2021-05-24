@@ -17,8 +17,7 @@
                         {{ Form::select('societa', $societa, '', ['class' => 'form-control search-slt', 'placeholder'=>'> Scegli una società <']) }}
                         {{ Form::label('data', 'Scegli una data')}}
                         {{ Form::datetime('data', \Carbon\Carbon::create()->format('m-Y'), ['class' => 'form-control search-slt']) }}
-                        {{ Form::submit('Applica il filtro', ['class' => 'btn btn-primary btn-sm']) }}
-                        {{ Form::text('ricerca', '', ['class' => 'form-control search-slt', 'placeholder' => 'Cerca...']) }}
+                        {{ Form::text('ricerca', '', ['class' => 'form-control search-slt', 'placeholder' => 'Cerca nella descrizione...']) }}
                         {{ Form::submit('Avvia la ricerca', ['class' => 'btn btn-primary btn-sm']) }}
                         {{Form::close()}}
                     </div>
