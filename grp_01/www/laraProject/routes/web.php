@@ -1,15 +1,15 @@
 <?php
 
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+  |--------------------------------------------------------------------------
+  | Web Routes
+  |--------------------------------------------------------------------------
+  |
+  | Here is where you can register web routes for your application. These
+  | routes are loaded by the RouteServiceProvider within a group which
+  | contains the "web" middleware group. Now create something great!
+  |
+ */
 
 // ROTTE PUBBLICHE
 Route::view('/', 'homePubblica')
@@ -42,14 +42,12 @@ Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')
         ->name('logout');
 //FINE
-
 // ROTTE REGISTRAZIONE
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')
         ->name('register');
 
 Route::post('register', 'Auth\RegisterController@register');
 //FINE
-
 // ROTTE POST AUTENTICAZIONE
 Route::view('/cliente', 'AreaUtente2')
         ->name('cliente');
@@ -68,11 +66,11 @@ Route::view('/modificalivello2', 'ModificaUtente2')
 
 Route::get('/qrcode/{stringa}', function ($stringa) {
     return QrCode::size(250)
-        ->backgroundColor(224, 122, 114)
-        ->generate("$stringa");
+                    ->backgroundColor(224, 122, 114)
+                    ->generate("$stringa");
 })->name('qrcode');
 
-Route::resource('user','ControllerLivello2');
+Route::resource('user', 'ControllerLivello2');
 Route::post('creaBiglietto', 'ControllerLivello2@creaBiglietto')
         ->name('creaBiglietto');
 
@@ -90,24 +88,29 @@ Route::view('AggiungiOrganizzatore', 'RegistrazioneOrganizzatore')
         ->name('AggiungiOrganizzatore')->middleware('can:isAdmin');
 Route::post('AggiungiOrganizzatore', 'AdminController@aggiungiOrganizzatore')->middleware('can:isAdmin');
 
-Route::resource('admin','AdminController');
+Route::resource('admin', 'AdminController');
 Route::get('/modificaorganizzatore/{id}/modifica', 'AdminController@FormOrganizzatori')
         ->name('modificaorganizzatore')->middleware('can:isAdmin');
 Route::get('EliminaUtente/{id}', 'AdminController@cancella')
         ->name('EliminaUtente')->middleware('can:isAdmin');
+
 //ADMIN gestione FAQ
 Route::get('EliminaFAQ/{id}', 'AdminController@cancellafaq')
         ->name('EliminaFAQ')->middleware('can:isAdmin');
 Route::view('AggiungiFAQ', 'NuovaFAQ')
         ->name('AggiungiFAQ')->middleware('can:isAdmin');
 Route::post('AggiungiFAQ', 'AdminController@aggiungifaq')->middleware('can:isAdmin');
-Route::resource('faqs','ControllerFAQ')->middleware('can:isAdmin');
+Route::resource('faqs', 'ControllerFAQ')->middleware('can:isAdmin');
 Route::get('/modificafaq/{id}/modifica', 'AdminController@FormFAQ')
         ->name('modificafaq')->middleware('can:isAdmin');
 Route::get('/statistiche/{id}/vedi', 'AdminController@statistiche')
         ->name('statistiche')->middleware('can:isAdmin');
 
+//rotte organizzatore (utente livello 3)
 
+Route::get('/gestioneEventi/{id}', 'ControllerLivello3@mostraGestioneEventi')
+        ->name('gestioneEventi')
+        ->middleware('can:isOrganizer');
 
 /* Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home'); */

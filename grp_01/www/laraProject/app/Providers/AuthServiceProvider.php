@@ -32,7 +32,7 @@ class AuthServiceProvider extends ServiceProvider
             return $user->hasRole('cliente');
         });
         
-        Gate::define('isOrganizator', function ($user) {
+        Gate::define('isOrganizer', function ($user) {
             return $user->hasRole('organizzatore');
         });
 
