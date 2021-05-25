@@ -11,11 +11,11 @@ class Utente extends Model{
     public $timestamps = false;
     
     public function getUtenteById($id) {
-
-        return Utente::where('id', $id)->first();      
+        return Utente::where('id', $id)->get();
     }
     
     public function getUtenti() {
+        return 10;
         return Utente::all();      
     }
     
