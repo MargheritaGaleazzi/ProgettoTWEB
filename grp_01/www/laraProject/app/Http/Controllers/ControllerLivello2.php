@@ -26,7 +26,8 @@ class ControllerLivello2 extends Controller {
         $this->_utenteModel = new Utente;
         $this->_catalogoModel = new Catalogo; 
         $this->_bigliettoModel = new Biglietto;
-        $this->_eventoModel = new Evento; 
+        $this->_eventoModel = new Evento;
+        $this->_parteciperoModel = new Partecipero; 
     }
     
     public function index() {
@@ -157,27 +158,19 @@ class ControllerLivello2 extends Controller {
         return redirect('catalogo');
     }
     
-        public function mostraCatalogo() {
+        public function mostraCatalogo($id) {
 
         //Mostra il catalogo con tutti gli eventi
-        $eventi = $this->_catalogoModel->getTuttiEventi();
-        foreach($eventi as $evento){
-            $data_evento=Carbon::create($evento->data_ora);
-            $oggi=Carbon::now();
-            $diff=$data_evento->diff($oggi)->format("%a");
-        if ($data_evento<$oggi){
-               $evento->stato_evento="chiuso";
-                $evento->save(); 
-        } 
-        else if ($diff>0 && $diff<50){
-                $evento->biglietto_scontato=1;
-                $evento->save();
-            } 
-            
-           
+        $partecip = $this->_parteciperoModel->getParteciperoUtente($id);
+        $eventi=[];
+          foreach ($partecip as $partecipero){
+          $indice=$partecipero->id;
+          $evento = $this->_catalogoModel->getEventoByCodice($partecipero->codice_evento); 
+          $eventi[$indice]=$evento;
         }
-        return view('catalogo')
-                        ->with('eventi', $eventi);
+            
+        return view('partecipero', ['partecipero' => $partecip,
+                                            'eventi'=>$eventi]);
     }
 }
 
