@@ -28,7 +28,7 @@ class ControllerPubblico extends Controller {
         foreach($eventi as $evento){
             $data_evento=Carbon::create($evento->data_ora);
             $oggi=Carbon::now();
-            $diff=$data_evento->diff($oggi)->format("%r%a");
+            $diff=$data_evento->diff($oggi)->format("%a");
             if ($diff>0 && $diff<30){
                 $evento->biglietto_scontato=1;
                 $evento->save();
