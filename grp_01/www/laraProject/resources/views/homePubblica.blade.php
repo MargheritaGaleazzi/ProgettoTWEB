@@ -53,11 +53,34 @@
             </div>
             <div>
                 <br><center>
+                 @can('isUser')
+                    <h1 style="font-weight: bold; font-family: Verdana">CLICCA SULLA CHITARRA PER TORNARE ALL'AREA RISERVATA</h1>
+                      <img alt="Immagine casa discografica" src="images/mappa.jpg" usemap="#map">
+                      <map name="map">
+                          <area shape="rect" alt="Login" title="Registrati o effettua il login" coords="51,156,129,296" href="{{ route('cliente') }}">
+                      </map>
+                 @endcan
+                 @can('isAdmin')
+                    <h1 style="font-weight: bold; font-family: Verdana">CLICCA SULLA CHITARRA PER TORNARE ALL'AREA RISERVATA</h1>
+                      <img alt="Immagine casa discografica" src="images/mappa.jpg" usemap="#map">
+                      <map name="map">
+                          <area shape="rect" alt="Login" title="Registrati o effettua il login" coords="51,156,129,296" href="{{ route('amministratore') }}">
+                      </map>
+                 @endcan  
+                @can('isOrganizer')
+                    <h1 style="font-weight: bold; font-family: Verdana">CLICCA SULLA CHITARRA PER TORNARE ALL'AREA RISERVATA</h1>
+                      <img alt="Immagine casa discografica" src="images/mappa.jpg" usemap="#map">
+                      <map name="map">
+                          <area shape="rect" alt="Login" title="Registrati o effettua il login" coords="51,156,129,296" href="{{ route('organizzatore') }}">
+                      </map>
+                 @endcan
+                 @guest
                  <h1 style="font-weight: bold; font-family: Verdana">CLICCA SULLA CHITARRA PER EFFETTUARE IL LOGIN!</h1>
                       <img alt="Immagine casa discografica" src="images/mappa.jpg" usemap="#map">
                       <map name="map">
                           <area shape="rect" alt="Login" title="Registrati o effettua il login" coords="51,156,129,296" href="{{ route('login') }}">
                       </map>
+                 @endguest
                 </center>
             </div><br>
         </div>

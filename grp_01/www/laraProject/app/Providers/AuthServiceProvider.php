@@ -37,9 +37,7 @@ class AuthServiceProvider extends ServiceProvider
         });
 
          Gate::define('show-discount', function ($user) {
-            return $user->hasRole(['cliente', 'organizzatore']);
+            return $user->hasRole(['cliente', 'organizzatore', 'amministratore']);
         }); 
-
-        //show-discount serve per mostrare il prezzo scontato solo agli utenti registrati
     }
 }
