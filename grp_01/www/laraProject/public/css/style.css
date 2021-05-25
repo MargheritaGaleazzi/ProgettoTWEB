@@ -2806,6 +2806,25 @@ Primary style
     object-fit:cover;
 }
 /*----------------------------------------------Stile prezzo in sconto---------------------------------------------------------------*/
+
+.prod .pricebox .price{
+    color: #424954;
+    font-family: Verdana;
+	padding-right: 10px;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.prod .pricebox .discprice{
+    color: #CC0000;
+    font-family: Verdana;
+	padding-right: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: right;
+}
+
 .style-1 {
   font-family: Roboto, sans-serif;
   font-size: 20px;

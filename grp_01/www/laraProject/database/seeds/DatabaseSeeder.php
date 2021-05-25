@@ -62,7 +62,7 @@ class DatabaseSeeder extends Seeder
         
          
         DB::table('evento')->insert([
-            ['societa_organizzatrice' => 'ConcertoPlanner', 'prezzo_biglietto' => 100.00, 'biglietto_scontato' => 0, 'sconto' => 25, 'data_ora' => '2021:07:03 21:30:00',
+            ['societa_organizzatrice' => 'ConcertoPlanner', 'prezzo_biglietto' => 100.00, 'biglietto_scontato' => 0, 'sconto' => 25, 'data_ora' => '2021:05:27 21:30:00',
                 'informazioni' => 'Vasco torna in concerto con NonStopLive! Vieni anche tu ad ascoltarlo dal vivo, una esperienza indimenticabile da vivere presso Autodromo Internazionale Enzo e Dino Ferrari ad Imola, il giorno 3 luglio 2021. Dai, ti aspettiamo!',
                 'titolo' => 'NonStopLive', 'totale_biglietti_evento' => 4000, 'biglietti_rimanenti' => 4000, 
                 'coordinate_maps' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2853.339630991969!2d11.712162215520328!3d44.34407377910367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132b4a7474d71167%3A0x81177e3551c217a6!2sAutodromo%20Enzo%20e%20Dino%20Ferrari!5e0!3m2!1sit!2sit!4v1621159580971!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',
