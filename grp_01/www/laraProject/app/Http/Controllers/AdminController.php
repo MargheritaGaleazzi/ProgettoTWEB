@@ -79,7 +79,7 @@ public function FormFAQ($id) {
 }
 
     public function vediUtenti(){
-        $utenti=$this->_utenteModel->getUtenti();
+        $utenti=Utente::all();
         $clienti=[];
         $organizzatori=[];
         foreach ($utenti as $utente){
