@@ -21,7 +21,7 @@ class Evento extends Model{
         return $prezzo;
     }
     
-    public function getSconto($date1, $date2) {
+    /*public function getSconto($date1, $date2) {
       
         $sconto = $this->biglietto_scontato;
         $diff = $date2 - $date1;
@@ -30,5 +30,5 @@ class Evento extends Model{
         }
             
         return $sconto;
-    }
+    }*/
 }

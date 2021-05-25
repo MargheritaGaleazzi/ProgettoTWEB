@@ -2,7 +2,7 @@
 
 @can('show-discount')
     <div class="style-1"> {{ number_format($evento->getPrezzo($evento->biglietto_scontato), 2, ',', '.') }} € </div>
-    <div class="style-1">{{ number_format($evento->getSconto($evento->data_ora, time()))}}</div>
+    
     @if ($evento->biglietto_scontato == 1)
         <p class="style-1"> Valore <del>{{ number_format($evento->getPrezzo(false), 2, ',', '.') }} €</del><br>
         Sconto {{ $evento->sconto }}%</p>

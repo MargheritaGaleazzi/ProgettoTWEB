@@ -6,6 +6,8 @@ use App\Models\Catalogo;
 use App\Models\Resources\FAQ;
 use App\Models\Resources\Partecipero;
 use App\Http\Requests\FiltroRequest;
+use Carbon\Carbon;
+
 
 class ControllerPubblico extends Controller {
 
@@ -23,6 +25,16 @@ class ControllerPubblico extends Controller {
         $eventi = $this->_catalogoModel->getTuttiEventi();
         $filtro_luoghi = $this->_catalogoModel->getTabellaEventi()->pluck('luogo', 'luogo');
         $filtro_societa = $this->_catalogoModel->getTabellaEventi()->pluck('societa_organizzatrice', 'societa_organizzatrice');
+        foreach($eventi as $evento){
+            $data_evento=Carbon::create($evento->data_ora);
+            $oggi=Carbon::now();
+            $diff=$data_evento->diff($oggi)->format("%a");
+            if ($diff>1 && $diff<126){
+                $evento->biglietto_scontato=1;
+                $evento->data_ora=$evento->data_ora;
+                $evento->save();
+            }
+        }
         return view('catalogo')
                         ->with('eventi', $eventi)
                         ->with('luoghi', $filtro_luoghi)
