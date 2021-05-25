@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="address">
-                <div class="wrapper fadeInDown">REGISTRATI</div>
+                <div class="wrapper fadeInDown">Modifica i tuoi dati</div>
 <?php $ut=Auth::user();?>
                 <div class="address">
                     {{ Form::model($ut, ['method'=>'PUT',
