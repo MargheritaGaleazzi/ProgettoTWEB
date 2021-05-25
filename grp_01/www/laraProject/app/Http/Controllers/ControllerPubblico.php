@@ -29,13 +29,16 @@ class ControllerPubblico extends Controller {
             $data_evento=Carbon::create($evento->data_ora);
             $oggi=Carbon::now();
             $diff=$data_evento->diff($oggi)->format("%a");
-            if ($diff>0 && $diff<30){
+        if ($data_evento<$oggi){
+               $evento->stato_evento="chiuso";
+                $evento->save(); 
+        } 
+        else if ($diff>0 && $diff<30){
                 $evento->biglietto_scontato=1;
                 $evento->save();
-            } else if ($diff<=0){
-                $evento->stato_evento="chiuso";
-                $evento->save();
-            }
+            } 
+            
+           
         }
         return view('catalogo')
                         ->with('eventi', $eventi)
