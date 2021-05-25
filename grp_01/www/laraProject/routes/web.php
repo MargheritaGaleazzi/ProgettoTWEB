@@ -61,6 +61,9 @@ Route::view('/organizzatore', 'AreaUtente3')
 Route::get('/storico/{id}', 'ControllerLivello2@mostraStorico')
         ->name('storico');
 
+Route::post('/partecipero/{id}', 'ControllerLivello2@mostraCatalogo')
+        ->name('partecipero');
+
 Route::view('/modificalivello2', 'ModificaUtente2')
         ->name('modificalivello2');
 

@@ -156,6 +156,28 @@ class ControllerLivello2 extends Controller {
         
         return redirect('catalogo');
     }
+    
+        public function mostraCatalogo() {
 
+        //Mostra il catalogo con tutti gli eventi
+        $eventi = $this->_catalogoModel->getTuttiEventi();
+        foreach($eventi as $evento){
+            $data_evento=Carbon::create($evento->data_ora);
+            $oggi=Carbon::now();
+            $diff=$data_evento->diff($oggi)->format("%a");
+        if ($data_evento<$oggi){
+               $evento->stato_evento="chiuso";
+                $evento->save(); 
+        } 
+        else if ($diff>0 && $diff<50){
+                $evento->biglietto_scontato=1;
+                $evento->save();
+            } 
+            
+           
+        }
+        return view('catalogo')
+                        ->with('eventi', $eventi);
+    }
 }
 

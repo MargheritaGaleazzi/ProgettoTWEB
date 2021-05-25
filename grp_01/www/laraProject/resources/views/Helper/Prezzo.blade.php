@@ -8,7 +8,7 @@
         Sconto {{ $evento->sconto }}%</p>
     @endif   
     @else
-    <p class="style-1">{{ number_format($evento->getPrezzo(false), 2, ',', '.') }} €</p>
+    <p class="style-1" style="color: red">{{ number_format($evento->getPrezzo(false), 2, ',', '.') }} €</p>
 @endcan
 
 

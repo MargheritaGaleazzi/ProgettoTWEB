@@ -113,9 +113,7 @@
                     </div>
                     
                     <div class="col-auto my-auto ml-auto">
-                    <?php if($biglietto_scontato==1){
-                    $prezzo=$prezzo-(($prezzo*$sconto)/100);
-                    }?>
+
                         <h5  class="display-3 "><span id="totale">{{$prezzo}}</span><span>€</span></h5>
                     </div>
                     
