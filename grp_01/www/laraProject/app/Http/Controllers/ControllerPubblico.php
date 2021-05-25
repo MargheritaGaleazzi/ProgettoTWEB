@@ -32,6 +32,9 @@ class ControllerPubblico extends Controller {
             if ($diff>0 && $diff<30){
                 $evento->biglietto_scontato=1;
                 $evento->save();
+            } else if ($diff<=0){
+                $evento->stato_evento="chiuso";
+                $evento->save();
             }
         }
         return view('catalogo')
