@@ -28,7 +28,7 @@ Route::post('/catalogo', 'ControllerPubblico@mostraCatalogoFiltrato')
         ->name('catalogoFiltrato');
 
 Route::get('/catalogo/acquisto/{codice_evento}', 'ControllerLivello2@acquisto')
-        ->name('acquisto');
+        ->name('acquisto')->middleware('can:isUser');
 
 Route::get('/catalogo/dettagliEvento/{codice_evento}', 'ControllerPubblico@mostraDettagli')
         ->name('dettagliEvento');
@@ -50,37 +50,37 @@ Route::post('register', 'Auth\RegisterController@register');
 //FINE
 // ROTTE POST AUTENTICAZIONE
 Route::view('/cliente', 'AreaUtente2')
-        ->name('cliente');
+        ->name('cliente')->middleware('can:isUser');
 
 Route::view('/amministratore', 'AreaAdmin')
-        ->name('amministratore');
+        ->name('amministratore')->middleware('can:isAdmin');
 
 Route::view('/organizzatore', 'AreaUtente3')
         ->name('organizzatore');
 
 Route::get('/storico/{id}', 'ControllerLivello2@mostraStorico')
-        ->name('storico');
+        ->name('storico')->middleware('can:isUser');
 
 Route::get('/partecipero/{id}', 'ControllerLivello2@mostraCatalogo')
-        ->name('partecipero');
+        ->name('partecipero')->middleware('can:isUser');
 
 Route::view('/modificalivello2', 'ModificaUtente2')
-        ->name('modificalivello2');
+        ->name('modificalivello2')->middleware('can:isUser');
 
 Route::get('/qrcode/{stringa}', function ($stringa) {
     return QrCode::size(250)
                     ->backgroundColor(224, 122, 114)
                     ->generate("$stringa");
-})->name('qrcode');
+})->name('qrcode')->middleware('can:isUser');
 
 Route::resource('user', 'ControllerLivello2');
 Route::post('creaBiglietto', 'ControllerLivello2@creaBiglietto')
-        ->name('creaBiglietto');
+        ->name('creaBiglietto')->middleware('can:isUser');
 
 Route::post('partecipero', 'ControllerLivello2@partecipero')
-        ->name('partecipero');
+        ->name('partecipero')->middleware('can:isUser');
 Route::get('vedipartecipero/{id}','ControllerLivello2@vedipartecipero')
-        ->name('vedipartecipero');
+        ->name('vedipartecipero')->middleware('can:isUser');
 
 //rotte amministratore
 Route::get('/gestioneFAQ', 'AdminController@mostrafaq')
