@@ -33,7 +33,7 @@ class ControllerPubblico extends Controller {
                $evento->stato_evento="chiuso";
                 $evento->save(); 
         } 
-        else if ($diff>0 && $diff<30){
+        else if ($diff>0 && $diff<50){
                 $evento->biglietto_scontato=1;
                 $evento->save();
             } 
