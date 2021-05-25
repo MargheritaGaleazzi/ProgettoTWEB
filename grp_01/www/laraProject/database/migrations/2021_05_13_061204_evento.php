@@ -19,7 +19,7 @@ class Evento extends Migration
             $table->float('prezzo_biglietto');
             $table->tinyInteger('biglietto_scontato')->default(0);
             $table->integer('sconto')->nullable();
-            $table->timestamp('data_ora');
+            $table->timestamp('data_ora')->nullable();
             $table->string('informazioni',2500);
             $table->string('titolo',40);
             $table->integer('totale_biglietti_evento');
