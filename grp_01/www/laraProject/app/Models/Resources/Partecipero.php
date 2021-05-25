@@ -21,8 +21,6 @@ class Partecipero extends Model{
     public $timestamps = false;
     protected $fillable = ['codice_utente','codice_evento'];
     
-    public function getParteciperoUtente($id){
-         $partecipero=Partecipero::where('id',$id)->get();
-         return $partecipero->all();
-}
+    
+
 }

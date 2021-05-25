@@ -79,6 +79,8 @@ Route::post('creaBiglietto', 'ControllerLivello2@creaBiglietto')
 
 Route::post('partecipero', 'ControllerLivello2@partecipero')
         ->name('partecipero');
+Route::get('vedipartecipero/{id}','ControllerLivello2@vedipartecipero')
+        ->name('vedipartecipero');
 
 //rotte amministratore
 Route::get('/gestioneFAQ', 'AdminController@mostrafaq')

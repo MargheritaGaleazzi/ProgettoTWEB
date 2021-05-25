@@ -158,18 +158,20 @@ class ControllerLivello2 extends Controller {
         return redirect('catalogo');
     }
     
-        public function mostraCatalogo($id) {
+        
+    
+    public function vedipartecipero($id) {
 
         //Mostra il catalogo con tutti gli eventi
-        $partecip = $this->_parteciperoModel->getParteciperoUtente($id);
+        $partecip = Partecipero::where('codice_utente','=',$id)->get();
         $eventi=[];
           foreach ($partecip as $partecipero){
-          $indice=$partecipero->id;
-          $evento = $this->_catalogoModel->getEventoByCodice($partecipero->codice_evento); 
-          $eventi[$indice]=$evento;
+          $evento = Evento::find($partecipero->codice_evento); 
+          array_push($eventi,$evento);
+          
         }
             
-        return view('partecipero', ['partecipero' => $partecip,
+        return view('partecipero', ['partecip' => $partecip,
                                             'eventi'=>$eventi]);
     }
 }
