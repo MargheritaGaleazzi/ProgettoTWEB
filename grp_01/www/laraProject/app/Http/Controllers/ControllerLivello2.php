@@ -99,9 +99,7 @@ class ControllerLivello2 extends Controller {
         $biglietto=new Biglietto;
         $biglietto->id=$request->id;
         $biglietto->codice_evento=$request->codice_evento;
-        if (empty($request->metodo_pagamento)==false){
         $biglietto->metodo_pagamento=$request->metodo_pagamento;
-        } else {$biglietto->metodo_pagamento='bonifico';}
         $biglietto->prezzo_acquisto=($request->prezzo)*($request->quantita);
         $biglietto->quantita=$request->quantita;
         $biglietto->save();
