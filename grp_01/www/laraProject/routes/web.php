@@ -87,7 +87,7 @@ Route::get('/gestioneFAQ', 'AdminController@mostrafaq')
         ->name('gestioneFAQ')->middleware('can:isAdmin');
 
 Route::get('/gestioneUtenti', 'AdminController@vediutenti')
-        ->name('gestioneUtenti')->middleware('can:isAdmin');
+        ->name('gestioneUtenti')->middleware('can:isAdmin')->middleware('preventBackHistory');
 
 Route::view('AggiungiOrganizzatore', 'RegistrazioneOrganizzatore')
         ->name('AggiungiOrganizzatore')->middleware('can:isAdmin');
