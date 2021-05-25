@@ -82,10 +82,7 @@
                             <p class="mb-1"><b>Metodo di pagamento</b></p>
                         </div>
                         <div class="flex-sm-col col-auto">
-                            <?php $pag=['bonifico','carta di credito','paypal'];
-                            if($biglietto_scontato==1){
-                    $prezzo=$prezzo-(($prezzo*$sconto)/100);
-                    }?>
+                            
                             {{ Form::label('metodo_pagamento', 'Metodo di Pagamento', ['class' => 'label-input']) }}
                             {{ Form::select('metodo_pagamento',array('bonifico'=>'bonifico','carta di credito'=>'carta di credito','paypal'=>'paypal') ,'bonifico', ['class' => 'input','id' => 'metodo_pagamento']) }}
                             {{ Form::hidden('prezzo', $prezzo) }}
