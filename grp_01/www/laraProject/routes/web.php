@@ -50,28 +50,28 @@ Route::post('register', 'Auth\RegisterController@register');
 //FINE
 // ROTTE POST AUTENTICAZIONE
 Route::view('/cliente', 'AreaUtente2')
-        ->name('cliente')->middleware('can:isUser');
+        ->name('cliente')->middleware('can:isUser')->middleware('preventBackHistory');
 
 Route::view('/amministratore', 'AreaAdmin')
-        ->name('amministratore')->middleware('can:isAdmin');
+        ->name('amministratore')->middleware('can:isAdmin')->middleware('preventBackHistory');
 
 Route::view('/organizzatore', 'AreaUtente3')
-        ->name('organizzatore');
+        ->name('organizzatore')->middleware('preventBackHistory');
 
 Route::get('/storico/{id}', 'ControllerLivello2@mostraStorico')
-        ->name('storico')->middleware('can:isUser');
+        ->name('storico')->middleware('can:isUser')->middleware('preventBackHistory');
 
 Route::get('/partecipero/{id}', 'ControllerLivello2@mostraCatalogo')
-        ->name('partecipero')->middleware('can:isUser');
+        ->name('partecipero')->middleware('can:isUser')->middleware('preventBackHistory');
 
 Route::view('/modificalivello2', 'ModificaUtente2')
-        ->name('modificalivello2')->middleware('can:isUser');
+        ->name('modificalivello2')->middleware('can:isUser')->middleware('preventBackHistory');
 
 Route::get('/qrcode/{stringa}', function ($stringa) {
     return QrCode::size(250)
                     ->backgroundColor(224, 122, 114)
                     ->generate("$stringa");
-})->name('qrcode')->middleware('can:isUser');
+})->name('qrcode')->middleware('can:isUser')->middleware('preventBackHistory');
 
 Route::resource('user', 'ControllerLivello2');
 Route::post('creaBiglietto', 'ControllerLivello2@creaBiglietto')
@@ -80,22 +80,22 @@ Route::post('creaBiglietto', 'ControllerLivello2@creaBiglietto')
 Route::post('partecipero', 'ControllerLivello2@partecipero')
         ->name('partecipero')->middleware('can:isUser');
 Route::get('vedipartecipero/{id}','ControllerLivello2@vedipartecipero')
-        ->name('vedipartecipero')->middleware('can:isUser');
+        ->name('vedipartecipero')->middleware('can:isUser')->middleware('preventBackHistory');
 
 //rotte amministratore
 Route::get('/gestioneFAQ', 'AdminController@mostrafaq')
-        ->name('gestioneFAQ')->middleware('can:isAdmin');
+        ->name('gestioneFAQ')->middleware('can:isAdmin')->middleware('preventBackHistory');
 
 Route::get('/gestioneUtenti', 'AdminController@vediutenti')
         ->name('gestioneUtenti')->middleware('can:isAdmin')->middleware('preventBackHistory');
 
 Route::view('AggiungiOrganizzatore', 'RegistrazioneOrganizzatore')
-        ->name('AggiungiOrganizzatore')->middleware('can:isAdmin');
+        ->name('AggiungiOrganizzatore')->middleware('can:isAdmin')->middleware('preventBackHistory');
 Route::post('AggiungiOrganizzatore', 'AdminController@aggiungiOrganizzatore')->middleware('can:isAdmin');
 
 Route::resource('admin', 'AdminController');
 Route::get('/modificaorganizzatore/{id}/modifica', 'AdminController@FormOrganizzatori')
-        ->name('modificaorganizzatore')->middleware('can:isAdmin');
+        ->name('modificaorganizzatore')->middleware('can:isAdmin')->middleware('preventBackHistory');
 Route::get('EliminaUtente/{id}', 'AdminController@cancella')
         ->name('EliminaUtente')->middleware('can:isAdmin');
 
@@ -103,13 +103,13 @@ Route::get('EliminaUtente/{id}', 'AdminController@cancella')
 Route::get('EliminaFAQ/{id}', 'AdminController@cancellafaq')
         ->name('EliminaFAQ')->middleware('can:isAdmin');
 Route::view('AggiungiFAQ', 'NuovaFAQ')
-        ->name('AggiungiFAQ')->middleware('can:isAdmin');
+        ->name('AggiungiFAQ')->middleware('can:isAdmin')->middleware('preventBackHistory');
 Route::post('AggiungiFAQ', 'AdminController@aggiungifaq')->middleware('can:isAdmin');
 Route::resource('faqs', 'ControllerFAQ')->middleware('can:isAdmin');
 Route::get('/modificafaq/{id}/modifica', 'AdminController@FormFAQ')
-        ->name('modificafaq')->middleware('can:isAdmin');
+        ->name('modificafaq')->middleware('can:isAdmin')->middleware('preventBackHistory');
 Route::get('/statistiche/{id}/vedi', 'AdminController@statistiche')
-        ->name('statistiche')->middleware('can:isAdmin');
+        ->name('statistiche')->middleware('can:isAdmin')->middleware('preventBackHistory');
 
 //rotte organizzatore (utente livello 3)
 
