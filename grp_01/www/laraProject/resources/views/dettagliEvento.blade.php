@@ -31,7 +31,9 @@
                 <div>
                     <br><br><b>{{ $informazioni }}</b>
                 </div>
+                
                 @can('isUser')
+                @if($evento->stato_evento=="aperto")
                 <a href="{{route('acquisto',[$evento->codice_evento])}}">
                     <button class="btn btn-outline-primary btn-sm mt-2" type="button">Compra</button>
                 </a>
@@ -41,6 +43,9 @@
                 {{ Form::submit('Parteciperò', ['class' => 'form-btn1']) }}
                         {{ Form::close() }}
                 
+                @elseif($evento->stato_evento=="chiuso")
+                   <p class='finito'> L'evento è terminato!</p>
+                   @endif
                 @endcan
             </div>
         </div>

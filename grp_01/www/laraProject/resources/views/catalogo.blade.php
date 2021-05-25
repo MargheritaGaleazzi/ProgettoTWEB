@@ -60,7 +60,11 @@
                     </div>
                     <div class="d-flex flex-column mt-4"><a href="{{route('dettagliEvento',[$evento->codice_evento])}}"><button class="btn btn-primary btn-sm" type="button">Dettagli</button></a>
                    @can('isUser')
+                   @if($evento->stato_evento=="aperto")
                         <a href="{{route('acquisto',[$evento->codice_evento])}}"><button class="btn btn-outline-primary btn-sm mt-2" type="button">Compra</button></a>
+                   @elseif($evento->stato_evento=="chiuso")
+                   <p class='finito'> L'evento è terminato!</p>
+                   @endif
                    @endcan
                     </div>
                 </div>
