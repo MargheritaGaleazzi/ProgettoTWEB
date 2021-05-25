@@ -87,7 +87,7 @@
                     $prezzo=$prezzo-(($prezzo*$sconto)/100);
                     }?>
                             {{ Form::label('metodo_pagamento', 'Metodo di Pagamento', ['class' => 'label-input']) }}
-                            {{ Form::select('metodo_pagamento',$pag ,'bonifico', ['class' => 'input','id' => 'metodo_pagamento']) }}
+                            {{ Form::select('metodo_pagamento',array('bonifico'=>'bonifico','carta di credito'=>'carta di credito','paypal'=>'paypal') ,'bonifico', ['class' => 'input','id' => 'metodo_pagamento']) }}
                             {{ Form::hidden('prezzo', $prezzo) }}
                             {{ Form::hidden('id', $ut->id) }}
                             {{ Form::hidden('codice_evento', $evento->codice_evento) }}
