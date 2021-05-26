@@ -8,18 +8,21 @@
 @endguest
     
 @can('isAdmin')
+    <li> <a href="{{ route('homePubblica') }}" title="Home">Home</a> </li>
     <li><a href="{{ route('amministratore') }}" title="Home Admin">Area privata</a></li>
 @endcan
 
 @can('isOrganizer')
     
+    <li> <a href="{{ route('homePubblica') }}" title="Home">Home</a> </li>
     <li> <a href="{{ route('info') }}" title="Info">Info</a> </li>
     <li> <a href="{{ route('faq') }}" title="FAQ">FAQ</a> </li>
     <li><a href="{{ route('organizzatore') }}" title="Home Organizzatore">Area privata</a></li>
 @endcan
 
 @can('isUser')
-    
+    <li> <a href="{{ route('homePubblica') }}" title="Home">Home</a> </li>
+    <li> <a href="{{ route('catalogo') }}" title="Catalogo"> Catalogo</a> </li>
     <li> <a href="{{ route('info') }}" title="Info">Info</a> </li>
     <li> <a href="{{ route('faq') }}" title="FAQ">FAQ</a> </li>
     <li><a href="{{ route('cliente') }}" title="Home User">Area privata</a></li>
