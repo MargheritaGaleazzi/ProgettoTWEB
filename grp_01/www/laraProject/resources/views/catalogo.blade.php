@@ -5,9 +5,8 @@
 @section('content')
 
 
-<section class="search-sec">
+{{-- <section class="search-sec">
     <div class="container" >
-        <center>
         <div class="d-flex justify-content-center row">
             <div class="col-md-10">
                 <div class="row">
@@ -24,8 +23,57 @@
                 </div>
             </div>
         </div>
-        </center>
     </div> 
+</section> --}}
+
+<section class="search-sec">
+    <div class="container">
+        <form action="#" method="post" novalidate="novalidate">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+
+                        {{ Form::open(array('route' => 'catalogoFiltrato', 'id' => 'filtro', 'files' => true, 'style' => 'float:left')) }}
+
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            {{ Form::text('ricerca', '', ['placeholder' => 'Cerca nella descrizione...']) }}
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            {{-- {{ Form::label('data', 'Scegli una data')}} --}}
+                            {{ Form::datetime('data', \Carbon\Carbon::create()->format('m-Y'), ['class' => 'form-control search-slt', 'placeholder'=>'Scegli una data']) }}
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            {{ Form::select('luogo', $luoghi, '', ['class' => 'form-control search-slt', 'placeholder'=>'Scegli una regione']) }}
+                            {{-- <select class="form-control search-slt" id="exampleFormControlSelect1">
+                                <option>Select Vehicle</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                            </select> --}}
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            {{ Form::select('societa', $societa, '', ['class' => 'form-control search-slt', 'placeholder'=>'Scegli una società']) }}
+                            {{-- <select class="form-control search-slt" id="exampleFormControlSelect1">
+                                <option>Select Vehicle</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                            </select> --}}
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            {{ Form::submit('Avvia la ricerca') }}
+                        </div>
+                        {{Form::close()}}
+                </div>
+            </div>
+        </form>
+    </div>
 </section>
  
 <div class="container">
