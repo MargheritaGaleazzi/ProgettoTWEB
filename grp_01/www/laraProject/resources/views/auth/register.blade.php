@@ -190,28 +190,12 @@
                             </div>
                         </div>
                         </div>
-
-                        
-
-                        
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
                         <div class="wrapper fadeInDown">
                             <div class="col-md-6 offset-md-3">
                                 {{ Form::submit('Registra', ['class' => 'form-btn1']) }}
                             </div>
                         </div>
                     {{ Form::close() }}
-                    
-                    
                 </div>
             </div>
         </div>

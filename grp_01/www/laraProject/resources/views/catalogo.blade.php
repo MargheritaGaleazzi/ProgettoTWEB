@@ -35,36 +35,22 @@
 
                         {{ Form::open(array('route' => 'catalogoFiltrato', 'id' => 'filtro', 'files' => true, 'style' => 'float:left')) }}
 
+                        {{-- Ricerca testuale --}}
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                             {{ Form::text('ricerca', '', ['placeholder' => 'Cerca nella descrizione...']) }}
                         </div>
+                        {{-- Ricerca per data --}}
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                             {{-- {{ Form::label('data', 'Scegli una data')}} --}}
                             {{ Form::datetime('data', \Carbon\Carbon::create()->format('m-Y'), ['class' => 'form-control search-slt', 'placeholder'=>'Scegli una data']) }}
                         </div>
+                        {{-- Ricerca per luoghi --}}
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                             {{ Form::select('luogo', $luoghi, '', ['class' => 'form-control search-slt', 'placeholder'=>'Scegli una regione']) }}
-                            {{-- <select class="form-control search-slt" id="exampleFormControlSelect1">
-                                <option>Select Vehicle</option>
-                                <option>Example one</option>
-                                <option>Example one</option>
-                                <option>Example one</option>
-                                <option>Example one</option>
-                                <option>Example one</option>
-                                <option>Example one</option>
-                            </select> --}}
                         </div>
+                        {{-- Ricerca per società --}}
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                             {{ Form::select('societa', $societa, '', ['class' => 'form-control search-slt', 'placeholder'=>'Scegli una società']) }}
-                            {{-- <select class="form-control search-slt" id="exampleFormControlSelect1">
-                                <option>Select Vehicle</option>
-                                <option>Example one</option>
-                                <option>Example one</option>
-                                <option>Example one</option>
-                                <option>Example one</option>
-                                <option>Example one</option>
-                                <option>Example one</option>
-                            </select> --}}
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                             {{ Form::submit('Avvia la ricerca') }}
