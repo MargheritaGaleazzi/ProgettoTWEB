@@ -56,7 +56,7 @@
                             <div class="limit-box">
                                 <nav class="main-menu">
                                     <ul class="menu-area-main">
-                                        @include('layout/navBarPubblica')
+                                        @include('layout/navbar')
                                     </ul>
                                 </nav>
                             </div>
