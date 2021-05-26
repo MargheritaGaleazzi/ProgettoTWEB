@@ -17,11 +17,27 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-2">
-                        <a href="{{route('modificalivello2')}}" title="Modifica profilo"><input type="submit" class="profile-edit-btn" name="btnAddMore" value="Modifica Profilo"/></a>
-                    </div>
                 </div>
-                <div class="row">
+                
+
+                <div class="row">    
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <a href="{{route('modificalivello2')}}" title="Modifica profilo"><input type="submit" class="profile-edit-btn" name="btnAddMore" value="Modifica profilo"/></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <a href="{{route('storico',[Auth::user()->id])}}" title="I tuoi acquisti"><input type="submit" class="profile-edit-btn" name="btnAddMore" value="I miei acquisti"/></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <a href="{{route('vedipartecipero',[Auth::user()->id])}}" title="Parteciperò"><input type="submit" class="profile-edit-btn" name="btnAddMore" value="I miei parteciperò"/></a>
+                        </div>
+                    </div>
+                    </div>
                     
                     <div class="col-md-8">
                         <div class="tab-content profile-tab" id="myTabContent">
