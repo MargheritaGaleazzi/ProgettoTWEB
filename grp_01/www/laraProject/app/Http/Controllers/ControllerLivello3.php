@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Catalogo;
 use App\Models\Resources\Utente;
 use App\Models\Resources\GestioneEvento;
+use App\Http\Requests\NuovoEventoRequest;
+use App\Http\Controllers\Auth;
 
 class ControllerLivello3 extends Controller {
 
@@ -24,6 +25,16 @@ class ControllerLivello3 extends Controller {
         $eventi = $this->_gestioneEventoModel->getEventiBySocieta($societa[0]);
         return view('GestioneEventi')
                         ->with('eventi', $eventi);
+    }
+    
+    public function mostraFormInserimento(){
+        return view('InserimentoEvento');
+    }
+    
+    public function inserisciEvento(NuovoEventoRequest $request){
+        $id = Auth::user()->nome;
+        return $id;
+        return redirect()->action('ControllerLivello3@mostraGestioneEventi', ['']);
     }
 
 }

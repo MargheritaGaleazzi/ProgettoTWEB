@@ -11,16 +11,30 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/searchbar.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}">
 
-@extends('layout.zonaUtente3')
 
-@section('title', 'Gestione Eventi')
+@extends('layout.zonaPubblica')
+
+@section('title', 'Catalogo')
 
 @section('content')
+
+<section class="search-sec">
+    <div class="container" >
+        <div class="d-flex justify-content-center row">
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                        <a href="{{route('inserisciEvento',[Auth::user()->id])}}"><button class="input-group-text" type="button">Inserisci un nuovo evento</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</section>
 
 <div class="container">
     @isset($eventi)
     @foreach ($eventi as $evento)
-
     <div class="d-flex justify-content-center row">
         <div class="col-md-10">
             <div class="row p-2 bg-white border rounded">
@@ -48,9 +62,12 @@
                         <h4 class="mr-1">@include('Helper/Prezzo')</h4><span class="strike-text"></span>
                     </div>
                     <div class="d-flex flex-column mt-4"><a href="{{route('dettagliEvento',[$evento->codice_evento])}}"><button class="btn btn-primary btn-sm" type="button">Dettagli</button></a>
-                   @can('isUser')
-                        <a href="{{route('acquisto',[$evento->codice_evento])}}"><button class="btn btn-outline-primary btn-sm mt-2" type="button">Compra</button></a>
-                   @endcan
+                        <a href="">
+                            <button class="btn btn-outline-primary btn-sm mt-2" type="button">Modifica</button>
+                        </a>
+                        <a href="">
+                            <button class="btn btn-outline-primary btn-sm mt-2" type="button">Elimina</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -63,5 +80,5 @@
     @include('pagination.paginator', ['paginator' => $eventi])
 
     @endisset()
+    @endsection
 </div>
-@endsection

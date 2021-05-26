@@ -56,12 +56,12 @@
                             {{ Form::submit('Avvia la ricerca') }}
                         </div>
                         {{Form::close()}}
+                    </div>
                 </div>
-            </div>
         </form>
     </div>
 </section>
- 
+
 <div class="container">
     @isset($eventi)
     @foreach ($eventi as $evento)
@@ -93,13 +93,21 @@
                         <h4 class="mr-1">@include('Helper/Prezzo')</h4><span class="strike-text"></span>
                     </div>
                     <div class="d-flex flex-column mt-4"><a href="{{route('dettagliEvento',[$evento->codice_evento])}}"><button class="btn btn-primary btn-sm" type="button">Dettagli</button></a>
-                   @can('isUser')
-                   @if($evento->stato_evento=="aperto")
+                        @can('isOrganizer')
+                        @if($evento->societa_organizzatrice==Auth::user()->nome_societa_organizzatrice)
+                        <a href=""><button class="btn btn-outline-primary btn-sm mt-2" type="button">Modifica</button></a>
+                        <a href=""><button class="btn btn-outline-primary btn-sm mt-2" type="button">Elimina</button></a>
+                        @else
+                        <p class='finito'>Non hai i permessi per modificare/eliminare questo evento!</p>
+                        @endif
+                        @endcan
+                        @can('isUser')
+                        @if($evento->stato_evento=="aperto")
                         <a href="{{route('acquisto',[$evento->codice_evento])}}"><button class="btn btn-outline-primary btn-sm mt-2" type="button">Compra</button></a>
-                   @elseif($evento->stato_evento=="chiuso")
-                   <p class='finito'> L'evento è terminato!</p>
-                   @endif
-                   @endcan
+                        @elseif($evento->stato_evento=="chiuso")
+                        <p class='finito'> L'evento è terminato!</p>
+                        @endif
+                        @endcan
                     </div>
                 </div>
             </div>

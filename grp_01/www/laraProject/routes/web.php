@@ -115,7 +115,18 @@ Route::get('/statistiche/{id}/vedi', 'AdminController@statistiche')
 
 Route::get('/gestioneEventi/{id}', 'ControllerLivello3@mostraGestioneEventi')
         ->name('gestioneEventi')
-        ->middleware('can:isOrganizer');
+        ->middleware('can:isOrganizer')
+        ->middleware('preventBackHistory');
+
+Route::get('/gestioneEventi/{id}/inserisciEvento', 'ControllerLivello3@mostraFormInserimento')
+        ->name('inserisciEvento')
+        ->middleware('can:isOrganizer')
+        ->middleware('preventBackHistory');
+
+Route::post('/gestioneEventi/{id}/inserisciEvento', 'ControllerLivello3@inserisciEvento')
+        ->name('inserisciEvento.inserisci')
+        ->middleware('can:isOrganizer')
+        ->middleware('preventBackHistory');
 
 /* Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home'); */
