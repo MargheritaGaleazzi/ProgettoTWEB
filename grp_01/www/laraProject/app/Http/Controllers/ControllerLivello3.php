@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Resources\Utente;
+use App\Models\Resources\Evento;
 use App\Models\Resources\GestioneEvento;
 use App\Http\Requests\NuovoEventoRequest;
 use App\Http\Controllers\Auth;
@@ -26,15 +27,20 @@ class ControllerLivello3 extends Controller {
         return view('GestioneEventi')
                         ->with('eventi', $eventi);
     }
-    
-    public function mostraFormInserimento(){
+
+    public function mostraFormInserimento() {
         return view('InserimentoEvento');
     }
-    
-    public function inserisciEvento(NuovoEventoRequest $request){
+
+    public function inserisciEvento(NuovoEventoRequest $request) {
         $id = Auth::user()->nome;
         return $id;
         return redirect()->action('ControllerLivello3@mostraGestioneEventi', ['']);
+    }
+
+    public function eliminaEvento($id) {
+        Evento::find($id)->delete();
+        return redirect("organizzatore");
     }
 
 }

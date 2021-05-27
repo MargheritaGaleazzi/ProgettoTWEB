@@ -65,7 +65,7 @@
                         <a href="">
                             <button class="btn btn-outline-primary btn-sm mt-2" type="button">Modifica</button>
                         </a>
-                        <a href="">
+                        <a href="{{route('EliminaEvento',[$evento->codice_evento])}}">
                             <button class="btn btn-outline-primary btn-sm mt-2" type="button">Elimina</button>
                         </a>
                     </div>
