@@ -34,10 +34,10 @@
 
                     @can('isOrganizer')
                     @if($organizzatore==Auth::user()->nome_societa_organizzatrice)
-                    <a href="">
+                    <a href="{{route('ModificaEvento',[$evento->codice_evento])}}">
                         <button class="input-group-text" type="button">Modifica</button>
                     </a>
-                    <a href="">
+                    <a href="{{route('EliminaEvento',[$evento->codice_evento])}}">
                         <button class="input-group-text" type="button">Elimina</button>
                     </a>
                     @endif
