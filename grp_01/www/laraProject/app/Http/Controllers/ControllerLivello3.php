@@ -41,11 +41,12 @@ class ControllerLivello3 extends Controller {
         }
         
         $nuovoEvento = new Evento;
+        /*
         $nuovoEvento->societa_organizzatrice=$request->societa_organizzatrice;
         $nuovoEvento->prezzo_biglietto=$request->prezzo_biglietto;
         $nuovoEvento->biglietto_scontato=0;
         $nuovoEvento->sconto=$request->sconto;
-        $nuovoEvento->data_ora= time();
+        $nuovoEvento->data_ora=$request->Carbon::create(data_ora);
         $nuovoEvento->informazioni=$request->informazioni;
         $nuovoEvento->titolo=$request->titolo;
         $nuovoEvento->totale_biglietti_evento=$request->totale_biglietti_evento;
@@ -54,16 +55,17 @@ class ControllerLivello3 extends Controller {
         $nuovoEvento->coordinate_maps=$request->coordinate_maps;
         $nuovoEvento->luogo=$request->luogo;
         $nuovoEvento->programma_evento=$request->programma_evento;
-        $nuovoEvento->indicazioni=$request->indicazioni;
+        $nuovoEvento->indicazioni=$request->indicazioni;*/
+        $nuovoEvento->fill($request->validated());
+        $nuovoEvento->locandina=$imageName;
+        $nuovoEvento->save();
         
         if (!is_null($imageName)) {
             $destinationPath = public_path() . '/images/locandine';
             $image->move($destinationPath, $imageName);
         };
         
-        $nuovoEvento->save();
-        
-        return redirect('/');
+        return redirect("organizzatore");
     }
 
     public function eliminaEvento($id) {

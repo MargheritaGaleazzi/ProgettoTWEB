@@ -33,8 +33,8 @@ class NuovoEventoRequest extends FormRequest {
             'biglietti_rimanenti' => 'required|numeric|min:0',
             'coordinate_maps' => 'required|max:2500',
             'luogo' => 'required|max:100',
-            'data_ora' => 'required',
             'indicazioni' => 'required|max:2500',
+            'programma_evento' => 'required|max:2500',
             'informazioni' => 'required|max:2500'
         ];
     }
