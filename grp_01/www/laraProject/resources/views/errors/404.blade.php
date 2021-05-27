@@ -4,6 +4,7 @@
     <link rel="icon" href="{!! asset('images/music-icon-ico-25.ico') !!}"/>
     </head>
 <body>
+    
     <div class="background">
 	<div class="ground"></div>
 </div>
@@ -12,6 +13,7 @@
 		<div class="inner-content">
 			<h1 class="heading">404</h1>
 			<p class="subheading">Sembra che la pagina che stai cercando non sia qui...</p>
+                        <p class="subheading"><a class="casa" href="{{ route('homePubblica') }}" title="Home">Home</a></p>
 		</div>
 	</div>
 	<div class="right-section">

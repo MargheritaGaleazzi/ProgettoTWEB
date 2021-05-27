@@ -4,6 +4,12 @@
 <link rel="icon" href="{!! asset('images/music-icon-ico-25.ico') !!}"/>
     </head>
 <body>
+    
+    
+
+   <a class="casa" href="{{ route('homePubblica') }}" title="Home">Home</a> 
+
+
 <div class="ghost">
   
 <div class="ghost--navbar"></div>
