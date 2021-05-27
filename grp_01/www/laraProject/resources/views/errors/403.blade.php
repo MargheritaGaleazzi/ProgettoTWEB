@@ -1,6 +1,8 @@
 <html lang="it">
+    <head>
 <link rel="stylesheet" href="{{ asset('css/403.css') }}">
-
+<link rel="icon" href="{!! asset('images/music-icon-ico-25.ico') !!}"/>
+    </head>
 <body>
 <div class="ghost">
   
