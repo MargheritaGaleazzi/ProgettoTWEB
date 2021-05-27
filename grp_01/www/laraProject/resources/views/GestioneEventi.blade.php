@@ -24,7 +24,7 @@
             <div class="col-md-10">
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                        <a href="{{route('inserisciEvento',[Auth::user()->id])}}"><button class="input-group-text" type="button">Inserisci un nuovo evento</button></a>
+                        <a href="{{route('inserisciEvento')}}"><button class="input-group-text" type="button">Inserisci un nuovo evento</button></a>
                     </div>
                 </div>
             </div>

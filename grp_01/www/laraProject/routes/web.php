@@ -118,13 +118,13 @@ Route::get('/gestioneEventi/{id}', 'ControllerLivello3@mostraGestioneEventi')
         ->middleware('can:isOrganizer')
         ->middleware('preventBackHistory');
 
-Route::get('/gestioneEventi/{id}/inserisciEvento', 'ControllerLivello3@mostraFormInserimento')
+Route::get('/inserisciEvento', 'ControllerLivello3@mostraFormInserimento')
         ->name('inserisciEvento')
         ->middleware('can:isOrganizer')
         ->middleware('preventBackHistory');
 
-Route::post('/gestioneEventi/{id}/inserisciEvento', 'ControllerLivello3@inserisciEvento')
-        ->name('inserisciEvento.inserisci')
+Route::post('/inserisciEvento', 'ControllerLivello3@inserisciEvento')
+        ->name('inserisci')
         ->middleware('can:isOrganizer')
         ->middleware('preventBackHistory');
 

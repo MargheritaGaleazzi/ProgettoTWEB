@@ -25,7 +25,7 @@
                     <div class="address">
                         <div class="form-group row">
                             <div class="wrapper fadeInDown">INSERISCI EVENTO</div>
-                            {{ Form::open(array('route' => ['inserisciEvento.inserisci', Auth::user()->id], 'id' => 'inseriscievento', 'files' => true, 'class' => 'contact-form')) }}
+                            {{ Form::open(array('route' => 'inserisci', 'id' => 'inseriscievento', 'files' => true, 'class' => 'contact-form')) }}
                         </div>
                     </div>
                     <!--Titolo-->
@@ -63,18 +63,9 @@
                     <!--Societa Organizzatrice-->
                     <div class="address">
                         <div class="form-group row">
-                            {{ Form::label('societa organizzatrice', 'Societa Organizzatrice', ['class' => 'label-input']) }}
-                            <div class="col-md-6">
-                                <? php $user=Auth::user()? >
-                                {{ Form::text('societa organizzatrice', '', ['class' => 'input', 'id' => 'societa organizzatrice']) }}
-                                @if ($errors->first('societa organizzatrice'))
-                                <ul class="errors">
-                                    @foreach ($errors->get('societa organizzatrice') as $message)
-                                    <li>{{ $message }}</li>
-                                    @endforeach
-                                </ul>
-                                @endif
-                            </div>
+                            <?php $user=Auth::user() ?>
+                            {{ Form::hidden('societa_organizzatrice', $user->nome_societa_organizzatrice) }}
+                           
                         </div>
                     </div>
                     <!--Prezzo-->
@@ -141,22 +132,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--Biglietti Rimanenti-->
-                    <div class="address">
-                        <div class="form-group row">
-                            {{ Form::label('biglietti rimanenti', 'Biglietti Rimamenti', ['class' => 'label-input']) }}
-                            <div class="col-md-6">
-                                {{ Form::number('biglietti rimanenti', '', ['class' => 'input','id' => 'biglietti rimanenti']) }}
-                                @if ($errors->first('biglietti rimanenti'))
-                                <ul class="errors">
-                                    @foreach ($errors->get('biglietti rimanenti') as $message)
-                                    <li>{{ $message }}</li>
-                                    @endforeach
-                                </ul>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
+                    
                     <!--coordinate maps-->
                     <div class="address">
                         <div class="form-group row">
