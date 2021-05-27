@@ -43,4 +43,14 @@ class ControllerLivello3 extends Controller {
         return redirect("organizzatore");
     }
 
+    public function modificaEvento($id) {
+        $evento = Evento::find($id);
+        return view('ModificaEvento')
+                ->with('evento', $evento);
+    }
+    
+    public function applicaModifica(){
+        
+    }
+
 }
