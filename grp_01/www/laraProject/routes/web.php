@@ -13,25 +13,25 @@
 
 // ROTTE PUBBLICHE
 Route::view('/', 'homePubblica')
-        ->name('homePubblica');
+        ->name('homePubblica')->middleware('preventBackHistory');
 
 Route::get('/faq', 'ControllerPubblico@mostrafaq')
-        ->name('faq');
+        ->name('faq')->middleware('preventBackHistory');
 
 Route::view('/info', 'info')
-        ->name('info');
+        ->name('info')->middleware('preventBackHistory');
 
 Route::get('/catalogo', 'ControllerPubblico@mostraCatalogo')
-        ->name('catalogo');
+        ->name('catalogo')->middleware('preventBackHistory');
 
 Route::post('/catalogo', 'ControllerPubblico@mostraCatalogoFiltrato')
         ->name('catalogoFiltrato');
 
 Route::get('/catalogo/acquisto/{codice_evento}', 'ControllerLivello2@acquisto')
-        ->name('acquisto')->middleware('can:isUser');
+        ->name('acquisto')->middleware('can:isUser')->middleware('preventBackHistory');
 
 Route::get('/catalogo/dettagliEvento/{codice_evento}', 'ControllerPubblico@mostraDettagli')
-        ->name('dettagliEvento');
+        ->name('dettagliEvento')->middleware('preventBackHistory');
 
 // ROTTE PER AUTENTICAZIONE
 Route::get('login', 'Auth\LoginController@showLoginForm')
