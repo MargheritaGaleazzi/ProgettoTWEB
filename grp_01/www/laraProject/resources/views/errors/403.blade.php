@@ -35,7 +35,7 @@
 </div>
 
 <h1 class="police-tape police-tape--2">
-  &nbsp;&nbsp;&nbsp;&nbsp;Error: 403&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Error: 403&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Error: 403&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Error: 403&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Error: 403&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Error: 403&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Error: 403
+  &nbsp;&nbsp;&nbsp;&nbsp;Errore: 403&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Errore: 403&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Errore: 403&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Errore: 403&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Errore: 403&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Errore: 403&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Errore: 403
 </h1>
 <h1 class="police-tape police-tape--1">Accesso negato&nbsp;&nbsp;&nbsp;Non sei autorizzato&nbsp;&nbsp;&nbsp;Accesso negato&nbsp;&nbsp;&nbsp;Non sei autorizzato&nbsp;&nbsp;&nbsp;Accesso negato&nbsp;&nbsp;&nbsp;Non sei autorizzato&nbsp;&nbsp;&nbsp;</h1>
 </body>
