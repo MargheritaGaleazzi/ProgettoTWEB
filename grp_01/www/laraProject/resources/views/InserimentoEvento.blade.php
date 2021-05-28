@@ -1,16 +1,3 @@
-<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/animate.min.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/jquery-ui.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.mCustomScrollbar.min.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/meanmenu.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/nice-select.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/owl.carousel.min.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/searchbar.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}">
-
 @extends('layout.zonaUtente3')
 
 @section('title', 'Inserimento Evento')
@@ -73,7 +60,7 @@
                         <div class="form-group row">
                             {{ Form::label('prezzo_biglietto', 'Prezzo', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                                {{ Form::number('prezzo_biglietto', '', ['class' => 'input','id' => 'prezzo_biglietto']) }}
+                                {{ Form::number('prezzo_biglietto', '', ['min'=> 0, 'class' => 'input','id' => 'prezzo_biglietto']) }}
                                 @if ($errors->first('prezzo_biglietto'))
                                 <ul class="errors">
                                     @foreach ($errors->get('prezzo_boglietto') as $message)
@@ -89,7 +76,7 @@
                         <div class="form-group row">
                             {{ Form::label('sconto', 'Sconto', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                                {{ Form::number('sconto', '', ['class' => 'input','id' => 'sconto']) }}
+                                {{ Form::number('sconto', '', ['min'=> 0, 'max'=> 100, 'class' => 'input','id' => 'sconto']) }}
                                 @if ($errors->first('sconto'))
                                 <ul class="errors">
                                     @foreach ($errors->get('sconto') as $message)
@@ -171,7 +158,7 @@
                             {{ Form::label('programma_evento', 'Programma Evento', ['class' => 'label-input']) }}
                             <div class="col-md-6">
                                 {{ Form::text('programma_evento', '', ['class' => 'input', 'id' => 'programma_evento']) }}
-                                @if ($errors->first('programma evento'))
+                                @if ($errors->first('programma_evento'))
                                 <ul class="errors">
                                     @foreach ($errors->get('programma_evento') as $message)
                                     <li>{{ $message }}</li>
