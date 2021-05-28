@@ -9,6 +9,15 @@ class Utente extends Model{
     protected $table = 'users';
     protected $primaryKey = 'id';
     public $timestamps = false;
+    protected $fillable = ['email',
+            'nome_societa_organizzatrice',
+            'username',
+            'password',
+            'via',
+            'citta',
+            'cap',
+            'sesso',
+            'cellulare'];
     
     public function getUtenteById($id) {
         return Utente::where('id', $id)->get();

@@ -10,6 +10,8 @@ use App\Models\Resources\FAQ;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\NuovoOrganizzatoreRequest;
+use App\Http\Requests\NuovaFaqRequest;
 
 
 class AdminController extends Controller {
@@ -48,21 +50,9 @@ class AdminController extends Controller {
         return redirect('gestioneFAQ');
     }
     
-    public function aggiungifaq(Request $request) {
-        
-        $validator = Validator::make($request->all(), [
-            'domanda' => 'required|string|unique:faq|max:255',
-            'risposta' => 'required|string|max:255',
-        ]);
-        
-
-        if ($validator->fails()) {
-            return redirect('NuovaFAQ')
-                        ->withErrors($validator)
-                        ->withInput();
-        }
-
+    public function aggiungifaq(NuovaFaqRequest $request) {
         $faq = new FAQ;
+        $faq->fill($request->validated());
         $faq->domanda=$request->domanda;
         $faq->risposta=$request->risposta;
         $faq->save();
@@ -93,28 +83,10 @@ public function FormFAQ($id) {
                                     'organizzatori'=>$organizzatori]);
     }
     
-    public function aggiungiOrganizzatore(Request $request) {
+    public function aggiungiOrganizzatore(NuovoOrganizzatoreRequest $request) {
         
-        $validator = Validator::make($request->all(), [
-            'email' => 'required|string|email|unique:users|max:255',
-            'nome_societa_organizzatrice' => 'required|string|max:255',
-            'username' => 'required|string|min:8|unique:users',
-            'password' => 'required|string|min:8|confirmed',
-            'via' => 'required|string',
-            'citta' => 'required|string',
-            'cap' => 'required|string|min:5|max:5',
-            'sesso' => 'required|string',
-            'cellulare' => 'string',
-        ]);
-        
-
-        if ($validator->fails()) {
-            return redirect('AggiungiOrganizzatore')
-                        ->withErrors($validator)
-                        ->withInput();
-        }
-
         $organizzatore = new Utente;
+        $organizzatore->fill($request->validated());
         $organizzatore->categoria='organizzatore';
         $organizzatore->email=$request->email;
         $organizzatore->username=$request->username;
