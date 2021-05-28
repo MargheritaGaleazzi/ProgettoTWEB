@@ -21,7 +21,7 @@
 
                 <div class="address">
                             {{ Form::model($evento, ['method'=>'PUT',
-                            'route'=>['organizer.applicaModifica',$evento->codice_evento], 'id' => 'inseriscievento', 'files' => true, 'class' => 'contact-form']) }}        
+                            'route'=>['organizer.update',$evento->codice_evento], 'id' => 'inseriscievento', 'files' => true, 'class' => 'contact-form']) }}        
                     <!--Titolo-->
                     <div class="address">
                         <div class="form-group row">
@@ -98,8 +98,11 @@
                         <div class="form-group row">
                             {{ Form::label('data_ora', 'Data e Ora', ['class' => 'label-input']) }}
                             <div class="col-md-6">
+                                <!--
                                 {{ Form::date('data', '',['class' => 'input','id' => 'data']) }}
-                                {{Form::time('ora', '',['class' => 'input','id' => 'ora'])}}
+                                {{Form::time('ora', '',['class' => 'input','id' => 'ora'])}}-->
+                                
+                                {{Form::text('data_ora', old('data_ora'),['class' => 'input','id' => 'data_ora'])}}
                                 @if ($errors->first('data'))
                                 <ul class="errors">
                                     @foreach ($errors->get('data_ora') as $message)

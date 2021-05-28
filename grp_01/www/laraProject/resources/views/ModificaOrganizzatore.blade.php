@@ -187,28 +187,12 @@
                             </div>
                         </div>
                         </div>
-
-                        
-
-                        
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
                         <div>
                             <div class="col-md-6 offset-md-3">
                                 {{ Form::submit('Modifica', ['class' => 'form-btn1']) }}
                             </div>
                         </div>
                     {{ Form::close() }}
-                    
-                    
                 </div>
             </div>
         </div>

@@ -108,7 +108,7 @@ class ControllerLivello3 extends Controller {
         return view('ModificaEvento', ['evento' => $evento]);
     }
 
-    public function applicaModifica(AggiornamentoEventoRequest $request, $id) {
+    public function update(AggiornamentoEventoRequest $request, $id) {
         
         if ($request->hasFile('locandina')) {
             $image = $request->file('locandina');
@@ -124,9 +124,11 @@ class ControllerLivello3 extends Controller {
         $nuovoEvento->prezzo_biglietto = $request->prezzo_biglietto;
         $nuovoEvento->biglietto_scontato = 0;
         $nuovoEvento->sconto = $request->sconto;
+        /*
         $dateTimeString = $request->data . " " . $request->ora;
         $dueDateTime = Carbon::createFromFormat('Y-m-d H:i', $dateTimeString);
-        $nuovoEvento->data_ora = $dueDateTime;
+        $nuovoEvento->data_ora = $dueDateTime;*/
+        $nuovoEvento->data_ora = Carbon::create($request->data_ora);
         $nuovoEvento->informazioni = $request->informazioni;
         $nuovoEvento->titolo = $request->titolo;
         $nuovoEvento->totale_biglietti_evento = $request->totale_biglietti_evento;
