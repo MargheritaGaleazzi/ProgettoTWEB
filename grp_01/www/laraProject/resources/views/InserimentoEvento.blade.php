@@ -105,7 +105,8 @@
                         <div class="form-group row">
                             {{ Form::label('data_ora', 'Data e Ora', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                                {{ Form::text('data_ora', '', ['class' => 'input','id' => 'data_ora', 'placeholder' => 'aaaa:mm:gg hh:mm:ss']) }}
+                                {{ Form::date('data', '', ['class' => 'input','id' => 'data']) }}
+                                {{Form::time('ora','',['class' => 'input','id' => 'ora'])}}
                                 @if ($errors->first('data'))
                                 <ul class="errors">
                                     @foreach ($errors->get('data_ora') as $message)
