@@ -30,10 +30,10 @@
     @isset($faq)
     @foreach ($faq as $fa)
       <tr>
-         <td>{{ $fa->domanda }}</td>
-         <td>{{ $fa->risposta }}</td>
-         <td> <a href="{{route('EliminaFAQ',[$fa->id_faq])}}"><button class="btn btn-primary btn-sm" type="button">Elimina</button></a> </td>
-         <td> <a href="{{route('modificafaq',[$fa])}}"><button class="btn btn-primary btn-sm" type="button">Modifica</button></a> </td>
+         <td width=30%>{{ $fa->domanda }}</td>
+         <td width=62%>{{ $fa->risposta }}</td>
+         <td width=4%> <a href="{{route('EliminaFAQ',[$fa->id_faq])}}"><button class="btn btn-primary btn-sm" type="button">Elimina</button></a> </td>
+         <td width=4%> <a href="{{route('modificafaq',[$fa])}}"><button class="btn btn-primary btn-sm" type="button">Modifica</button></a> </td>
       </tr>
     @endforeach
     @endisset()
