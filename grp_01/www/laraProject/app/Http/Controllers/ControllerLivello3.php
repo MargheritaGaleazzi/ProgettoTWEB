@@ -127,7 +127,8 @@ class ControllerLivello3 extends Controller {
         /*
         $dateTimeString = $request->data . " " . $request->ora;
         $dueDateTime = Carbon::createFromFormat('Y-m-d H:i', $dateTimeString);
-        $nuovoEvento->data_ora = $dueDateTime;*/
+        $nuovoEvento->data_ora = $dueDateTime;
+         */
         $nuovoEvento->data_ora = Carbon::create($request->data_ora);
         $nuovoEvento->informazioni = $request->informazioni;
         $nuovoEvento->titolo = $request->titolo;
