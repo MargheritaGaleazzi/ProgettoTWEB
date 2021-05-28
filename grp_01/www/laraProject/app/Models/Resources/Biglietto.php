@@ -9,6 +9,7 @@ class Biglietto extends Model{
     protected $table = 'biglietto';
     protected $primaryKey = 'codice_biglietto';
     public $timestamps = false;
+    protected $fillable = ['metodo_pagamento'];
     
     // Realazione One-To-One con Utente
     public function codUtente() {
