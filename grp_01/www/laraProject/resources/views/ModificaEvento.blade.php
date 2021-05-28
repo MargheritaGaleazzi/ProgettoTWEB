@@ -20,14 +20,13 @@
                 <div>Modifica Evento</div>
 
                 <div class="address">
-                    {{ Form::open(array('route' => ['ModificaEvento.applica', '2'], 'id' => 'inseriscievento', 'files' => true, 'class' => 'contact-form')) }}
-
-                    <!--Modifica Titolo-->
+                            {{ Form::open(array('route' => ['ModificaEvento.applica', $evento->codice_evento], 'id' => 'inseriscievento', 'files' => true, 'class' => 'contact-form')) }}        
+                    <!--Titolo-->
                     <div class="address">
                         <div class="form-group row">
                             {{ Form::label('titolo', 'Titolo', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                                {{ Form::text('titolo', old('titolo'), ['class' => 'input', 'id' => 'titolo']) }}
+                                {{ Form::text('titolo', '', ['class' => 'input', 'id' => 'titolo', 'placeholder' => $evento->titolo]) }}
                                 @if ($errors->first('titolo'))
                                 <ul class="errors">
                                     @foreach ($errors->get('titolo') as $message)
@@ -38,9 +37,7 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <!--Modifica Locandina-->
+                    <!--Locandina-->
                     <div class="address">
                         <div class="form-group row">
                             {{ Form::label('locandina', 'Locandina', ['class' => 'label-input']) }}
@@ -56,16 +53,22 @@
                             </div>
                         </div>
                     </div>
-
-                    <!--Modifica Prezzo -->
+                    <!--Societa Organizzatrice-->
                     <div class="address">
                         <div class="form-group row">
-                            {{ Form::label('prezzo', 'Prezzo', ['class' => 'label-input']) }}
+                            <?php $user=Auth::user() ?>
+                            {{ Form::hidden('societa_organizzatrice', $user->nome_societa_organizzatrice) }}
+                        </div>
+                    </div>
+                    <!--Prezzo-->
+                    <div class="address">
+                        <div class="form-group row">
+                            {{ Form::label('prezzo_biglietto', 'Prezzo', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                                {{ Form::text('prezzo', old('prezzo'), ['class' => 'input','id' => 'prezzo']) }}
-                                @if ($errors->first('prezzo'))
+                                {{ Form::number('prezzo_biglietto', '', ['min'=> 0, 'class' => 'input','id' => 'prezzo_biglietto', 'placeholder' => $evento->prezzo_biglietto]) }}
+                                @if ($errors->first('prezzo_biglietto'))
                                 <ul class="errors">
-                                    @foreach ($errors->get('prezzo') as $message)
+                                    @foreach ($errors->get('prezzo_boglietto') as $message)
                                     <li>{{ $message }}</li>
                                     @endforeach
                                 </ul>
@@ -73,43 +76,32 @@
                             </div>
                         </div>
                     </div>
-
-                    <!--Password Utente Registrazione
-                    <div class="address">
-                    <div class="form-group row">
-                        {{ Form::label('password', 'Password', ['class' => 'label-input']) }}
-                        <div class="col-md-6">
-                        {{ Form::password('password', ['class' => 'input', 'id' => 'password']) }}
-                            @if ($errors->first('password'))
-                                <ul class="errors">
-                                @foreach ($errors->get('password') as $message)
-                                <li>{{ $message }}</li>
-                                @endforeach
-                                </ul>
-                            @endif
-                        </div>
-                    </div>
-                    </div>
-                    
-                    <!--Conferma Password Utente Registrazione
-                    <div class="address">
-                    <div class="form-group row">
-                        {{ Form::label('password-confirm', 'Conferma password', ['class' => 'label-input']) }}
-                        <div class="col-md-6">
-                        {{ Form::password('password_confirmation', ['class' => 'input', 'id' => 'password-confirm']) }}
-                        </div>
-                    </div>
-                    </div>
-                    
-                    <!--Modifica Data-->
+                    <!--Sconto-->
                     <div class="address">
                         <div class="form-group row">
-                            {{ Form::label('data', 'Data', ['class' => 'label-input']) }}
+                            {{ Form::label('sconto', 'Sconto', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                                {{ Form::text('data', old('data'), ['class' => 'input','id' => 'data']) }}
+                                {{ Form::number('sconto', '', ['min'=> 0, 'max'=> 100, 'class' => 'input','id' => 'sconto', 'placeholder' => $evento->sconto]) }}
+                                @if ($errors->first('sconto'))
+                                <ul class="errors">
+                                    @foreach ($errors->get('sconto') as $message)
+                                    <li>{{ $message }}</li>
+                                    @endforeach
+                                </ul>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                    <!--Data e Ora-->
+                    <div class="address">
+                        <div class="form-group row">
+                            {{ Form::label('data_ora', 'Data e Ora', ['class' => 'label-input']) }}
+                            <div class="col-md-6">
+                                {{ Form::date('data', '', ['class' => 'input','id' => 'data']) }}
+                                {{Form::time('ora','',['class' => 'input','id' => 'ora'])}}
                                 @if ($errors->first('data'))
                                 <ul class="errors">
-                                    @foreach ($errors->get('data') as $message)
+                                    @foreach ($errors->get('data_ora') as $message)
                                     <li>{{ $message }}</li>
                                     @endforeach
                                 </ul>
@@ -117,16 +109,15 @@
                             </div>
                         </div>
                     </div>
-
-                    <!--Modifica Ora-->
+                    <!--Totale Biglietti Evento-->
                     <div class="address">
                         <div class="form-group row">
-                            {{ Form::label('ora', 'Ora', ['class' => 'label-input']) }}
+                            {{ Form::label('totale_biglietti_evento', 'Totale biglietti evento', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                                {{ Form::text('ora', old('Ora'), ['class' => 'input','id' => 'ora']) }}
-                                @if ($errors->first('ora'))
+                                {{ Form::number('totale_biglietti_evento', '', ['min'=> 0, 'class' => 'input','id' => 'totale_biglietti_evento', 'placeholder' => $evento->totale_biglietti_evento]) }}
+                                @if ($errors->first('totale_biglietti_evento'))
                                 <ul class="errors">
-                                    @foreach ($errors->get('ora') as $message)
+                                    @foreach ($errors->get('totale_biglietti_evento') as $message)
                                     <li>{{ $message }}</li>
                                     @endforeach
                                 </ul>
@@ -134,16 +125,15 @@
                             </div>
                         </div>
                     </div>
-
-                    <!--Modifica Programma Evento-->
+                    <!--coordinate maps-->
                     <div class="address">
                         <div class="form-group row">
-                            {{ Form::label('programma evento', "Programma Evento", ['class' => 'label-input']) }}
+                            {{ Form::label('coordinate_maps', 'Coordinate Maps', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                                {{ Form::text('programma evento', old('programma evento'), ['class' => 'input','id' => 'programma evento']) }}
-                                @if ($errors->first('programma evento'))
+                                {{ Form::textarea('coordinate_maps', '', ['class' => 'input','id' => 'coordinate_maps', 'placeholder' => $evento->coordinate_maps]) }}
+                                @if ($errors->first('coordinate_maps'))
                                 <ul class="errors">
-                                    @foreach ($errors->get('programma evento') as $message)
+                                    @foreach ($errors->get('coordinate_maps') as $message)
                                     <li>{{ $message }}</li>
                                     @endforeach
                                 </ul>
@@ -151,13 +141,44 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <!--Modifica Indicazioni-->
+                    <!--Luogo-->
+                    <div class="address">
+                        <div class="form-group row">
+                            {{ Form::label('luogo', 'Luogo', ['class' => 'label-input']) }}
+                            <div class="col-md-6">
+                                {{ Form::text('luogo', '', ['class' => 'input', 'id' => 'luogo', 'placeholder' => $evento->luogo]) }}
+                                @if ($errors->first('luogo'))
+                                <ul class="errors">
+                                    @foreach ($errors->get('luogo') as $message)
+                                    <li>{{ $message }}</li>
+                                    @endforeach
+                                </ul>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                    <!--Programma Evento-->
+                    <div class="address">
+                        <div class="form-group row">
+                            {{ Form::label('programma_evento', 'Programma Evento', ['class' => 'label-input']) }}
+                            <div class="col-md-6">
+                                {{ Form::textarea('programma_evento', '', ['class' => 'input', 'id' => 'programma_evento', 'placeholder' => $evento->programma_evento]) }}
+                                @if ($errors->first('programma_evento'))
+                                <ul class="errors">
+                                    @foreach ($errors->get('programma_evento') as $message)
+                                    <li>{{ $message }}</li>
+                                    @endforeach
+                                </ul>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                    <!--Indicazioni-->
                     <div class="address">
                         <div class="form-group row">
                             {{ Form::label('indicazioni', 'Indicazioni', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                                {{ Form::text('indicazioni', old('indicazioni'), ['class' => 'input','id' => 'indicazioni']) }}
+                                {{ Form::textarea('indicazioni', '', ['class' => 'input', 'id' => 'indicazioni', 'placeholder' => $evento->indicazioni]) }}
                                 @if ($errors->first('indicazioni'))
                                 <ul class="errors">
                                     @foreach ($errors->get('indicazioni') as $message)
@@ -168,13 +189,12 @@
                             </div>
                         </div>
                     </div>
-
-                    <!--Modifica Informazioni-->
+                    <!--Informazioni-->
                     <div class="address">
                         <div class="form-group row">
                             {{ Form::label('informazioni', 'Informazioni', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                                {{ Form::textarea('informazioni', '', ['class' => 'input', 'id' => 'informazioni', 'rows' => 3]) }}
+                                {{ Form::textarea('informazioni', '', ['class' => 'input', 'id' => 'informazioni', 'placeholder' => $evento->informazioni]) }}
                                 @if ($errors->first('informazioni'))
                                 <ul class="errors">
                                     @foreach ($errors->get('informazioni') as $message)
@@ -185,33 +205,13 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <div>
                         <div class="col-md-6 offset-md-3">
-                            {{ Form::submit('Modifica', ['class' => 'form-btn1']) }}
+                            {{ Form::submit('Applica Modifiche', ['class' => 'form-btn1']) }}
                         </div>
-                    </div>
                     {{ Form::close() }}
-
-
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
-
-

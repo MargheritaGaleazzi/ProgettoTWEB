@@ -136,5 +136,6 @@ Route::get('/ModificaEvento/{id}', 'ControllerLivello3@modificaEvento')
 
 Route::post('/ModificaEvento/{id}', 'ControllerLivello3@applicaModifica')
         ->name('ModificaEvento.applica')->middleware('can:isOrganizer')->middleware('preventBackHistory');
+
 /* Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home'); */
