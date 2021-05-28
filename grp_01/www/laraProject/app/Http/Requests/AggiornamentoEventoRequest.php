@@ -26,7 +26,6 @@ class AggiornamentoEventoRequest extends FormRequest {
     public function rules() {
         return [
             'titolo' => 'required|max:40',
-            'societa_organizzatrice' => 'required|max:40',
             'prezzo_biglietto' => 'required|numeric|min:0',
             'totale_biglietti_evento' => 'required|numeric|min:0',
             'coordinate_maps' => 'required|max:2500',

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin;
 use App\Models\Resources\Utente;
 use App\Models\Resources\Evento;
 use App\Models\Resources\GestioneEvento;
@@ -23,7 +24,11 @@ class ControllerLivello3 extends Controller {
         $this->_gestioneEventoModel = new GestioneEvento;
         $this->_utenteModel = new Utente;
     }
-
+    
+        public function index() {
+        return view('AreaOrganizzatore');
+    }
+    
     public function mostraGestioneEventi($id) {
         $utente = $this->_utenteModel->getUtenteById($id);
         $societa = $utente->pluck('nome_societa_organizzatrice');
@@ -90,18 +95,17 @@ class ControllerLivello3 extends Controller {
             $image->move($destinationPath, $imageName);
         }
 
-        return redirect("organizzatore");
+        return redirect('organizzatore');
     }
 
     public function eliminaEvento($id) {
         Evento::find($id)->delete();
-        return redirect("organizzatore");
+        return redirect('organizzatore');
     }
 
     public function modificaEvento($id) {
         $evento = Evento::find($id);
-        return view('ModificaEvento')
-                        ->with('evento', $evento);
+        return view('ModificaEvento', ['evento' => $evento]);
     }
 
     public function applicaModifica(AggiornamentoEventoRequest $request, $id) {
@@ -113,7 +117,7 @@ class ControllerLivello3 extends Controller {
             $imageName = NULL;
         }
 
-        $nuovoEvento = new Evento;
+        $nuovoEvento= Evento::find($id);
         $nuovoEvento->fill($request->validated());
         $nuovoEvento->locandina = $imageName;
         $nuovoEvento->societa_organizzatrice = $request->societa_organizzatrice;
@@ -137,7 +141,7 @@ class ControllerLivello3 extends Controller {
             $destinationPath = public_path() . '/images/locandine';
             $image->move($destinationPath, $imageName);
         }
-        return redirect("organizzatore");
+        return redirect('organizzatore');
     }
 
 }

@@ -131,11 +131,11 @@ Route::post('/inserisciEvento', 'ControllerLivello3@inserisciEvento')
 Route::get('/EliminaEvento/{id}', 'ControllerLivello3@eliminaEvento')
         ->name('EliminaEvento')->middleware('can:isOrganizer');
 
-Route::get('/ModificaEvento/{id}', 'ControllerLivello3@modificaEvento')
+
+Route::resource('organizer', 'ControllerLivello3');
+Route::get('/ModificaEvento/{id}/modifica', 'ControllerLivello3@modificaEvento')
         ->name('ModificaEvento')->middleware('can:isOrganizer')->middleware('preventBackHistory');
 
-Route::post('/ModificaEvento/{id}', 'ControllerLivello3@applicaModifica')
-        ->name('ModificaEvento.applica')->middleware('can:isOrganizer')->middleware('preventBackHistory');
 
 /* Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home'); */
