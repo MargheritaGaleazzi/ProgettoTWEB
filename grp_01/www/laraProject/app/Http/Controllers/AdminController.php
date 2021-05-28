@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\NuovoOrganizzatoreRequest;
+use App\Http\Requests\AggiornamentoOrganizzatoreRequest;
 use App\Http\Requests\NuovaFaqRequest;
 
 
@@ -39,8 +40,6 @@ class AdminController extends Controller {
 
         //Prende tutte le FAQ
         $faq = $this->_faqModel->getfaq();
-
-
         return view('gestioneFAQ')
                         ->with('faq', $faq);
     }
@@ -102,27 +101,10 @@ public function FormFAQ($id) {
         return redirect('/');
     }
     
-    public function update(Request $request, $id)
-{
-        $validator = Validator::make($request->all(), [
-            'email' => 'required|string|email|max:255',
-            'nome_societa_organizzatrice' => 'required|string|max:255',
-            'username' => 'required|string|min:8|unique:users',
-            'via' => 'required|string',
-            'citta' => 'required|string',
-            'cap' => 'required|string|min:5|max:5',
-            'sesso' => 'required|string',
-            'cellulare' => 'string',
-        ]);
-        
-
-        if ($validator->fails()) {
-            return redirect()->route('modificaorganizzatore',[$id])
-                        ->withErrors($validator)
-                        ->withInput();
-        }
-        
+    public function update(AggiornamentoOrganizzatoreRequest $request, $id)
+{      
         $organizzatore= Utente::find($id);
+        $organizzatore->fill($request->validated());
         $organizzatore->categoria='organizzatore';
         $organizzatore->email=$request->email;
         $organizzatore->username=$request->username;
