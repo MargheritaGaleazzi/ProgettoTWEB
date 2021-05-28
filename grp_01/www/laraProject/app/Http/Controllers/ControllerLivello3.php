@@ -8,6 +8,7 @@ use App\Models\Resources\GestioneEvento;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\NuovoEventoRequest;
 use Carbon\Carbon;
 
 class ControllerLivello3 extends Controller {
@@ -34,11 +35,11 @@ class ControllerLivello3 extends Controller {
         return view('InserimentoEvento');
     }
 
-    public function inserisciEvento(Request $request) {
-        
+   // public function inserisciEvento(Request $request) {
+       public function inserisciEvento(NuovoEventoRequest $request) { 
+        /*
         $validator = Validator::make($request->all(), [
             'titolo' => 'required|max:40',
-            'locandina' => 'image|max:1024',
             'societa_organizzatrice' => 'required|max:40',
             'prezzo_biglietto' => 'required|numeric|min:0',
             'totale_biglietti_evento' => 'required|numeric|min:0',
@@ -47,14 +48,14 @@ class ControllerLivello3 extends Controller {
             'indicazioni' => 'required|max:2500',
             'programma_evento' => 'required|max:2500',
             'informazioni' => 'required|max:2500'
-        ]);    
+        ]);*/    
         
-        
+        /*
         if ($validator->fails()) {
             return redirect()->action('ControllerLivello3@mostraFormInserimento')
                         ->withErrors($validator)
                         ->withInput();
-        }
+        }*/
         
         if ($request->hasFile('locandina')) {
             $image = $request->file('locandina');
@@ -63,7 +64,8 @@ class ControllerLivello3 extends Controller {
             $imageName = NULL;
         }
         
-        $nuovoEvento = new Evento; 
+        $nuovoEvento = new Evento;
+        $nuovoEvento->fill($request->validated());
         $nuovoEvento->locandina = $imageName;
         $nuovoEvento->societa_organizzatrice=$request->societa_organizzatrice;
         $nuovoEvento->prezzo_biglietto=$request->prezzo_biglietto;
