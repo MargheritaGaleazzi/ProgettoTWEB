@@ -109,7 +109,7 @@
                         <div class="form-group row">
                             {{ Form::label('totale_biglietti_evento', 'Totale biglietti evento', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                                {{ Form::number('totale_biglietti_evento', '', ['class' => 'input','id' => 'totale_biglietti_evento']) }}
+                                {{ Form::number('totale_biglietti_evento', '', ['min'=> 0, 'class' => 'input','id' => 'totale_biglietti_evento']) }}
                                 @if ($errors->first('totale_biglietti_evento'))
                                 <ul class="errors">
                                     @foreach ($errors->get('totale_biglietti_evento') as $message)
@@ -125,7 +125,7 @@
                         <div class="form-group row">
                             {{ Form::label('coordinate_maps', 'Coordinate Maps', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                                {{ Form::text('coordinate_maps', '', ['class' => 'input','id' => 'coordinate_maps']) }}
+                                {{ Form::textarea('coordinate_maps', '', ['class' => 'input','id' => 'coordinate_maps']) }}
                                 @if ($errors->first('coordinate_maps'))
                                 <ul class="errors">
                                     @foreach ($errors->get('coordinate_maps') as $message)
@@ -157,7 +157,7 @@
                         <div class="form-group row">
                             {{ Form::label('programma_evento', 'Programma Evento', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                                {{ Form::text('programma_evento', '', ['class' => 'input', 'id' => 'programma_evento']) }}
+                                {{ Form::textarea('programma_evento', '', ['class' => 'input', 'id' => 'programma_evento']) }}
                                 @if ($errors->first('programma_evento'))
                                 <ul class="errors">
                                     @foreach ($errors->get('programma_evento') as $message)
@@ -173,7 +173,7 @@
                         <div class="form-group row">
                             {{ Form::label('indicazioni', 'Indicazioni', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                                {{ Form::text('indicazioni', '', ['class' => 'input', 'id' => 'indicazioni']) }}
+                                {{ Form::textarea('indicazioni', '', ['class' => 'input', 'id' => 'indicazioni']) }}
                                 @if ($errors->first('indicazioni'))
                                 <ul class="errors">
                                     @foreach ($errors->get('indicazioni') as $message)
@@ -189,7 +189,7 @@
                         <div class="form-group row">
                             {{ Form::label('informazioni', 'Informazioni', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                                {{ Form::text('informazioni', '', ['class' => 'input', 'id' => 'informazioni']) }}
+                                {{ Form::textarea('informazioni', '', ['class' => 'input', 'id' => 'informazioni']) }}
                                 @if ($errors->first('informazioni'))
                                 <ul class="errors">
                                     @foreach ($errors->get('informazioni') as $message)
