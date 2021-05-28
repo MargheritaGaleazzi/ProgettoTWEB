@@ -5,7 +5,8 @@
 @section('content')
 <section class="banner_section">
         <div class="banner-main">
-            <img src="images/banner2.jpg" />
+            <!--<img src="images/banner2.jpg" />-->
+            <img src="images/folla.gif" width="1920" height="100" object-fit="cover"/>
             <div class="container">
                 <div class="text-bg relative">
                     <h1>Bigliettone<br><br>Acquista da noi i tuoi biglietti</h1>
