@@ -40,7 +40,7 @@ class ControllerLivello2 extends Controller {
         //Mostra la finestra con i dettagli dell'evento selezionato
         $evento = $this->_catalogoModel->getEventoByCodice($codice_evento);
         $titolo = $evento->titolo;
-        $prezzo = $evento->prezzo_biglietto;
+        $prezzo = $evento->getPrezzo($evento->biglietto_scontato);
         $locandina = $evento->locandina;
         $biglietto_scontato = $evento->biglietto_scontato;
         $sconto = $evento->sconto;
