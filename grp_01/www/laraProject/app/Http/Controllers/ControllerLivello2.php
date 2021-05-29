@@ -81,17 +81,17 @@ class ControllerLivello2 extends Controller {
         $biglietto->fill($request->validated());
         $biglietto->id=$request->id;
         $biglietto->codice_evento=$request->codice_evento;
-        $biglietto->metodo_pagamento=$request->metodo_pagamento;
-         if($evento->biglietto_scontato==1){
-                    $prezzo=$evento->prezzo_biglietto-(($evento->prezzo_biglietto*$evento->sconto)/100);
-                    }
-        $biglietto->prezzo_acquisto=($prezzo)*($request->quantita);
+        if($evento->biglietto_scontato==1){
+                    $prezzo=$evento->prezzo_biglietto-(($evento->prezzo_biglietto)*($evento->sconto)/100);         
+                    $biglietto->prezzo_acquisto=($prezzo)*($request->quantita);          
+         }
+        else{
+            $biglietto->prezzo_acquisto=($evento->prezzo_biglietto)*($request->quantita);  
+        }
         $biglietto->quantita=$request->quantita;
         $biglietto->save();
         
-        
-        
-        return redirect('/');
+        return redirect()->action('ControllerLivello2@mostraStorico', $request->id);
     }
     
     public function mostraStorico($id) {
