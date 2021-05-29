@@ -165,7 +165,7 @@ class ControllerLivello3 extends Controller {
             $statistica['incasso']+=$biglietto->prezzo_acquisto;
         }
         
-        $statistica['pv']=round((($statistica['numBigl'])/$biglietti_tot),2);
+        $statistica['pv']=round((($statistica['numBigl']*100)/$biglietti_tot),2);
        
         return view('statisticheOrganizzatore')
                                 ->with('statistica', $statistica);; 
