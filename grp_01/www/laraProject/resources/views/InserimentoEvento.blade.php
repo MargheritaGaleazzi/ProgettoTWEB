@@ -3,6 +3,19 @@
 @section('title', 'Inserimento Evento')
 
 @section('content')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.mappa').hide();
+  $("label[for='coordinate_maps']").hover(function(){
+    $('#coordinate').hide();
+    $('.mappa').show();
+    }, function(){
+    $('.mappa').hide();
+    $('#coordinate').show();
+  });
+});
+</script>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -123,8 +136,8 @@
                     <!--coordinate maps-->
                     <div class="address">
                         <div class="form-group row">
-                            {{ Form::label('coordinate_maps', 'Coordinate Maps', ['class' => 'label-input']) }}
-                            <div class="col-md-6">
+                            {{ Form::label('coordinate_maps', 'Coordinate Maps ❓', ['class' => 'label-input']) }}
+                            <div class="col-md-6" id="coordinate">
                                 {{ Form::textarea('coordinate_maps', '', ['class' => 'input','id' => 'coordinate_maps']) }}
                                 @if ($errors->first('coordinate_maps'))
                                 <ul class="errors">
@@ -134,6 +147,7 @@
                                 </ul>
                                 @endif
                             </div>
+                            <div class="mappa"> <img src="{{ asset('/images/come_1.jpg') }}"/></div>
                         </div>
                     </div>
                     <!--Luogo-->
@@ -152,6 +166,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <!--Programma Evento-->
                     <div class="address">
                         <div class="form-group row">
