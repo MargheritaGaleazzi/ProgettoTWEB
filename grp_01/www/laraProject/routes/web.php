@@ -56,7 +56,7 @@ Route::view('/amministratore', 'AreaAdmin')
         ->name('amministratore')->middleware('can:isAdmin')->middleware('preventBackHistory');
 
 Route::view('/organizzatore', 'AreaUtente3')
-        ->name('organizzatore')->middleware('preventBackHistory');
+        ->name('organizzatore')->middleware('can:isOrganizer')->middleware('preventBackHistory');
 
 Route::get('/storico/{id}', 'ControllerLivello2@mostraStorico')
         ->name('storico')->middleware('can:isUser')->middleware('preventBackHistory');
