@@ -20,7 +20,7 @@ class RegisterController extends Controller
     | provide this functionality without requiring any additional code.
     |
     */
-//REGISTERCONTROLLER BIGLIETTONE
+
     use RegistersUsers;
 
     /**
@@ -29,7 +29,7 @@ class RegisterController extends Controller
      * @var string
      */
     
-    //protected $redirectTo = '/home';
+  
     protected $redirectTo = '/';
 
     /**

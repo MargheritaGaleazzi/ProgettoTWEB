@@ -13,8 +13,7 @@ class AggiornamentoOrganizzatoreRequest extends FormRequest {
      * @return bool
      */
     public function authorize() {
-        // Nella form non mettiamo restrizioni d'uso su base utente
-        // Gestiamo l'autorizzazione ad un altro livello
+        
         return true;
     }
 

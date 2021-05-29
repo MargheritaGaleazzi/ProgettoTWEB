@@ -42,28 +42,8 @@ class ControllerLivello3 extends Controller {
         return view('InserimentoEvento');
     }
 
-    // public function inserisciEvento(Request $request) {
+    
     public function inserisciEvento(NuovoEventoRequest $request) {
-        /*
-          $validator = Validator::make($request->all(), [
-          'titolo' => 'required|max:40',
-          'societa_organizzatrice' => 'required|max:40',
-          'prezzo_biglietto' => 'required|numeric|min:0',
-          'totale_biglietti_evento' => 'required|numeric|min:0',
-          'coordinate_maps' => 'required|max:2500',
-          'luogo' => 'required|max:100',
-          'indicazioni' => 'required|max:2500',
-          'programma_evento' => 'required|max:2500',
-          'informazioni' => 'required|max:2500'
-          ]); */
-
-        /*
-          if ($validator->fails()) {
-          return redirect()->action('ControllerLivello3@mostraFormInserimento')
-          ->withErrors($validator)
-          ->withInput();
-          } */
-
         if ($request->hasFile('locandina')) {
             $image = $request->file('locandina');
             $imageName = $image->getClientOriginalName();
@@ -125,11 +105,7 @@ class ControllerLivello3 extends Controller {
         $nuovoEvento->prezzo_biglietto = $request->prezzo_biglietto;
         $nuovoEvento->biglietto_scontato = 0;
         $nuovoEvento->sconto = $request->sconto;
-        /*
-        $dateTimeString = $request->data . " " . $request->ora;
-        $dueDateTime = Carbon::createFromFormat('Y-m-d H:i', $dateTimeString);
-        $nuovoEvento->data_ora = $dueDateTime;
-         */
+        
         $nuovoEvento->data_ora = Carbon::create($request->data_ora);
         $nuovoEvento->informazioni = $request->informazioni;
         $nuovoEvento->titolo = $request->titolo;
@@ -149,7 +125,7 @@ class ControllerLivello3 extends Controller {
     }
     
     public function statistiche($codice_evento) {
-        //$tutti_eventi=Evento::where('societa_organizzatrice','=', Auth::user()->nome_societa_organizzatrice)->get();
+        
         $biglietti_evento=Biglietto::where('codice_evento','=',$codice_evento)->get();
         $evento=Evento::find($codice_evento);
         $biglietti_tot=$evento->totale_biglietti_evento;

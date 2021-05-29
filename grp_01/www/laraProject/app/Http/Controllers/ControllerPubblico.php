@@ -47,27 +47,7 @@ class ControllerPubblico extends Controller {
     }
 
     public function mostraCatalogoFiltrato(FiltroRequest $request) {
-        /* $filtro_luoghi = $this->_catalogoModel->getTuttiEventiSenzaPaginate()->pluck('luogo', 'luogo');
-          $filtro_societa = $this->_catalogoModel->getTuttiEventiSenzaPaginate()->pluck('societa_organizzatrice', 'societa_organizzatrice');
-          if ($request->get('ricerca') != '') {
-          if(str_contains($request->get('ricerca'), ',')){
-          $ricercaArrayGrezzo = explode(',', $request->get('ricerca'));
-          $ricercaArray = array();
-          foreach($ricercaArrayGrezzo as $elementoRicerca){
-          $elementoFinale = ltrim($elementoRicerca, ' ');
-          array_push($ricercaArray, $elementoFinale);
-          }
-          $eventi = $this->_catalogoModel->getEventiRicercati($ricercaArray);
-          }
-          else{
-          $eventi = $this->_catalogoModel->getEventiRicercati($request->get('ricerca'));
-          }
-          } else {
-          $luogo = $request->get('luogo');
-          $societa = $request->get('societa');
-          $data = $request->get('data');
-          $eventi = $this->_catalogoModel->getEventiFiltrati($luogo, $societa, $data);
-          } */
+        
         $filtro_luoghi = $this->_catalogoModel->getTabellaEventi()->pluck('luogo', 'luogo');
         $filtro_societa = $this->_catalogoModel->getTabellaEventi()->pluck('societa_organizzatrice', 'societa_organizzatrice');
         $luogo = $request->get('luogo');

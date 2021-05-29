@@ -28,14 +28,5 @@ class Evento extends Model{
         return $prezzo;
     }
     
-    /*public function getSconto($date1, $date2) {
-      
-        $sconto = $this->biglietto_scontato;
-        $diff = $date2 - $date1;
-        if($diff>1 && $diff<8){
-            $sconto = 1;
-        }
-            
-        return $sconto;
-    }*/
+    
 }

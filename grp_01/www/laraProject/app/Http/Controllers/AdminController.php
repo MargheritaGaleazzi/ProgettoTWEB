@@ -31,11 +31,7 @@ class AdminController extends Controller {
         return view('AreaAdmin');
     }
 
-    /* public function addProduct() {
-        $prodCats = $this->_adminModel->getProdsCats()->pluck('name', 'catId');
-        return view('product.insert')
-                        ->with('cats', $prodCats);
-    } */
+    
     public function mostrafaq() {
 
         //Prende tutte le FAQ

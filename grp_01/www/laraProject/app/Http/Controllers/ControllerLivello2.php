@@ -54,21 +54,7 @@ class ControllerLivello2 extends Controller {
                                             ]);
     }
     
-    /*public function modificaDati($newnome,$newcognome,$newemail,$newsesso,$newcitta,$newvia,$newcap,$newcellulare) {
-
-        //Mostra la finestra con i dettagli dell'evento selezionato
-        $utente_id = Auth::user()->id;
-        $ut=$this->_utenteModel->getUtenteById($utente_id);
-        $ut->nome=$newnome;
-        $ut->conome=$newcognome;
-        $ut->email=$newemail;
-        $ut->sesso=$newsesso;
-        $ut->citta=$newcitta;
-        $ut->via=$newvia;
-        $ut->cap=$newcap;
-        $ut->cellulare=$newcellulare;
-        return view('cliente');
-    }*/
+    
     public function update(Request $request, $id)
 {
     $ut= Utente::find($id);
@@ -118,48 +104,22 @@ class ControllerLivello2 extends Controller {
           $evento = $this->_catalogoModel->getEventoByCodice($biglietto->codice_evento); 
           $eventi[$indice]=$evento;
         }
-       /*$codice_biglietto=$this->codice_biglietto;
-        $codice_evento=$this->codice_evento;
-        $evento=$this->_eventoModel->getEventoByCodice($codice_evento);
-        $titolo = $evento->titolo;
-        $data_ora = $evento->data_ora;
-        $luogo = $evento->luogo;*/
+       
         
     return view('StoricoUtente2', ['biglietti' => $biglietti,
-                                    'eventi'=>$eventi])
-                        /*->with('codice_biglietto', $codice_biglietto)
-                        ->with('codice_evento', $codice_evento)
-                        ->with('evento', $evento)
-                        ->with('titolo', $titolo)
-                        ->with('data_ora', $data_ora)
-                        ->with('luogo', $luogo)*/;
+                                    'eventi'=>$eventi]);
     }
     
     public function partecipero(Request $request){
-       
-        /*$gia=Partecipero::where('codice_utente', $request->id)->where('codice_evento', $request->codice_evento)->get();*/
-       
+
         $partecip = Partecipero::firstOrCreate(['codice_utente' => $request->id,
-                                                'codice_evento'=>$request->codice_evento]);
-       
-            /*$partecip=new Partecipero;
-            $partecip->codice_utente=$request->id;
-            $partecip->codice_evento=$request->codice_evento;
-            $partecip->save();
-            
-            $evento=Evento::find($request->codice_evento);
-            $evento->partecipero=($evento->partecipero)+1;
-            $evento->save();*/
-            
-        
+                                                'codice_evento'=>$request->codice_evento]);  
         return redirect('catalogo');
     }
     
         
     
     public function vedipartecipero($id) {
-
-        //Mostra il catalogo con tutti gli eventi
         $partecip = Partecipero::where('codice_utente','=',$id)->get();
         $eventi=[];
           foreach ($partecip as $partecipero){
