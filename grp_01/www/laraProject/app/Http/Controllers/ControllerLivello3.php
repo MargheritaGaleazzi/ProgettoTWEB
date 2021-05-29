@@ -154,6 +154,7 @@ class ControllerLivello3 extends Controller {
         $evento=Evento::find($codice_evento);
         $biglietti_tot=$evento->totale_biglietti_evento;
         $statistica=[
+            'nomeEvento'=>$evento->titolo,
             'numBigl'=>0,
             'pv'=>0,
             'incasso'=>0

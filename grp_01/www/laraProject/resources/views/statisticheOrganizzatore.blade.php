@@ -22,7 +22,7 @@
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h1>
-                                       STATISTICHE 
+                                       {{$statistica['nomeEvento']}}
                                     </h1>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
