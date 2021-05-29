@@ -1717,6 +1717,15 @@
  .copyright a:hover {
      color: #f70e0e 
 }
+#footer_with_contact{
+    background-color: black;
+}
+#footer_with_contact ul{
+    color: white; font-size: 20px;text-align: center;
+}
+#footer_with_contact ul li{
+     font-weight: bold;
+}
 /*--------------------------------------------------------------------- ener page css ---------------------------------------------------------------------*/
  .about-page .footer {
      margin-top: 90px;
