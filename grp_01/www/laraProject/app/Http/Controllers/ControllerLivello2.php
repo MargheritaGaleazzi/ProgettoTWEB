@@ -87,19 +87,23 @@ class ControllerLivello2 extends Controller {
     
     public function creaBiglietto(NuovoBigliettoRequest $request)
     {
+        $evento=Evento::find($request->codice_evento);
+        $evento->biglietti_rimanenti=($evento->biglietti_rimanenti)-($request->quantita);
+        $evento->save();
         
         $biglietto=new Biglietto;
         $biglietto->fill($request->validated());
         $biglietto->id=$request->id;
         $biglietto->codice_evento=$request->codice_evento;
         $biglietto->metodo_pagamento=$request->metodo_pagamento;
-        $biglietto->prezzo_acquisto=($request->prezzo)*($request->quantita);
+         if($evento->biglietto_scontato==1){
+                    $prezzo=$evento->prezzo_biglietto-(($evento->prezzo_biglietto*$evento->sconto)/100);
+                    }
+        $biglietto->prezzo_acquisto=($prezzo)*($request->quantita);
         $biglietto->quantita=$request->quantita;
         $biglietto->save();
         
-        $evento=Evento::find($request->codice_evento);
-        $evento->biglietti_rimanenti=($evento->biglietti_rimanenti)-($request->quantita);
-        $evento->save();
+        
         
         return redirect('/');
     }

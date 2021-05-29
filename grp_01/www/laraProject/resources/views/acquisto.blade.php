@@ -85,7 +85,6 @@
                             
                             {{ Form::label('metodo_pagamento', 'Metodo di Pagamento', ['class' => 'label-input']) }}
                             {{ Form::select('metodo_pagamento',array('bonifico'=>'bonifico','carta di credito'=>'carta di credito','paypal'=>'paypal') ,'bonifico', ['class' => 'input','id' => 'metodo_pagamento']) }}
-                            {{ Form::hidden('prezzo', $prezzo) }}
                             {{ Form::hidden('id', $ut->id) }}
                             {{ Form::hidden('codice_evento', $evento->codice_evento) }}
                            <!-- <form action="#">
@@ -110,9 +109,7 @@
                     </div>
                     
                     <div class="col-auto my-auto ml-auto">
-                    <?php if($biglietto_scontato==1){
-                    $prezzo=$prezzo-(($prezzo*$sconto)/100);
-                    }?>
+                    
 
                         <h5  class="display-3 "><span id="totale">{{$prezzo}}</span><span>€</span></h5>
                     </div>
