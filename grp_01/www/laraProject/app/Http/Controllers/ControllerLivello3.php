@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Admin;
 use App\Models\Resources\Utente;
+use App\Models\Resources\Biglietto;
 use App\Models\Resources\Evento;
 use App\Models\Resources\GestioneEvento;
 use Illuminate\Http\Request;
@@ -145,6 +146,29 @@ class ControllerLivello3 extends Controller {
             $image->move($destinationPath, $imageName);
         }
         return redirect('organizzatore');
+    }
+    
+    public function statistiche($codice_evento) {
+        //$tutti_eventi=Evento::where('societa_organizzatrice','=', Auth::user()->nome_societa_organizzatrice)->get();
+        $biglietti_evento=Biglietto::where('codice_evento','=',$codice_evento)->get();
+        $evento=Evento::find($codice_evento);
+        $biglietti_tot=$evento->totale_biglietti_evento;
+        $statistica=[
+            'numBigl'=>0,
+            'pv'=>0,
+            'incasso'=>0
+        ];
+        
+        
+        foreach ($biglietti_evento as $biglietto){
+            $statistica['numBigl']+=$biglietto->quantita;
+            $statistica['incasso']+=$biglietto->prezzo_acquisto;
+        }
+        
+        $statistica['pv']=round((($statistica['numBigl'])/$biglietti_tot),2);
+       
+        return view('statisticheOrganizzatore')
+                                ->with('statistica', $statistica);; 
     }
 
 }

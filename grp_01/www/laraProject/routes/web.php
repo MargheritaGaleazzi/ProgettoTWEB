@@ -136,6 +136,9 @@ Route::resource('organizer', 'ControllerLivello3');
 Route::get('/ModificaEvento/{id}/modifica', 'ControllerLivello3@modificaEvento')
         ->name('ModificaEvento')->middleware('can:isOrganizer')->middleware('preventBackHistory');
 
+Route::get('/statisticheOrga/{codice_evento}/vedi', 'ControllerLivello3@statistiche')
+        ->name('statisticheOrga')->middleware('can:isOrganizer')->middleware('preventBackHistory');
+
 
 /* Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home'); */

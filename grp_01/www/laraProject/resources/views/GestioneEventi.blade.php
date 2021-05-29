@@ -68,6 +68,9 @@
                         <a href="{{route('EliminaEvento',[$evento->codice_evento])}}">
                             <button class="btn btn-outline-primary btn-sm mt-2" type="button">Elimina</button>
                         </a>
+                        <a href="{{route('statisticheOrga',[$evento->codice_evento])}}">
+                            <button class="btn btn-outline-primary btn-sm mt-2" type="button">Statistiche</button>
+                        </a>
                     </div>
                 </div>
             </div>
