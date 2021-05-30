@@ -2078,6 +2078,24 @@ input[type="password"]:placeholder {
 .megaBanner{
     width: 100%;
 }
+.para p{
+    text-align: justify;
+}
+.tab-info{
+     text-align: center;
+     width: 45%;
+}
+.tab-info th{  
+    border-collapse: collapse;
+    border-style: double;
+    border-color: black;
+}
+
+.tab-info td{  
+    border-collapse: collapse;
+    border-style: double;
+    border-color: black;
+}
 /*------------------------------------------------------Stile del biglietti storico--------------------------------------------------------*/
 .ticket {
   font-family: sans-serif;

@@ -83,14 +83,14 @@
             </div>
             
             <br><br><h1>MODALITA' DI FORNITURA DEI SERVIZI</h1>
-            <p style="text-align: justify"> Il nostro sito è in grado di mostrarvi tutti gli eventi offerti dalle società organizzatrici: cliccando sull'evento di interesse,
+            <p class="para"> Il nostro sito è in grado di mostrarvi tutti gli eventi offerti dalle società organizzatrici: cliccando sull'evento di interesse,
                è possibile visualizzare tutte le caratteristiche inerenti, con indicazioni riguardo il luogo in cui si svolgerà, la data, la società organizzatrice che offre l'evento,
                il programma offerto ed informazioni riguardo gli orari di ingresso presso la struttura. Per quanto riguarda l'acquisto dei biglietti, può essere effettuato esclusivamente on-line, 
                in completa sicurezza e solo dagli utenti registrati al sito. Gli utenti non registrati o non loggati non possono acquistare i biglietti. </p>
        
             <br><br><h1>LE NOSTRE SEDI ALL'ESTERO</h1>
             <center>
-            <table border style='text-align: center;' width='45%'>
+            <table class="tab-info">
                <tr><th>Luogo</th><th>Indirizzo</th></tr> 
                <tr><th>Francia</th><td>118 Boulevard Saint-Germain, 75006 Toulouse</td></tr>
                <tr><th>Germania</th><td>Am Steinlein 2, 97753 Karlstadt</td></tr>
