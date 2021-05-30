@@ -1726,6 +1726,9 @@
 #footer_with_contact ul li{
      font-weight: bold;
 }
+#pagination{
+    text-align: center;
+}
 /*--------------------------------------------------------------------- ener page css ---------------------------------------------------------------------*/
  .about-page .footer {
      margin-top: 90px;
