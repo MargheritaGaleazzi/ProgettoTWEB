@@ -186,7 +186,7 @@
       <div class="left-section">
         <div class="inner-content">
           <h1 class="heading">Errore: 404</h1>
-          <p class="subheading">Sembra che la pagina che stai cercando non esista più.</p>
+          <p class="subheading">Sembra che la pagina che stai cercando non ci sia.</p>
           <p class="subheading">
             Torna alla <a href="{{ route('homePubblica') }}" title="Home">home.</a>
           </p>
