@@ -6,7 +6,7 @@
 <section class="banner_section">
         <div class="banner-main">
             <!--<img src="images/banner2.jpg" />-->
-            <img src="{{ asset('/images/folla.gif') }}" width="100%"/>
+            <img src="{{ asset('/images/folla.gif') }}" class="megaBanner"/>
             <div class="container">
                 <div class="text-bg relative">
                     <h1>Bigliettone<br><br>Acquista da noi i tuoi biglietti</h1>

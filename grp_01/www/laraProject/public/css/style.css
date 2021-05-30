@@ -2058,13 +2058,8 @@ input[type="password"]:placeholder {
     font-weight: 600;
     color: #cc0014;
 }
-.faqs table{
-     
-     width: 75%;
-}
-.faqs table th{
-    width: 180;
-}
+
+
 .piccola td{
     width:4%;
 }
@@ -2078,7 +2073,10 @@ input[type="password"]:placeholder {
     width: 180;
 }
 .user table td{
-   align: center;
+   text-align: center;
+}
+.megaBanner{
+    width: 100%;
 }
 /*------------------------------------------------------Stile del biglietti storico--------------------------------------------------------*/
 .ticket {
