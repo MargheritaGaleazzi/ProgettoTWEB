@@ -22,15 +22,15 @@
    <div class="headertable">CLIENTI</div>
    <table class="user" cellspacing="0">
       <tr>
-         <th width="180">E-mail</th>
-         <th width="180">Username</th>
-         <th width="180">Nome</th>
-         <th width="180">Cognome</th>
-         <th width="180">Via</th>
-         <th width="180">Citta</th>
-         <th width="180">CAP</th>
-         <th width="180">Sesso</th>
-         <th width="180">Cellulare</th>
+         <th>E-mail</th>
+         <th>Username</th>
+         <th>Nome</th>
+         <th>Cognome</th>
+         <th>Via</th>
+         <th>Citta</th>
+         <th>CAP</th>
+         <th>Sesso</th>
+         <th>Cellulare</th>
          <th></th>
       </tr>
     @isset($clienti)
@@ -57,15 +57,15 @@
 </div>
    <table class="user" cellspacing="0">
       <tr>
-         <th width="180">E-mail</th>
-         <th width="180">Username</th>
-         <th width="180">Nome società</th>
-         <th width="180">Via</th>
-         <th width="180">Citta</th>
-         <th width="180">CAP</th>
-         <th width="180">Cellulare</th>
-         <th width="180">Sesso</th>
-         <th></th>
+         <th>E-mail</th>
+         <th>Username</th>
+         <th>Nome società</th>
+         <th>Via</th>
+         <th>Citta</th>
+         <th>CAP</th>
+         <th>Cellulare</th>
+         <th>Sesso</th>
+         
       </tr>
     @isset($organizzatori)
     @foreach ($organizzatori as $organizzatore)

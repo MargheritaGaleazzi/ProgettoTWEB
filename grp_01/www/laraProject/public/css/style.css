@@ -2074,6 +2074,12 @@ input[type="password"]:placeholder {
 .grandee td{
     width:62%;
 }
+.user table th{
+    width: 180;
+}
+.user table td{
+   align: center;
+}
 /*------------------------------------------------------Stile del biglietti storico--------------------------------------------------------*/
 .ticket {
   font-family: sans-serif;
