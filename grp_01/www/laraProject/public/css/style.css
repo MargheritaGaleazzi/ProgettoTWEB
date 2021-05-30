@@ -2058,6 +2058,22 @@ input[type="password"]:placeholder {
     font-weight: 600;
     color: #cc0014;
 }
+.faqs table{
+     
+     width: 75%;
+}
+.faqs table th{
+    width: 180;
+}
+.piccola td{
+    width:4%;
+}
+.media td{
+    width:30%;
+}
+.grandee td{
+    width:62%;
+}
 /*------------------------------------------------------Stile del biglietti storico--------------------------------------------------------*/
 .ticket {
   font-family: sans-serif;

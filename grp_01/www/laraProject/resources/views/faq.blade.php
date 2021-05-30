@@ -3,55 +3,6 @@
 @section('title', 'FAQ')
 
 @section('content')
-
-<div class="aboutbg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="abouttitlepage">
-                        <center>
-                        <h2>Frequently Asked Questions</h2>
-                        </center>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-      <section class="faq">
-        
-      
-        
-          <ul id="basics" class="faq-group">
-            <li class="faq-title">
-                <center>
-                    <h2>Le risposte alle domande che ci vengono poste più di frequente, clicca sulla domanda di interesse per
-                    visualizzare la risposta.</h2>
-                </center>
-            </li>
-              
-    @isset($faq)
-    @foreach ($faq as $domanda)
-              
-
-            <li>
-              <a class="trigger" href="#0">{{ $domanda->domanda }}</a>
-              <div class="faq-content">
-                <p>{{ $domanda->risposta }}</p>
-              </div> <!-- faq-content -->
-            </li>
-      
-            @endforeach
-
-            @endisset()
-            
-          </ul> <!-- faq-group -->
-        
-
-        <a href="#0" class="cd-close-panel">Close</a>
-
-      </section> <!-- faq -->
-
   <script>
 
         jQuery(document).ready(function($){
@@ -180,4 +131,47 @@
     }
     });
     </script>
+<div class="aboutbg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="abouttitlepage">
+                        <center>
+                        <h2>Frequently Asked Questions</h2>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="faq">
+        <ul id="basics" class="faq-group">
+            <li class="faq-title">
+                <center>
+                    <h2>Le risposte alle domande che ci vengono poste più di frequente, clicca sulla domanda di interesse per
+                    visualizzare la risposta.</h2>
+                </center>
+            </li>
+              
+    @isset($faq)
+    @foreach ($faq as $domanda)
+
+            <li>
+                <a class="trigger" href="#0">{{ $domanda->domanda }}</a>
+                <div class="faq-content">
+                    <p>{{ $domanda->risposta }}</p>
+                </div> <!-- faq-content -->
+            </li>
+      
+            @endforeach
+            @endisset()
+            
+        </ul> <!-- faq-group -->
+
+        <a href="#0" class="cd-close-panel">Close</a>
+
+    </section> <!-- faq -->
+
+
 @endsection

@@ -22,18 +22,18 @@
    <div class="headertable">FAQ
    <a href="{{route('AggiungiFAQ')}}"><button class="btn btn-sm" type="button">Inserisci nuovo</button></a>
    </div>
-   <table class="user" cellspacing="0" width="75%">
+   <table class="faqs">
       <tr>
-         <th width="180">Domanda</th>
-         <th width="180">Risposta</th>
+         <th>Domanda</th>
+         <th>Risposta</th>
       </tr>
     @isset($faq)
     @foreach ($faq as $fa)
       <tr>
-         <td width=30%>{{ $fa->domanda }}</td>
-         <td width=62%>{{ $fa->risposta }}</td>
-         <td width=4%> <a href="{{route('EliminaFAQ',[$fa->id_faq])}}"><button class="btn btn-primary btn-sm" type="button">Elimina</button></a> </td>
-         <td width=4%> <a href="{{route('modificafaq',[$fa])}}"><button class="btn btn-primary btn-sm" type="button">Modifica</button></a> </td>
+         <td class="media">{{ $fa->domanda }}</td>
+         <td class="grandee">{{ $fa->risposta }}</td>
+         <td class="piccola"> <a href="{{route('EliminaFAQ',[$fa->id_faq])}}"><button class="btn btn-primary btn-sm" type="button">Elimina</button></a> </td>
+         <td class="piccola"> <a href="{{route('modificafaq',[$fa])}}"><button class="btn btn-primary btn-sm" type="button">Modifica</button></a> </td>
       </tr>
     @endforeach
     @endisset()
