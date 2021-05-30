@@ -4,28 +4,6 @@
 
 @section('content')
 
-
-{{-- <section class="search-sec">
-    <div class="container" >
-        <div class="d-flex justify-content-center row">
-            <div class="col-md-10">
-                <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                        {{ Form::open(array('route' => 'catalogoFiltrato', 'id' => 'filtro', 'files' => true, 'style' => 'float:left')) }}
-                        {{ Form::select('luogo', $luoghi, '', ['class' => 'form-control search-slt', 'placeholder'=>'> Scegli una regione <']) }}
-                        {{ Form::select('societa', $societa, '', ['class' => 'form-control search-slt', 'placeholder'=>'> Scegli una società <']) }}
-                        {{ Form::label('data', 'Scegli una data')}}
-                        {{ Form::datetime('data', \Carbon\Carbon::create()->format('m-Y'), ['class' => 'form-control search-slt']) }}
-                        {{ Form::text('ricerca', '', ['class' => 'form-control search-slt', 'placeholder' => 'Cerca nella descrizione...']) }}
-                        {{ Form::submit('Avvia la ricerca', ['class' => 'btn btn-primary btn-sm']) }}
-                        {{Form::close()}}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> 
-</section> --}}
-
 <section class="search-sec">
     <div class="container">
         <form action="#" method="post" novalidate="novalidate">
@@ -33,7 +11,7 @@
                 <div class="col-lg-12">
                     <div class="row">
 
-                        {{ Form::open(array('route' => 'catalogoFiltrato', 'id' => 'filtro', 'files' => true, 'style' => 'float:left')) }}
+                        {{ Form::open(array('route' => 'catalogoFiltrato', 'id' => 'filtro', 'files' => true, 'class'=>'lineaDritta')) }}
 
                         {{-- Ricerca testuale --}}
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
@@ -58,7 +36,8 @@
                         {{Form::close()}}
                     </div>
                 </div>
-        </form>
+            </div>
+        </form>    
     </div>
 </section>
 

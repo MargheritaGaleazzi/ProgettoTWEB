@@ -10,7 +10,12 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/searchbar.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}">
-
+<script>
+        function prezzoTotale($quant) {
+            var totale=$quant*<?php echo $prezzo; ?>;
+            document.getElementById('totale').innerHTML=totale;
+            }
+</script>
 
 @extends('layout.zonaPubblica')
 
@@ -97,19 +102,7 @@
 
                         <h5  class="display-3 "><span id="totale">{{$prezzo}}</span><span>€</span></h5>
                     </div>
-                    
-                    <script >
-                        
-                        
-          function prezzoTotale($quant) {
-                
-                var totale=$quant*<?php echo $prezzo; ?>;
-                document.getElementById('totale').innerHTML=totale;
-            }
 
-        </script>
-                    
-                    
                     <div class="col-auto my-auto ml-auto">
                         {{ Form::submit('Acquista', ['class' => 'form-btn1']) }}
                         {{ Form::close() }}

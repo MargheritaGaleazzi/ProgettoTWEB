@@ -22,10 +22,12 @@ Route::view('/info', 'info')
         ->name('info');
 
 Route::get('/catalogo', 'ControllerPubblico@mostraCatalogo')
-        ->name('catalogo');
+        ->name('catalogo')
+        ->middleware('preventBackHistory');
 
 Route::post('/catalogo', 'ControllerPubblico@mostraCatalogoFiltrato')
-        ->name('catalogoFiltrato');
+        ->name('catalogoFiltrato')
+        ->middleware('preventBackHistory');
 
 Route::get('/catalogo/dettagliEvento/{codice_evento}', 'ControllerPubblico@mostraDettagli')
         ->name('dettagliEvento')
