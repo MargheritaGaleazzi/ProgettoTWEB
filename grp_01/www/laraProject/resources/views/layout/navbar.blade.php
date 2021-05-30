@@ -9,15 +9,15 @@
 @endguest
     
 @can('isAdmin')
-    <li><a href="{{ route('amministratore') }}" title="Home Admin">Area privata</a></li>
+    <li><a href="{{ route('amministratore') }}" title="Home Admin">Area privata Amministratore</a></li>
 @endcan
 
 @can('isOrganizer')
-    <li><a href="{{ route('organizzatore') }}" title="Home Organizzatore">Area privata</a></li>
+    <li><a href="{{ route('organizzatore') }}" title="Home Organizzatore">Area privata Organizzatore</a></li>
 @endcan
 
 @can('isUser')
-    <li><a href="{{ route('cliente') }}" title="Home User">Area privata</a></li>
+    <li><a href="{{ route('cliente') }}" title="Home User">Area privata Cliente</a></li>
 @endcan
 
 @auth
