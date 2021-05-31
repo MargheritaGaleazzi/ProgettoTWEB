@@ -76,7 +76,7 @@ class ControllerLivello3 extends Controller {
             $image->move($destinationPath, $imageName);
         }
 
-        return redirect('organizzatore');
+        return response()->json(['redirect' => route('organizzatore')]);
     }
 
     public function eliminaEvento($id) {
