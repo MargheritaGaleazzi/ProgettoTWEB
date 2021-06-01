@@ -6,6 +6,9 @@
                             <li>Tel. 0712367458</li>
                             <li>e-mail: info@bigliettoneconcerti.it</li>
                             <li>P.IVA: 0123456789</li>
+                            <li>
+                                <a href="{{ asset('/Relazionenostra.pdf') }}">Documentazione del progetto</a>
+                            </li>
                 </ul>             
         </div>
 </footer>
