@@ -1,5 +1,26 @@
 @extends('layout.zonaPubblica')
 
+@section('scripts')
+
+@parent
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{{ asset('js/functions.js') }}" ></script>
+<script>
+$(function () {
+    var actionUrl = "{{ route('aggiungi') }}";
+    var formId = 'inserisciOrganizzatore';
+    $(":input").on('blur', function (event) {
+        var formElementId = $(this).attr('id');
+        doElemValidation(formElementId, actionUrl, formId);
+    });
+    $("#inserisciOrganizzatore").on('submit', function (event) {
+        event.preventDefault();
+        doFormValidation(actionUrl, formId);
+    });
+});
+</script>
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -8,23 +29,14 @@
                 <div class="wrapper fadeInDown">AGGIUNGI ORGANIZZATORE</div>
 
                 <div class="address">
-                    {{ Form::open(array('route' => 'AggiungiOrganizzatore')) }}
-                    
-
-
+                    {{ Form::open(array('route' => 'aggiungi', 'id' => 'inserisciOrganizzatore', 'files' => true, 'class' => 'contact-form')) }}
                         <!--Nome società Utente Registrazione-->
                         <div class="address">
                         <div class="form-group row">
                             {{ Form::label('nome_societa_organizzatrice', 'Nome società', ['class' => 'label-input']) }}
                             <div class="col-md-6">
                             {{ Form::text('nome_societa_organizzatrice', '', ['class' => 'input', 'id' => 'nome_societa_organizzatrice']) }}
-                                @if ($errors->first('cognome'))
-                                        <ul class="errors">
-                                        @foreach ($errors->get('cognome') as $message)
-                                        <li>{{ $message }}</li>
-                                        @endforeach
-                                        </ul>
-                                    @endif
+
                             </div>
                         </div>
                         </div>
@@ -35,13 +47,7 @@
                             {{ Form::label('email', 'Email', ['class' => 'label-input']) }}
                             <div class="col-md-6">
                             {{ Form::text('email', '', ['class' => 'input','id' => 'email']) }}
-                                @if ($errors->first('email'))
-                                    <ul class="errors">
-                                    @foreach ($errors->get('email') as $message)
-                                    <li>{{ $message }}</li>
-                                    @endforeach
-                                    </ul>
-                                @endif
+
                             </div>
                         </div>
                         </div>
@@ -52,13 +58,7 @@
                             {{ Form::label('username', 'Username', ['class' => 'label-input']) }}
                             <div class="col-md-6">
                             {{ Form::text('username', '', ['class' => 'input','id' => 'username']) }}
-                                @if ($errors->first('username'))
-                                    <ul class="errors">
-                                    @foreach ($errors->get('username') as $message)
-                                    <li>{{ $message }}</li>
-                                    @endforeach
-                                    </ul>
-                                @endif
+
                             </div>
                         </div>
                         </div>
@@ -69,13 +69,7 @@
                             {{ Form::label('password', 'Password', ['class' => 'label-input']) }}
                             <div class="col-md-6">
                             {{ Form::password('password', ['class' => 'input', 'id' => 'password']) }}
-                                @if ($errors->first('password'))
-                                    <ul class="errors">
-                                    @foreach ($errors->get('password') as $message)
-                                    <li>{{ $message }}</li>
-                                    @endforeach
-                                    </ul>
-                                @endif
+
                             </div>
                         </div>
                         </div>
@@ -96,13 +90,7 @@
                             {{ Form::label('via', 'Via', ['class' => 'label-input']) }}
                             <div class="col-md-6">
                             {{ Form::text('via', '', ['class' => 'input','id' => 'via']) }}
-                                @if ($errors->first('via'))
-                                    <ul class="errors">
-                                    @foreach ($errors->get('via') as $message)
-                                    <li>{{ $message }}</li>
-                                    @endforeach
-                                    </ul>
-                                @endif
+
                             </div>
                         </div>
                         </div>
@@ -113,13 +101,7 @@
                             {{ Form::label('citta', 'Citta', ['class' => 'label-input']) }}
                             <div class="col-md-6">
                             {{ Form::text('citta', '', ['class' => 'input','id' => 'citta']) }}
-                                @if ($errors->first('citta'))
-                                    <ul class="errors">
-                                    @foreach ($errors->get('citta') as $message)
-                                    <li>{{ $message }}</li>
-                                    @endforeach
-                                    </ul>
-                                @endif
+ 
                             </div>
                         </div>
                         </div>
@@ -130,13 +112,7 @@
                             {{ Form::label('cap', 'CAP', ['class' => 'label-input']) }}
                             <div class="col-md-6">
                             {{ Form::text('cap', '', ['class' => 'input','id' => 'cap']) }}
-                                @if ($errors->first('cap'))
-                                    <ul class="errors">
-                                    @foreach ($errors->get('cap') as $message)
-                                    <li>{{ $message }}</li>
-                                    @endforeach
-                                    </ul>
-                                @endif
+
                             </div>
                         </div>
                         </div>
@@ -148,13 +124,7 @@
                             {{ Form::label('sesso', 'Sesso', ['class' => 'label-input']) }}
                             <div class="col-md-6">
                             {{ Form::select('sesso',$gen ,'', ['class' => 'input','id' => 'sesso']) }}
-                                @if ($errors->first('sesso'))
-                                    <ul class="errors">
-                                    @foreach ($errors->get('sesso') as $message)
-                                    <li>{{ $message }}</li>
-                                    @endforeach
-                                    </ul>
-                                @endif
+
                             </div>
                         </div>
                         </div>
@@ -165,30 +135,10 @@
                             {{ Form::label('cellulare', 'Cellulare', ['class' => 'label-input']) }}
                             <div class="col-md-6">
                             {{ Form::text('cellulare', '', ['class' => 'input','id' => 'cellulare']) }}
-                                @if ($errors->first('cellulare'))
-                                    <ul class="errors">
-                                    @foreach ($errors->get('cellulare') as $message)
-                                    <li>{{ $message }}</li>
-                                    @endforeach
-                                    </ul>
-                                @endif
+
                             </div>
                         </div>
                         </div>
-
-                        
-
-                        
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
                         <div class="wrapper fadeInDown">
                             <div class="col-md-6 offset-md-3">
                                 {{ Form::submit('Aggiungi', ['class' => 'form-btn1']) }}
