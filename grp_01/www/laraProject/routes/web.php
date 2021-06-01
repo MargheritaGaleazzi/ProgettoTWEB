@@ -117,13 +117,15 @@ Route::get('/gestioneUtenti', 'AdminController@vediutenti')
         ->middleware('can:isAdmin')
         ->middleware('preventBackHistory');
 
-Route::view('AggiungiOrganizzatore', 'RegistrazioneOrganizzatore')
+Route::get('/registrazioneOrganizzatore', 'AdminController@mostraFormInserimentoOrganizzatore')
         ->name('AggiungiOrganizzatore')
         ->middleware('can:isAdmin')
         ->middleware('preventBackHistory');
 
-Route::post('AggiungiOrganizzatore', 'AdminController@aggiungiOrganizzatore')
-        ->middleware('can:isAdmin');
+Route::post('/registrazioneOrganizzatore', 'AdminController@aggiungiOrganizzatore')
+        ->name('aggiungi')
+        ->middleware('can:isAdmin')
+        ->middleware('preventBackHistory');
 
 Route::resource('admin', 'AdminController');
 

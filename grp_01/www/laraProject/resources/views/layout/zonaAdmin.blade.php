@@ -8,6 +8,10 @@
 <link rel="icon" href="{!! asset('images/music-icon-ico-25.ico') !!}"/>
 
 
+        @show
+        @section('scripts')
+        @show
+        
     <!-- basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
