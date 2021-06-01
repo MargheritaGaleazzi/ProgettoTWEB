@@ -8,7 +8,6 @@ use App\Models\Resources\Partecipero;
 use App\Http\Requests\FiltroRequest;
 use Carbon\Carbon;
 
-
 class ControllerPubblico extends Controller {
 
     protected $_catalogoModel;
@@ -25,29 +24,26 @@ class ControllerPubblico extends Controller {
         $eventi = $this->_catalogoModel->getTuttiEventi();
         $filtro_luoghi = $this->_catalogoModel->getTabellaEventi()->pluck('luogo', 'luogo');
         $filtro_societa = $this->_catalogoModel->getTabellaEventi()->pluck('societa_organizzatrice', 'societa_organizzatrice');
-        foreach($eventi as $evento){
-            $data_evento=Carbon::create($evento->data_ora);
-            $oggi=Carbon::now();
-            $diff=$data_evento->diff($oggi)->format("%a");
-        if ($data_evento<$oggi){
-               $evento->stato_evento="chiuso";
-                $evento->save(); 
-        } 
-        else if ($diff>0 && $diff<50){
-                $evento->biglietto_scontato=1;
+        foreach ($eventi as $evento) {
+            $data_evento = Carbon::create($evento->data_ora);
+            $oggi = Carbon::now();
+            $diff = $data_evento->diff($oggi)->format("%a");
+            if ($data_evento < $oggi) {
+                $evento->stato_evento = "chiuso";
                 $evento->save();
-            } 
-            
-           
+            } else if ($diff > 0 && $diff < 50) {
+                $evento->biglietto_scontato = 1;
+                $evento->save();
+            }
         }
         return view('catalogo')
                         ->with('eventi', $eventi)
                         ->with('luoghi', $filtro_luoghi)
-                        ->with('societa', $filtro_societa);
+                        ->with('societa', $filtro_societa)->with('filtrato', 0);
     }
 
     public function mostraCatalogoFiltrato(FiltroRequest $request) {
-        
+
         $filtro_luoghi = $this->_catalogoModel->getTabellaEventi()->pluck('luogo', 'luogo');
         $filtro_societa = $this->_catalogoModel->getTabellaEventi()->pluck('societa_organizzatrice', 'societa_organizzatrice');
         $luogo = $request->get('luogo');
@@ -55,11 +51,12 @@ class ControllerPubblico extends Controller {
         $data = $request->get('data');
         $descrizione = $request->get('ricerca');
         $eventi = $this->_catalogoModel->getEventiFiltrati($luogo, $societa, $data, $descrizione);
-
+        $filtrato = 1;
         return view('catalogo')
                         ->with('eventi', $eventi)
                         ->with('luoghi', $filtro_luoghi)
-                        ->with('societa', $filtro_societa);
+                        ->with('societa', $filtro_societa)
+                        ->with('filtrato', $filtrato);
     }
 
     public function mostraCatalogoRicerca(FiltroRequest $request) {

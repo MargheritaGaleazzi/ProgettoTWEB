@@ -30,12 +30,12 @@ class Catalogo {
                             ->where('societa_organizzatrice', 'LIKE', '%' . $societa . '%')
                             ->whereYear('data_ora', substr($data, 3, 7))
                             ->whereMonth('data_ora', substr($data, 0, 2))
-                            ->paginate(4);
+                            ->get();
         }
         return Evento::where('informazioni', 'LIKE', '%' . $descrizione . '%')
                         ->where('luogo', 'LIKE', '%' . $luogo . '%')
                         ->where('societa_organizzatrice', 'LIKE', '%' . $societa . '%')
-                        ->paginate(4);
+                        ->get();
         
     }
 

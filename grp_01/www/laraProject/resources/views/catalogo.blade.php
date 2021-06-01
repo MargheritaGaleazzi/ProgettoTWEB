@@ -94,9 +94,11 @@
         </div>
     </div>
     @endforeach
-
+    
+    @if($filtrato != 1)
     <!--Paginazione-->
     @include('pagination.paginator', ['paginator' => $eventi])
+    @endif
 
     @endisset()
     @endsection
