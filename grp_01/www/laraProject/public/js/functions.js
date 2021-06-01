@@ -47,6 +47,9 @@ function doElemValidation(id, actionUrl, formId) {
     } else {
         // elemento di input type != file
         inputVal = elem.val();
+        if (inputVal === undefined){
+            inputVal="";
+        } 
     }
     formElems = new FormData();
     formElems.append(id, inputVal);
