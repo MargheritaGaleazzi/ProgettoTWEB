@@ -63,10 +63,6 @@ public function FormFAQ($id) {
     
 }
 
-    public function mostraFormInserimentoOrganizzatore() {
-       return view('registrazioneOrganizzatore');
-    }
-
     public function vediUtenti(){
         $utenti=Utente::all();
         $clienti=[];
@@ -98,7 +94,7 @@ public function FormFAQ($id) {
         $organizzatore->sesso=$request->sesso;
         $organizzatore->save();
 
-        return response()->json(['redirect' => route('amministratore')]);
+        return redirect('/');
     }
     
     public function update(AggiornamentoOrganizzatoreRequest $request, $id)

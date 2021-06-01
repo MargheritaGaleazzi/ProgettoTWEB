@@ -5,11 +5,6 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-// Aggiunti per response JSON
-use Illuminate\Http\Exceptions\HttpResponseException;
-use Illuminate\Contracts\Validation\Validator;
-use Symfony\Component\HttpFoundation\Response;
-
 class NuovoOrganizzatoreRequest extends FormRequest {
 
     /**
@@ -41,13 +36,6 @@ class NuovoOrganizzatoreRequest extends FormRequest {
             
         ];
     }
-    
-            /**
-     * Override: response in formato JSON
-    */
-    protected function failedValidation(Validator $validator)
-    {
-        throw new HttpResponseException(response($validator->errors(), Response::HTTP_UNPROCESSABLE_ENTITY));
-    }
+
 }
 
