@@ -33,6 +33,9 @@ Route::get('/catalogo/dettagliEvento/{codice_evento}', 'ControllerPubblico@mostr
         ->name('dettagliEvento')
         ->middleware('preventBackHistory');
 
+/* Route::view('/relazione', 'homePubblica')
+        ->name('homePubblica'); */
+
 // ROTTE PER AUTENTICAZIONE
 Route::get('login', 'Auth\LoginController@showLoginForm')
         ->name('login');
