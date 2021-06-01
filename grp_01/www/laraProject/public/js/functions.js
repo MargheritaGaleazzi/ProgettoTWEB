@@ -36,7 +36,7 @@ function doElemValidation(id, actionUrl, formId) {
         });
     }
 
-    var elem = $("#" + formId + " :input[name=" + id + "]");
+    var elem = $(":input[name=" + id + "]");
     if (elem.attr('type') === 'file') {
     // elemento di input type=file valorizzato
         if (elem.val() !== '') {
@@ -47,9 +47,7 @@ function doElemValidation(id, actionUrl, formId) {
     } else {
         // elemento di input type != file
         inputVal = elem.val();
-        if (inputVal === undefined){
-            inputVal="";
-        } 
+        
     }
     formElems = new FormData();
     formElems.append(id, inputVal);
