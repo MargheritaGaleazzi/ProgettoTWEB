@@ -74,10 +74,11 @@
                     <div class="d-flex flex-column mt-4"><a href="{{route('dettagliEvento',[$evento->codice_evento])}}"><button class="btn btn-primary btn-sm" type="button">Dettagli</button></a>
                         @can('isOrganizer')
                         @if($evento->societa_organizzatrice==Auth::user()->nome_societa_organizzatrice)
-                        <a href=""><button class="btn btn-outline-primary btn-sm mt-2" type="button">Modifica</button></a>
-                        <a href=""><button class="btn btn-outline-primary btn-sm mt-2" type="button">Elimina</button></a>
+                        <a href="{{route('statisticheOrga',[$evento->codice_evento])}}"><button class="btn btn-outline-primary btn-sm mt-2" type="button">Statistiche</button></a>
+                        <a href="{{route('EliminaEvento',[$evento->codice_evento])}}"><button class="btn btn-outline-primary btn-sm mt-2" type="button">Modifica</button></a>
+                        <a href="{{route('EliminaEvento',[$evento->codice_evento])}}"><button class="btn btn-outline-primary btn-sm mt-2" type="button">Elimina</button></a>
                         @else
-                        <p class='finito'>Non hai i permessi per modificare/eliminare questo evento!</p>
+                        <p class='finito'>Non hai i permessi per gestire questo evento!</p>
                         @endif
                         @endcan
                         @can('isUser')

@@ -34,6 +34,9 @@
 
                     @can('isOrganizer')
                     @if($organizzatore==Auth::user()->nome_societa_organizzatrice)
+                    <a href="{{route('statisticheOrga',[$evento->codice_evento])}}">
+                        <button class="input-group-text" type="button">Statistiche</button>
+                    </a>
                     <a href="{{route('ModificaEvento',[$evento->codice_evento])}}">
                         <button class="input-group-text" type="button">Modifica</button>
                     </a>
