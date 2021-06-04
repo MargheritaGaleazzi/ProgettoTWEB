@@ -61,15 +61,10 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <p>{{ $statistica['pv'] }}%</p>
-                                            </div>
-                                        
+                                            </div> 
                             </div>
                         </div>
                     </div>
                 </div>          
         </div>
 @endsection
-
-
-
-

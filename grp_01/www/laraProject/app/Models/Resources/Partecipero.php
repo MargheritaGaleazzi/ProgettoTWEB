@@ -12,7 +12,6 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Description of Partecipero
  *
- * @author chiar
  */
 class Partecipero extends Model{
     

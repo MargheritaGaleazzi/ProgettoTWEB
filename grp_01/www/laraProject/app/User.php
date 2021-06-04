@@ -39,7 +39,7 @@ class User extends Authenticatable {
         'email_verified_at' => 'datetime',
     ];
     
-    //verifica che l'utente loggato abbia il ruolo che ci serev
+    //verifica che l'utente loggato abbia il ruolo che ci serve
     public function hasRole($role) {
         $role = (array)$role;
         return in_array($this->categoria, $role);
