@@ -37,7 +37,7 @@
    <?php if($eventi[$biglietto->codice_biglietto]->biglietto_scontato==1){
                     $eventi[$biglietto->codice_biglietto]->prezzo_biglietto=$eventi[$biglietto->codice_biglietto]->prezzo_biglietto-(($eventi[$biglietto->codice_biglietto]->prezzo_biglietto)*($eventi[$biglietto->codice_biglietto]->sconto)/100);
                     }?>
-    <span class="live small">Prezzo singolo biglietto: {{$eventi[$biglietto->codice_biglietto]->prezzo_biglietto}}</span><br>
+    <span class="live small">Prezzo singolo biglietto: {{$eventi[$biglietto->codice_biglietto]->prezzo_biglietto}} €</span><br>
     <span class="live small">Prezzo totale: {{$biglietto->prezzo_acquisto}} €</span><br>
     <span class="live small">Metodo di pagamento: {{$biglietto->metodo_pagamento}}</span><br>
   </div>
