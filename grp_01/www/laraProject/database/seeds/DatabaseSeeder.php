@@ -204,16 +204,5 @@ class DatabaseSeeder extends Seeder
                 'programma_evento' => 'Nella mattinata del giorno 31 maggio 2022, a partire dalle ore 10:15, il personale della struttura che ospita l evento controllerà i biglietti e farà entrare a scaglioni i partecipanti. A partire dalle ore 15:00, inizierà la diretta della radio Furore direttamente sul palco. Alle ore 20:50 il concerto verra aperto da Frah Quintale, cantante italiano. La durata prevista del concerto è di circa tre ore, con un numero di circa ventisette esibizioni.',
                 'indicazioni' => 'È possibile raggiungere l Ippodromo Le Capannelle sia in auto (attraverso l autostrada A1 o A24), sia in treno (scendendo presso la stazione ferroviaria di Roma Termini). È possibile inoltre raggiungere la località anche in aereo, con meta presso l aeroporto di Ciampino e Fiumicino, che distano da Roma rispettivamente 40 km e 30 km (da qui è possibile poi prendere una navetta che porta fino alla struttura).'],
         ]);
-        
-        /*
-        DB::table('biglietto')->insert([
-           
-            ['codice_utente' => 7, 'codice_evento' => 1, 'metodo_pagamento' => 'bonifico', 'data_acquisto' => '2020:07:04 09:23:57', 'prezzo_acquisto' => 35.00],
-            ['codice_utente' => 7, 'codice_evento' => 1, 'metodo_pagamento' => 'bonifico', 'data_acquisto' => '2020:07:04 09:25:37', 'prezzo_acquisto' => 35.00],
-            ['codice_utente' => 7, 'codice_evento' => 2, 'metodo_pagamento' => 'paypal', 'data_acquisto' => '2020:05:19 12:24:56', 'prezzo_acquisto' => 100.00],
-           
-        ]);
-         * 
-         */
     }
 }

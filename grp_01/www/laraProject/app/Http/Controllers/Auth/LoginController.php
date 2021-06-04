@@ -21,7 +21,8 @@ use AuthenticatesUsers;
 
     protected function redirectTo() {        
         $role = auth()->user()->categoria;
-        switch ($role) {
+        switch ($role) { 
+            //redirect sulla pagina competente rispetto al livello di utente
             case 'amministratore': return '/amministratore';
                 break;
             case 'cliente': return '/cliente';
