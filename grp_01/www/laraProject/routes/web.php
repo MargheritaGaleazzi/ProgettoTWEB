@@ -13,13 +13,16 @@
 
 // ROTTE PUBBLICHE
 Route::view('/', 'homePubblica')
-        ->name('homePubblica');
+        ->name('homePubblica')
+        ->middleware('preventBackHistory');
 
 Route::get('/faq', 'ControllerPubblico@mostrafaq')
-        ->name('faq');
+        ->name('faq')
+        ->middleware('preventBackHistory');
 
 Route::view('/info', 'info')
-        ->name('info');
+        ->name('info')
+        ->middleware('preventBackHistory');
 
 Route::get('/catalogo', 'ControllerPubblico@mostraCatalogo')
         ->name('catalogo')
