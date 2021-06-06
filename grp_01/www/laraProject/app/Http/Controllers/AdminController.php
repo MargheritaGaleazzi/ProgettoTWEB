@@ -83,6 +83,8 @@ public function FormFAQ($id) {
         $organizzatore = new Utente;
         $organizzatore->fill($request->validated());
         $organizzatore->categoria='organizzatore';
+        $organizzatore->nome=$request->nome;
+        $organizzatore->cognome=$request->cognome;
         $organizzatore->email=$request->email;
         $organizzatore->username=$request->username;
         $organizzatore->password=Hash::make($request->password);
@@ -102,6 +104,8 @@ public function FormFAQ($id) {
         $organizzatore= Utente::find($id);
         $organizzatore->fill($request->validated());
         $organizzatore->categoria='organizzatore';
+        $organizzatore->nome=$request->nome;
+        $organizzatore->cognome=$request->cognome;
         $organizzatore->email=$request->email;
         $organizzatore->username=$request->username;
         $organizzatore->via=$request->via;

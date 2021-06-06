@@ -11,7 +11,40 @@
                     {{ Form::open(array('route' => 'AggiungiOrganizzatore')) }}
                     
 
+                         <!--Nome Utente Registrazione-->
+                        <div class="address">
+                        <div class="form-group row">
+                            {{ Form::label('nome', 'Nome', ['class' => 'label-input']) }}
+                            <div class="col-md-6">
+                            {{ Form::text('nome', '', ['class' => 'input', 'id' => 'nome']) }}
+                                    @if ($errors->first('nome'))
+                                        <ul class="errors">
+                                        @foreach ($errors->get('nome') as $message)
+                                        <li>{{ $message }}</li>
+                                        @endforeach
+                                        </ul>
+                                    @endif
+                            </div>
+                        </div>
+                        </div>
 
+                        <!--Cognome Utente Registrazione-->
+                        <div class="address">
+                        <div class="form-group row">
+                            {{ Form::label('cognome', 'Cognome', ['class' => 'label-input']) }}
+                            <div class="col-md-6">
+                            {{ Form::text('cognome', '', ['class' => 'input', 'id' => 'cognome']) }}
+                                @if ($errors->first('cognome'))
+                                        <ul class="errors">
+                                        @foreach ($errors->get('cognome') as $message)
+                                        <li>{{ $message }}</li>
+                                        @endforeach
+                                        </ul>
+                                    @endif
+                            </div>
+                        </div>
+                        </div>
+                        
                         <!--Nome società Utente Registrazione-->
                         <div class="address">
                         <div class="form-group row">

@@ -22,6 +22,41 @@
                 <div class="address">
                     {{ Form::model($organizzatore, ['method'=>'PUT',
                             'route'=>['admin.update',$organizzatore->id]]) }}
+
+                        <!--Nome Utente Registrazione-->
+                        <div class="address">
+                        <div class="form-group row">
+                            {{ Form::label('nome', 'Nome', ['class' => 'label-input']) }}
+                            <div class="col-md-6">
+                            {{ Form::text('nome', old('nome'), ['class' => 'input', 'id' => 'nome']) }}
+                                    @if ($errors->first('nome'))
+                                        <ul class="errors">
+                                        @foreach ($errors->get('nome') as $message)
+                                        <li>{{ $message }}</li>
+                                        @endforeach
+                                        </ul>
+                                    @endif
+                            </div>
+                        </div>
+                        </div>
+
+                        <!--Cognome Utente Registrazione-->
+                        <div class="address">
+                        <div class="form-group row">
+                            {{ Form::label('cognome', 'Cognome', ['class' => 'label-input']) }}
+                            <div class="col-md-6">
+                            {{ Form::text('cognome', old('cognome'), ['class' => 'input', 'id' => 'cognome']) }}
+                                @if ($errors->first('cognome'))
+                                        <ul class="errors">
+                                        @foreach ($errors->get('conome') as $message)
+                                        <li>{{ $message }}</li>
+                                        @endforeach
+                                        </ul>
+                                    @endif
+                            </div>
+                        </div>
+                        </div>
+                        
                         <!--Nome società Utente Registrazione-->
                         <div class="address">
                         <div class="form-group row">
