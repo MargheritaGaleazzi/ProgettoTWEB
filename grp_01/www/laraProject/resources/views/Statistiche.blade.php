@@ -77,38 +77,6 @@
                                             <div class="col-md-6">
                                                 <p>{{ $percent_bv }}%</p>
                                             </div>
-                                        <!--<div class="row">
-                                            <div class="col-md-6">
-                                                <label>Città</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{ Auth::user()->citta }}</p>
-                                            </div>
-                                            </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>CAP</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{ Auth::user()->cap }}</p>
-                                            </div>
-                                            </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Sesso</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{ Auth::user()->sesso }}</p>
-                                            </div>
-                                            </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Cellulare</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{ Auth::user()->cellulare }}</p>
-                                            </div>
-                                        </div>-->
                             </div>
                         </div>
                     </div>

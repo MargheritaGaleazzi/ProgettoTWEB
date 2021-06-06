@@ -114,7 +114,7 @@ Route::get('/gestioneUtenti', 'AdminController@vediutenti')
         ->middleware('can:isAdmin')
         ->middleware('preventBackHistory');
 
-Route::view('AggiungiOrganizzatore', 'RegistrazioneOrganizzatore')
+Route::view('AggiungiOrganizzatore', 'registrazioneOrganizzatore')
         ->name('AggiungiOrganizzatore')
         ->middleware('can:isAdmin')
         ->middleware('preventBackHistory');

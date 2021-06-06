@@ -72,36 +72,8 @@
                                 @endif
                             </div>
                         </div>
-                        </div>
-                        
-                        <!--Password Utente Registrazione
-                        <div class="address">
-                        <div class="form-group row">
-                            {{ Form::label('password', 'Password', ['class' => 'label-input']) }}
-                            <div class="col-md-6">
-                            {{ Form::password('password', ['class' => 'input', 'id' => 'password']) }}
-                                @if ($errors->first('password'))
-                                    <ul class="errors">
-                                    @foreach ($errors->get('password') as $message)
-                                    <li>{{ $message }}</li>
-                                    @endforeach
-                                    </ul>
-                                @endif
-                            </div>
-                        </div>
-                        </div>
-                        
-                        <!--Conferma Password Utente Registrazione
-                        <div class="address">
-                        <div class="form-group row">
-                            {{ Form::label('password-confirm', 'Conferma password', ['class' => 'label-input']) }}
-                            <div class="col-md-6">
-                            {{ Form::password('password_confirmation', ['class' => 'input', 'id' => 'password-confirm']) }}
-                            </div>
-                        </div>
-                        </div>
-                        
-<!--Via Utente Registrazione-->
+                        </div>                   
+                        <!--Via Utente Registrazione-->
                         <div class="address">
                         <div class="form-group row">
                             {{ Form::label('via', 'Via', ['class' => 'label-input']) }}
@@ -152,14 +124,13 @@
                         </div>
                         </div>
                         
-                        <!--Sesso Utente Registrazion<?php $gen=['M','F']; ?>
-                        <div class="e-->
-                        <?php $gen=['M','F']; ?>
+                        <!--Sesso Utente Registrazione-->
+                        <?php $gen=['M'=>'M','F'=>'F']; ?>
                         <div class="address">
                         <div class="form-group row">
                             {{ Form::label('sesso', 'Sesso', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                            {{ Form::select('sesso',$gen ,old('sesso'), ['class' => 'input','id' => 'sesso']) }}
+                            {{ Form::select('sesso', $gen , old('sesso'), ['class' => 'input','id' => 'sesso']) }}
                                 @if ($errors->first('sesso'))
                                     <ul class="errors">
                                     @foreach ($errors->get('sesso') as $message)

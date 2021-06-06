@@ -136,6 +136,7 @@ public function FormOrganizzatori($id) {
         $biglietti_totali=0;
         $biglietti_rimasti=0;
         $biglietti_venduti=0;
+        $percentuale = 0;
         
         foreach ($tutti_eventi as $evento){
             if ($evento->societa_organizzatrice==$organizzatore->nome_societa_organizzatrice){
@@ -155,7 +156,12 @@ public function FormOrganizzatori($id) {
             $incasso=$incasso+$bigl->prezzo_acquisto;
             $biglietti_venduti=$biglietti_venduti+$bigl->quantita;
         }
-        $percent_bv=round((($biglietti_venduti*100)/$biglietti_totali),2);
+        
+        if($biglietti_totali != 0){
+            $percentuale = round((($biglietti_venduti*100)/$biglietti_totali),2);
+        }
+        
+        $percent_bv=$percentuale;
        
         return view('Statistiche', ['organizzatore' => $organizzatore,
                                     'incasso'=>$incasso,

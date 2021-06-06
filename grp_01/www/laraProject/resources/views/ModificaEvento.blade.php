@@ -98,9 +98,7 @@
                         <div class="form-group row">
                             {{ Form::label('data_ora', 'Data e Ora', ['class' => 'label-input']) }}
                             <div class="col-md-6">
-                                <!--
-                                {{ Form::date('data', '',['class' => 'input','id' => 'data']) }}
-                                {{Form::time('ora', '',['class' => 'input','id' => 'ora'])}}-->
+
                                 
                                 {{Form::text('data_ora', old('data_ora'),['class' => 'input','id' => 'data_ora'])}}
                                 @if ($errors->first('data'))

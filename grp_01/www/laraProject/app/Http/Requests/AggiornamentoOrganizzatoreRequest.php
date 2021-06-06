@@ -26,7 +26,7 @@ class AggiornamentoOrganizzatoreRequest extends FormRequest {
         return [
             'email' => 'required|string|email|max:255',
             'nome_societa_organizzatrice' => 'required|string|max:255',
-            'username' => 'required|string|min:8|unique:users',
+            'username' => 'required|string|min:8',
             'via' => 'required|string',
             'citta' => 'required|string',
             'cap' => 'required|string|min:5|max:5',

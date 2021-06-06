@@ -61,50 +61,6 @@
                         </div>
                         </div>
                         
-                       <!-- <!--Username Utente Registrazione
-                        <div class="address">
-                        <div class="form-group row">
-                            {{ Form::label('username', 'Username', ['class' => 'label-input']) }}
-                            <div class="col-md-6">
-                            {{ Form::text('username', '', ['class' => 'input','id' => 'username']) }}
-                                @if ($errors->first('username'))
-                                    <ul class="errors">
-                                    @foreach ($errors->get('username') as $message)
-                                    <li>{{ $message }}</li>
-                                    @endforeach
-                                    </ul>
-                                @endif
-                            </div>
-                        </div>
-                        </div>
-                        
-                        <!--Password Utente Registrazione
-                        <div class="address">
-                        <div class="form-group row">
-                            {{ Form::label('password', 'Password', ['class' => 'label-input']) }}
-                            <div class="col-md-6">
-                            {{ Form::password('password', ['class' => 'input', 'id' => 'password']) }}
-                                @if ($errors->first('password'))
-                                    <ul class="errors">
-                                    @foreach ($errors->get('password') as $message)
-                                    <li>{{ $message }}</li>
-                                    @endforeach
-                                    </ul>
-                                @endif
-                            </div>
-                        </div>
-                        </div>
-                        
-                        <!--Conferma Password Utente Registrazione
-                        <div class="address">
-                        <div class="form-group row">
-                            {{ Form::label('password-confirm', 'Conferma password', ['class' => 'label-input']) }}
-                            <div class="col-md-6">
-                            {{ Form::password('password_confirmation', ['class' => 'input', 'id' => 'password-confirm']) }}
-                            </div>
-                        </div>
-                        </div>
-                        
                         <!--Via Utente Registrazione-->
                         <div class="address">
                         <div class="form-group row">
@@ -137,8 +93,7 @@
                                 @endif
                             </div>
                         </div>
-                        </div>
-                        
+                        </div>         
                         <!--Cap Utente Registrazione-->
                         <div class="address">
                         <div class="form-group row">
@@ -155,10 +110,8 @@
                             </div>
                         </div>
                         </div>
-                        
-                        <!--Sesso Utente Registrazion<?php $gen=['M','F']; ?>
-                        <div class="e-->
-                        <?php $gen=['M','F']; ?>
+                        <!--Sesso Utente Registrazione-->
+                        <?php $gen=['M'=>'M','F'=>'F']; ?>
                         <div class="address">
                         <div class="form-group row">
                             {{ Form::label('sesso', 'Sesso', ['class' => 'label-input']) }}
@@ -174,7 +127,6 @@
                             </div>
                         </div>
                         </div>
-                        
                         <!--Cellulare Utente Registrazione-->
                         <div class="address">
                         <div class="form-group row">
@@ -191,28 +143,13 @@
                             </div>
                         </div>
                         </div>
-
-                        
-
-                        
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
                         <div class="wrapper fadeInDown">
                             <div class="col-md-6 offset-md-3">
                                 {{ Form::submit('Modifica', ['class' => 'form-btn1']) }}
                             </div>
                         </div>
                     {{ Form::close() }}
-                    
-                    
+    
                 </div>
             </div>
         </div>

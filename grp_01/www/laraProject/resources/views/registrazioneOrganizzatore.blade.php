@@ -174,21 +174,7 @@
                                 @endif
                             </div>
                         </div>
-                        </div>
-
-                        
-
-                        
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
+                        </div>                   
                         <div class="wrapper fadeInDown">
                             <div class="col-md-6 offset-md-3">
                                 {{ Form::submit('Aggiungi', ['class' => 'form-btn1']) }}
