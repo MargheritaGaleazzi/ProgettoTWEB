@@ -126,7 +126,9 @@ public function FormOrganizzatori($id) {
 }
 
     public function cancella($id) {
+        //Biglietto::where('id','=',$id)->delete();
         Utente::find($id)->delete();
+        
         return redirect('gestioneUtenti');
     }
     
