@@ -22,7 +22,7 @@
     @isset($biglietti)
     @foreach ($biglietti as $biglietto)
     
-    
+    @if($biglietto->codice_evento != null)
 <div class="ticket">
   
   <div class="ticketdate">
@@ -56,6 +56,7 @@
   </div>
  
 </div>
+    @endif
     @endforeach
     @endisset()
 </div>

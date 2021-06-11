@@ -15,8 +15,8 @@ class Partecipero extends Migration
     {
         Schema::create('partecipero', function (Blueprint $table){
             $table->bigIncrements('id')->unsigned()->index();
-            $table->bigInteger('codice_utente');
-            $table->bigInteger('codice_evento');
+            $table->bigInteger('codice_utente')->nullable();
+            $table->bigInteger('codice_evento')->nullable();
             
         });
     }

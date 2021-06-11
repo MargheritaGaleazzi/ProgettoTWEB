@@ -2168,7 +2168,8 @@ input[type="password"]:placeholder {
   height: 350px;
   position: absolute;
   top: 0;
-  left: 530px;
+  left: 550px;
+  right: 140px;
 }
 
 .ticketcta .ticketinfo {

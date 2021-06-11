@@ -75,7 +75,7 @@
                         @can('isOrganizer')
                         @if($evento->societa_organizzatrice==Auth::user()->nome_societa_organizzatrice)
                         <a href="{{route('statisticheOrga',[$evento->codice_evento])}}"><button class="btn btn-outline-primary btn-sm mt-2" type="button">Statistiche</button></a>
-                        <a href="{{route('EliminaEvento',[$evento->codice_evento])}}"><button class="btn btn-outline-primary btn-sm mt-2" type="button">Modifica</button></a>
+                        <a href="{{route('ModificaEvento',[$evento->codice_evento])}}"><button class="btn btn-outline-primary btn-sm mt-2" type="button">Modifica</button></a>
                         <a href="{{route('EliminaEvento',[$evento->codice_evento])}}"><button class="btn btn-outline-primary btn-sm mt-2" type="button">Elimina</button></a>
                         @else
                         <p class='finito'>Non hai i permessi per gestire questo evento!</p>

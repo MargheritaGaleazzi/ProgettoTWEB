@@ -6,6 +6,7 @@ use App\Models\Admin;
 use App\Models\Resources\Utente;
 use App\Models\Resources\Biglietto;
 use App\Models\Resources\Evento;
+use App\Models\Resources\Partecipero;
 use App\Models\Resources\GestioneEvento;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -81,6 +82,7 @@ class ControllerLivello3 extends Controller {
 
     public function eliminaEvento($id) {
         Evento::find($id)->delete();
+        Partecipero::where('codice_evento', '=', $id)->delete();
         return redirect('organizzatore');
     }
 
