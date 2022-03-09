@@ -79,3 +79,9 @@ Abbiamo inoltre deciso di aggiungere alcuni pacchetti opzionali:
 <p align="center">
 <img src="https://github.com/MargheritaGaleazzi/ProgettoTWEB/blob/main/img/5.jpg">
 </p>
+
+## Autori
+ - Margherita Galeazzi -> https://github.com/MargheritaGaleazzi
+ - Chiara Amalia Caporusso -> https://github.com/ChiaraAmalia
+ - Antonio Baio -> https://github.com/Asso-Di-Picche
+ - Kevin Gianattasio
